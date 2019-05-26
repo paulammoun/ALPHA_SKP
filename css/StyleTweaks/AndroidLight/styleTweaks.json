@@ -1,0 +1,75 @@
+{
+	"variables": [
+{
+	"Name": "fontFamily",
+	"Value": "sans-serif"
+},
+{
+	"Name": "primaryForeColor",
+	"Value": "#222222"
+},
+{
+	"Name": "primaryBackColor",
+	"Value": "#eee"
+},
+{
+	"Name": "accentForeColor",
+	"Value": "#222222"
+},
+{
+	"Name": "accentBackColor",
+	"Value": "#33b5e5"
+},
+{
+	"Name": "errorColor",
+	"Value": "#fd472a"
+},
+{
+	"Name": "buttonForeColor",
+	"Value": "#222222"
+},
+{
+	"Name": "buttonBackColor",
+	"Value": "#999999"
+},
+{
+	"Name": "confirmForeColor",
+	"Value": "#fff"
+},
+{
+	"Name": "confirmBackColor",
+	"Value": "#94b435"
+},
+{
+	"Name": "denyForeColor",
+	"Value": "#fff"
+},
+{
+	"Name": "denyBackColor",
+	"Value": "#fd4246"
+},
+{
+	"Name": "switchOn",
+	"Value": "#ffffff"
+},
+{
+	"Name": "switchOnBack",
+	"Value": "#4bd762"
+},
+{
+	"Name": "calendar",
+	"Value": "#ffffff"
+},
+{
+	"Name": "calendarBack",
+	"Value": "#ff3b30"
+},
+{
+	"Name": "iconSize",
+	"Value": "24px"
+},
+{
+	"Name": "iconSmSize",
+	"Value": "18px"
+}]
+}
