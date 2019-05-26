@@ -1,0 +1,1227 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "builderType": "Dialog2",
+        "info": {
+            "createdBy": "andre",
+            "dateCreated": "2019-2-20",
+            "dateLastEdited": "2019-2-20"
+        },
+        "guid": "ac611a65-2859-4193-9133-858cf8b96765",
+        "style_name": "iOS",
+        "componentName": "LOGINEX",
+        "componentFilename": "C:\\alpha_projects\\SKPWallet-Final\\SKPWallet-Final.WebProjects\\Default.WebProject\\LoginEx.a5wcmp",
+        "page_fields": [
+            {
+                "controltype": "layout_directive_comment",
+                "display": "{B=White,Light Blue}{B=White,#104+150+112}{Data=e4ed019d-5c00-4df0-8771-b58e8d498105}{I:'$$code.action.commentOut'} {C=#104+150+1120,White}After the user logs in the client-side afterLogin event fires and sets focus to the [PANEL_APPLICATION]...",
+                "displayODFlat": "{Data=e4ed019d-5c00-4df0-8771-b58e8d498105}{I:'$$code.action.commentOut'} ",
+                "idInternal": "e4ed019d-5c00-4df0-8771-b58e8d498105",
+                "parentContainer": -1,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "displayOD": "{Data=e4ed019d-5c00-4df0-8771-b58e8d498105}{I:'$$code.action.commentOut'} ",
+                "repeatingSectionParentId": -1,
+                "displayODTree": "{B=White,Light Blue}{B=White,#104+150+112}{Data=e4ed019d-5c00-4df0-8771-b58e8d498105}{I:'$$code.action.commentOut'} {C=#104+150+1120,White}After the user logs in the client-side afterLogin event fires and sets focus to the [PANEL_APPLICATION]...",
+                "precalc": {
+                    "ControlHTML": "",
+                    "DesignViewHTML": ""
+                },
+                "crc": "4294932463",
+                "v": {
+                    "comment": "After the user logs in the client-side afterLogin event fires and sets focus to the [PANEL_APPLICATION]\nPanel Card. This Panel Card will typically contain an [Embedded Object] control that loads your application UX component.\n\n\nWhen the user logs out, the client-side afterLogout event fires and sets forcus to the [PANEL_LOGIN] \nPanel Card.\n\nThe 'Has integrated login functionality' on the Properties pane has been checked."
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelNavigatorBegin",
+                "display": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=47bfe378_633f_4146_807e_4f1f12526a97}{I:'$$web.panel.navigator'} [Panel Navigator: PANEL_APPLICATIONNAVIGATOR] (Programmatic) (LTR)",
+                "displayODFlat": "{Data=47bfe378_633f_4146_807e_4f1f12526a97}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1]",
+                "idInternal": "47bfe378_633f_4146_807e_4f1f12526a97",
+                "lastIndex": 13,
+                "parentContainer": -1,
+                "displayOD": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=47bfe378_633f_4146_807e_4f1f12526a97}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=47bfe378_633f_4146_807e_4f1f12526a97}{I:'$$web.panel.navigator'} [Panel Navigator: PANEL_APPLICATIONNAVIGATOR] (Programmatic) (LTR)",
+                "indentTree": 0,
+                "crc": "4294931951",
+                "isCollapsed": false,
+                "v": {
+                    "container": {
+                        "id": "PANEL_APPLICATIONNAVIGATOR"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelNavigator": {
+                        "navigatorType": "Programmatic",
+                        "navigatorFlow": "LTR",
+                        "animation": {
+                            "type": "slide",
+                            "duration": 400
+                        },
+                        "javascript": {
+                            "_onsize": "if(typeof {dialog.object} != 'undefined') {\n\tif(typeof {dialog.object}._findActiveLayoutRule != 'undefined') { \n\t\t{dialog.object}._findActiveLayoutRule();\n\t\t//alert('system on size');\n\t}\n}\n",
+                            "onPanelView": ""
+                        },
+                        "indicator": {
+                            "location": "Auto"
+                        },
+                        "tabBand": {
+                            "location": "Top"
+                        }
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelCardBegin",
+                "display": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=02b56e60_dd76_413b_864e_6db29d75af04}{I:'$$web.panel.card'} [Panel Card: PANEL_LOGIN]",
+                "displayODFlat": "{Data=02b56e60_dd76_413b_864e_6db29d75af04}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "idInternal": "02b56e60_dd76_413b_864e_6db29d75af04",
+                "lastIndex": 9,
+                "parentContainer": 2,
+                "displayOD": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=02b56e60_dd76_413b_864e_6db29d75af04}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=02b56e60_dd76_413b_864e_6db29d75af04}{I:'$$web.panel.card'} [Panel Card: PANEL_LOGIN]",
+                "indentTree": 1,
+                "crc": "4294925212",
+                "precalc": {
+                    "ControlHTML": "'xbasic\n\nv._dirty = .f.\n\n\n",
+                    "DesignViewHTML": ""
+                },
+                "parentIsCollapsed": false,
+                "v": {
+                    "container": {
+                        "id": "PANEL_LOGIN"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelCard": {
+                        "javascript": {
+                            "onView": "",
+                            "onActivate": ""
+                        },
+                        "allowBodyScrolling": true,
+                        "bodyScrolling": {
+                            "axis": "Both"
+                        },
+                        "pull": {
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "scrolling": {
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "type": "Default"
+                    }
+                }
+            },
+            {
+                "controltype": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=b8d3c944_dd8d_44b0_bbba_dd34763a278f}{I:'$$control.edit'} [UserName] ¶",
+                "displayODFlat": "{Data=b8d3c944_dd8d_44b0_bbba_dd34763a278f}{I:'$$control.edit'} [UserName]",
+                "idInternal": "b8d3c944_dd8d_44b0_bbba_dd34763a278f",
+                "parentContainer": 3,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=b8d3c944_dd8d_44b0_bbba_dd34763a278f}{I:'$$control.edit'} [UserName]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=b8d3c944_dd8d_44b0_bbba_dd34763a278f}{I:'$$control.edit'} [UserName] ¶",
+                "indentTree": 2,
+                "crc": "4294961624",
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--FldS--><input\ttype=\"text\" id=\"{grid.componentname}.V.R{grid.rownumber}.USERNAME\" title=\"\"  autocapitalize=\"off\"  autocorrect=\"off\"     class=\"[class.dialogInput]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"    name=\"V.R{grid.rownumber}.USERNAME\"    value=\"\"    />\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'USERNAME': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                },
+                "parentIsCollapsed": true,
+                "v": {
+                    "controlType": "Textbox",
+                    "variableName": "UserName",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "hasWatermark": true,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "label": "User Name",
+                    "class": "<Default>",
+                    "width": "100%",
+                    "breakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        }
+                    },
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "precalc": {
+                        "editOptionsJSObject": "<watermark<text=\"User Name\">\n>\n",
+                        "javascript_Lookupfields": "{dialog.componentName}_DlgObj.fieldHelpers['USERNAME'] = new A5.Edit({\n\twatermark: {\n\t\ttext: 'User Name'\n\t}\n});",
+                        "xbasic_LookupfieldsPopulate": "",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                }
+            },
+            {
+                "controltype": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1df25d09_c204_4c79_b3a9_69059e858406}{I:'$$control.edit'} [Password] ¶{T=6}{C=#104+150+1120,White}// Autocorrect and Autocapitalize properties are turned off for password controls...",
+                "displayODFlat": "{Data=1df25d09_c204_4c79_b3a9_69059e858406}{I:'$$control.edit'} [Password]",
+                "idInternal": "1df25d09_c204_4c79_b3a9_69059e858406",
+                "parentContainer": 3,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1df25d09_c204_4c79_b3a9_69059e858406}{I:'$$control.edit'} [Password]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1df25d09_c204_4c79_b3a9_69059e858406}{I:'$$control.edit'} [Password] ¶{T=6}{C=#104+150+1120,White}// Autocorrect and Autocapitalize properties are turned off for password controls...",
+                "indentTree": 2,
+                "crc": "4294922568",
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--FldS--><input\ttype=\"password\" id=\"{grid.componentname}.V.R{grid.rownumber}.PASSWORD\" title=\"\"  autocapitalize=\"off\"  autocorrect=\"off\"     class=\"[class.dialogInput]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"    name=\"V.R{grid.rownumber}.PASSWORD\"    value=\"\"    />\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'PASSWORD': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                },
+                "parentIsCollapsed": true,
+                "v": {
+                    "comment": "Autocorrect and Autocapitalize properties are turned off for password controls\nAn onKeyPress event is defined to turn the control type to 'text' if there is no text in the control and to 'password' if the user has started typing.\nNOTE: The same code is repeated in the onBlur event to get this pattern to work in Internet Explorer.\nBy setting the control type to 'password' dynamically, the actual password characters that have been typed are hidden.\nBy setting the control type back to 'text' when there is no text in the field, the watermark text in the control (which displays the work 'Password') is readable.\nNOTE: Because the onKeyPress event is dynamically setting the control type, it is not necessary to check the 'Password' property for the control.",
+                    "controlType": "Textbox",
+                    "variableName": "Password",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "hasWatermark": true,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "label": "Password",
+                    "class": "<Default>",
+                    "width": "100%",
+                    "breakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "password": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        }
+                    },
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "precalc": {
+                        "editOptionsJSObject": "<watermark<text=\"Password\">\n>\n",
+                        "javascript_Lookupfields": "{dialog.componentName}_DlgObj.fieldHelpers['PASSWORD'] = new A5.Edit({\n\twatermark: {\n\t\ttext: 'Password'\n\t}\n});",
+                        "xbasic_LookupfieldsPopulate": "",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                }
+            },
+            {
+                "controltype": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4878c748_d89e_451c_8385_fa47b8567f44}{I:'$$control.button'} [Button: Login] ¶",
+                "displayODFlat": "{Data=4878c748_d89e_451c_8385_fa47b8567f44}{I:'$$control.button'} [Button]",
+                "idInternal": "4878c748_d89e_451c_8385_fa47b8567f44",
+                "parentContainer": 3,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4878c748_d89e_451c_8385_fa47b8567f44}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4878c748_d89e_451c_8385_fa47b8567f44}{I:'$$control.button'} [Button: Login] ¶",
+                "indentTree": 2,
+                "crc": "4294957057",
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_BUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "parentIsCollapsed": true,
+                "v": {
+                    "buttonText": "Login",
+                    "Class": "<Default>",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "LOGIN_BUTTON",
+                    "advancedButtonStyling": true,
+                    "width": "100%",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "",
+                    "abstractJavascript": {
+                        "click": "//Reminder: You must check the 'Has integrated login functionality' property on the Properties pane.\n{dialog.object}.login()"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_BUTTON',A5.d.evnts.click,function(e) {\n{dialog.object}.login()\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_BUTTON');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['LOGIN_BUTTON'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; ',\n\thtml: 'Login',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['LOGIN_BUTTON'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.LOGIN_BUTTON');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    },
+                    "consumedInSpecialPanelButton": false
+                }
+            },
+            {
+                "controltype": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=463059ca_02b8_42e2_bede_4e1d74741437}{I:'$$control.button'} [Button: Logout] ¶{T=6}{C=#104+150+1120,White}// This control has a client-side show/hide expression so that it only visible if user is logged in",
+                "displayODFlat": "{Data=463059ca_02b8_42e2_bede_4e1d74741437}{I:'$$control.button'} [Button]",
+                "idInternal": "463059ca_02b8_42e2_bede_4e1d74741437",
+                "parentContainer": 3,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=463059ca_02b8_42e2_bede_4e1d74741437}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=463059ca_02b8_42e2_bede_4e1d74741437}{I:'$$control.button'} [Button: Logout] ¶{T=6}{C=#104+150+1120,White}// This control has a client-side show/hide expression so that it only visible if user is logged in",
+                "indentTree": 2,
+                "crc": "4294951904",
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGOUT_BUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "parentIsCollapsed": true,
+                "v": {
+                    "comment": "This control has a client-side show/hide expression so that it only visible if user is logged in",
+                    "buttonText": "Logout",
+                    "Class": "<Default>",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "LOGOUT_BUTTON",
+                    "advancedButtonStyling": true,
+                    "width": "100%",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "dialog.isLoggedIn = true",
+                    "abstractJavascript": {
+                        "click": "//Note: This event is only meaningful if use logged in using integrated UX login, or the AppLauncher.\n//If the user logged in from the Login Component, this event has no meaning.\n{dialog.object}.logout();"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "{dialog.object}.dialogWatches['SHOWHIDE_LOGOUT_BUTTON'] = {\n\t\twatch: [],\n\t\tvariables: [],\n\t\tonChange: function(data) {\n\t\n\t\n\tvar dialog = {};\n\tvar summary = {};\n\t{dialog.object}._getDialogVariables(dialog,summary,data);\n\tvar showHide = '';\n\tif( (dialog.isLoggedIn == true) == true ) showHide = '';\n\telse showHide = 'none';\t\n\tif(showHide == 'none') {\t\n\t\t{dialog.object}.setControlDisplay(''+'LOGOUT_BUTTON'+'',false,'display');\n\t} else {\n\t\t{dialog.object}.setControlDisplay(''+'LOGOUT_BUTTON'+'',true,'display');\n\t}\n\t\n\t}\n}\n\n",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.LOGOUT_BUTTON',A5.d.evnts.click,function(e) {\n{dialog.object}.logout();\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.LOGOUT_BUTTON');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['LOGOUT_BUTTON'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; ',\n\thtml: 'Logout',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['LOGOUT_BUTTON'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.LOGOUT_BUTTON');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    },
+                    "consumedInSpecialPanelButton": false
+                }
+            },
+            {
+                "controltype": "layout_directive_placeholder",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1ca28036_4d7b_4d09_8e18_f97dcc7bf48e}{I:'$$format.border.style.dot'} [Placeholder:LOGIN_ERRORS] ¶{T=6}{C=#104+150+1120,White}// This is where login errors are shown. You must configure the 'Placeholder for login errors' property (see Properties pane) to use this placeholder.",
+                "displayODFlat": "{Data=1ca28036_4d7b_4d09_8e18_f97dcc7bf48e}{I:'$$format.border.style.dot'} [Placeholder]",
+                "idInternal": "1ca28036_4d7b_4d09_8e18_f97dcc7bf48e",
+                "parentContainer": 3,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1ca28036_4d7b_4d09_8e18_f97dcc7bf48e}{I:'$$format.border.style.dot'} [Placeholder]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=1ca28036_4d7b_4d09_8e18_f97dcc7bf48e}{I:'$$format.border.style.dot'} [Placeholder:LOGIN_ERRORS] ¶{T=6}{C=#104+150+1120,White}// This is where login errors are shown. You must configure the 'Placeholder for login errors' property (see Properties pane) to use this placeholder.",
+                "indentTree": 2,
+                "crc": "4294911084",
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\"  id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_ERRORS\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\">\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "parentIsCollapsed": true,
+                "v": {
+                    "comment": "This is where login errors are shown. You must configure the 'Placeholder for login errors' property (see Properties pane) to use this placeholder.",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "width": "100%",
+                    "id": "LOGIN_ERRORS",
+                    "labelPosition": "None",
+                    "hide": false
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelCardEnd",
+                "display": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=a60a0a77_6421_4fee_913b_91789c9c86d5}{I:'vertLineCap'} [Panel Card End: PANEL_LOGIN]",
+                "displayODFlat": "{Data=a60a0a77_6421_4fee_913b_91789c9c86d5}{I:'vertlinecap'} [Panel Card End]",
+                "idInternal": "a60a0a77_6421_4fee_913b_91789c9c86d5",
+                "containerStartIndex": 3,
+                "parentContainer": 2,
+                "displayOD": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=a60a0a77_6421_4fee_913b_91789c9c86d5}{I:'vertlinecap'} [Panel Card End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=a60a0a77_6421_4fee_913b_91789c9c86d5}{I:'vertLineCap'} [Panel Card End: PANEL_LOGIN]",
+                "indentTree": 1,
+                "crc": "4294913962",
+                "parentIsCollapsed": true,
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelCardBegin",
+                "display": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5f7a4df3_b756_4f8f_a546_38984152546c}{I:'$$web.panel.card'} [Panel Card: PANEL_APPLICATION]",
+                "displayODFlat": "{Data=5f7a4df3_b756_4f8f_a546_38984152546c}{I:'$$web.panel.card'} [Panel Card: PANELCARD_2]",
+                "idInternal": "5f7a4df3_b756_4f8f_a546_38984152546c",
+                "lastIndex": 12,
+                "parentContainer": 2,
+                "displayOD": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5f7a4df3_b756_4f8f_a546_38984152546c}{I:'$$web.panel.card'} [Panel Card: PANELCARD_2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5f7a4df3_b756_4f8f_a546_38984152546c}{I:'$$web.panel.card'} [Panel Card: PANEL_APPLICATION]",
+                "indentTree": 1,
+                "crc": "4294928151",
+                "precalc": {
+                    "ControlHTML": "'xbasic\n\nv._dirty = .f.\n\n\n",
+                    "DesignViewHTML": ""
+                },
+                "parentIsCollapsed": false,
+                "v": {
+                    "container": {
+                        "id": "PANEL_APPLICATION"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelCard": {
+                        "javascript": {
+                            "onView": "",
+                            "onActivate": ""
+                        },
+                        "bodyScrolling": {
+                            "axis": "Both"
+                        },
+                        "pull": {
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "scrolling": {
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "type": "Default"
+                    }
+                }
+            },
+            {
+                "controltype": "PageLayoutPart",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=96e18977-26cb-44cb-a846-903c12cb8e04}{I:'$$web.component.grid'} [Embedded Object: Mobile (UX Component)] ¶",
+                "displayODFlat": "{Data=96e18977-26cb-44cb-a846-903c12cb8e04}{I:'$$web.component.grid'} [Embedded Object: Mobile]",
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=96e18977-26cb-44cb-a846-903c12cb8e04}{I:'$$web.component.grid'} [Embedded Object: Mobile]",
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=96e18977-26cb-44cb-a846-903c12cb8e04}{I:'$$web.component.grid'} [Embedded Object: Mobile (UX Component)] ¶",
+                "idInternal": "96e18977-26cb-44cb-a846-903c12cb8e04",
+                "parentContainer": 10,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "repeatingSectionParentId": -1,
+                "indentTree": 2,
+                "precalc": {
+                    "ControlHTML": "\t<div class=\"\">\n\t\t<div id=\"{alias}_DIVCONTAINER_96e18977_26cb_44cb_a846_903c12cb8e04\"   ><img src=\"css/A5System/Images/wait.gif\" /> Working...</div>\n\t</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t\t",
+                    "DesignViewHTML": "",
+                    "pageLayoutPartJavascript": "{dialog.object}._functions.runAction_96e18977_26cb_44cb_a846_903c12cb8e04 = function() {\n\t\n\t\n\tvar onCompleteCode = '';\n\tvar callbackId = A5.UUID();\n\tvar objx = {dialog.object}._ajaxCallbackCompleteCode;\n\tif(typeof objx == 'undefined') objx = {};\n\tobjx[callbackId] = Function(onCompleteCode);\n\t\n\n\n\tvar go = new Object();\n\t\tgo.dialog2Name = 'Mobile';\n\tgo.type = 'dialog2';\n\t\n\tgo.alias = '{alias}_MOBILE_42559WGXX';\n\tgo.workingMessage = '<img src=\"css/A5System/Images/wait.gif\" /> Working...';\n\tgo.flagTimer = 'F';\n\tgo.flagQueryEcho = 'F';\n\tgo.flagDebugMode = 'F';\n\tgo.userFilter = '';\n\tgo.baseFilter = '';\n\tgo.userOrder = '';\n\tgo.overrideSettings = 'style_name=`{pageLayout.style}`'+'||';\n\tgo.arguments = '';\n\t\n\t\n\tgo.localArguments = '';\n\tgo.linkDefinition = '';\n\tgo.placeHolderValues = '';\n\tgo.parameterBucket = $gvs('{alias}.PARAMETERBUCKET');\n\tgo.argumentValueBucket = $gvs('{alias}.ARGUMENTVALUES');\n\tgo.a5_default_path = '{PageLayout.a5_default_path}';\n\tgo.onLoadCompleteJavascript = 'run:'+callbackId;\n\t\n\tgo._runningInMobilePreview = {dialog.object}._mobilePreview;\n\t\n\tif(typeof tbiObj != 'undefined' && typeof tbiObj._workingPreviewHost != 'undefined') { \n\t\tgo._workingPreviewHost = tbiObj._workingPreviewHost;\n\t}\n\n\tif(typeof {grid.object}.gridId != 'undefined') go._thisGridAlias = {grid.object}.gridId;\n\tif(typeof {grid.object}.dialogId != 'undefined') go._thisGridAlias = {grid.object}.dialogId;\n\n\tvar panelCardId = {dialog.object}.panelGetId('PANEL_APPLICATION','body');\nif($(panelCardId + '.SCROLLWRAPPER')) panelCardId = panelCardId + '.SCROLLWRAPPER';\ngo.dialog2Div = panelCardId;\n\t\t\n\tvar runMethod = 'ajax';\nif( !{dialog.object}._getOnlineStatus()) runMethod = 'precomputed';\nif({grid.object}._embeddedMode) runMethod = 'ajax';\nif({dialog.object}._staticHTMLMode) runMethod = 'precomputed';\nif(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_69f4cb9d9f384c39a4f90997fab85b4d_Mobile'] == 'function') { \n\t//PRECOMPUTED_UX_COMPONENT: {functionName: 'PRECOMPUTEDUX_69f4cb9d9f384c39a4f90997fab85b4d_Mobile', uxname: 'Mobile', alias: '{alias}_MOBILE_42559WGXX'}\n\tvar jsToRun = PRECOMPUTEDUX_69f4cb9d9f384c39a4f90997fab85b4d_Mobile(go);\n\teval(jsToRun);\n\t\n\tif(typeof go.onLoadCompleteJavascript != 'undefined') { \n\t\tvar txt = go.onLoadCompleteJavascript.split(':')[1];\n\t\tif(typeof txt != 'undefined') { \n\t\t\tif(typeof {dialog.object}._ajaxCallbackCompleteCode != 'undefined') { \n\t\t\t\tsetTimeout(function() { \n\t\t\t\t\t{dialog.object}._ajaxCallbackCompleteCode[txt].call();\n\t\t\t\t},500);\n\t\t\t}\n\t\t}\n\t}\n\n} else {\n\tA5.component.runGenericComponent(go)\n}\n;\n\t\n}\n"
+                },
+                "hasParentTab": false,
+                "parentTabId": "",
+                "crc": "4294922960",
+                "v": {
+                    "pageLayoutPart": {
+                        "showMode": "When page is loaded",
+                        "objectPosition": "To right of button",
+                        "freeformButtonLayout": "{button}<br />\n{object}\n",
+                        "windowType": "On page",
+                        "closeWindowHyperlink": "Close",
+                        "windowIsResizable": true,
+                        "paneTitle": "Pane",
+                        "reuseExistingPane": true,
+                        "buttonType": "Button",
+                        "buttonText": "Mobile",
+                        "actionType": "Component",
+                        "optimization": {
+                            "method": "AjaxIfOnLine_PrecomputedIfOffLine"
+                        },
+                        "grid": {
+                            "gridName": "Mobile",
+                            "componentType": "UX",
+                            "alias": "<DefaultAlias>",
+                            "customSettingOverridesJSON": "",
+                            "useMasterStyle": true,
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working..."
+                        },
+                        "report": {
+                            "workingMessage": "<img src=\"css/A5System/Images/wait.gif\" /> Working...",
+                            "moreRecordsTemplate": "<hr />Showing first [DisplayRecords] of [TotalRecords] records in query",
+                            "moreRecordsStyle": "text-align: center;",
+                            "initialView": "PDF",
+                            "HTMLToolbar": {
+                                "buttons": {
+                                    "pdf": true,
+                                    "excel": true,
+                                    "printHTML": true,
+                                    "word": true,
+                                    "pdfButton": {
+                                        "text": "PDF",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.adobe.pdf.png.a5image",
+                                        "bubbleHelp": "Print report as a PDF document."
+                                    },
+                                    "excelButton": {
+                                        "text": "Excel",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.excel.png.a5image",
+                                        "bubbleHelp": "Export report to Excel."
+                                    },
+                                    "printHTMLButton": {
+                                        "text": "Print HTML",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$device.printer.png.a5image",
+                                        "bubbleHelp": "Print the HTML report."
+                                    },
+                                    "WordButton": {
+                                        "text": "Word",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$application.ms.word.png.a5image",
+                                        "bubbleHelp": "Export report to Word."
+                                    },
+                                    "textButton": {
+                                        "text": "Text",
+                                        "buttonType": "Image followed by text",
+                                        "imageName": "images/$$control.text.png.a5image",
+                                        "bubbleHelp": "Export data in report to a text file."
+                                    },
+                                    "bookmarksButton": {
+                                        "buttonType": "Text",
+                                        "text": "Bookmarks",
+                                        "imageName": "images/$$generic.book.png.a5image"
+                                    }
+                                },
+                                "bookMarkPanelSize": "3in"
+                            }
+                        },
+                        "inPanelCard": {
+                            "fillPanelContainer": true,
+                            "delayRenderTillVisible": true,
+                            "autoRefreshWhenCardActivated": true,
+                            "autoSynchronizeWhenCardActivated": false,
+                            "destroyOnDeactivate": false,
+                            "javascript": {
+                                "onActivate": "{dialog.object}._functions.runAction_96e18977_26cb_44cb_a846_903c12cb8e04();",
+                                "onDeactivate": ""
+                            }
+                        }
+                    },
+                    "controlContainerPreventFloat": true,
+                    "class": "<Default>",
+                    "style": "width:1.5in;",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "breakHeight2": "",
+                    "breakHorizontalSpace2": "",
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "javascript": {
+                        "onclick": "{dialog.object}._functions.runAction_96e18977_26cb_44cb_a846_903c12cb8e04(); return false;",
+                        "ondblclick": "",
+                        "onmousedown": "",
+                        "onmouseup": "",
+                        "onmouseover": "",
+                        "onmousemove": "",
+                        "onmouseout": "",
+                        "onkeypress": "",
+                        "onkeydown": "",
+                        "onkeyup": "",
+                        "onBlur": "",
+                        "onChange": "",
+                        "onFocus": "",
+                        "onSelect": "",
+                        "immediate": ""
+                    },
+                    "Window": {
+                        "onInitialize": "",
+                        "onBeforeShow": "",
+                        "onShow": "",
+                        "onBeforeHide": "",
+                        "onHide": "",
+                        "onFocus": "",
+                        "onMove": "",
+                        "onResize": "",
+                        "hasCustomButtons": false,
+                        "buttonsArrayString": "",
+                        "buttonCount": 0,
+                        "customButtonsInLineStyle": "",
+                        "tbar": {
+                            "show": false,
+                            "html": "",
+                            "style": ""
+                        },
+                        "header": {
+                            "show": false,
+                            "html": "",
+                            "style": ""
+                        },
+                        "footer": {
+                            "show": false,
+                            "html": "",
+                            "style": ""
+                        },
+                        "bbar": {
+                            "show": false,
+                            "html": "",
+                            "style": ""
+                        }
+                    },
+                    "tabbedUI": {
+                        "autoRefreshOnFocus": false
+                    }
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelCardEnd",
+                "display": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=8c2caaee_2a8c_4740_8caf_7140b1b83e85}{I:'vertLineCap'} [Panel Card End: PANEL_APPLICATION]",
+                "displayODFlat": "{Data=8c2caaee_2a8c_4740_8caf_7140b1b83e85}{I:'vertlinecap'} [Panel Card End]",
+                "idInternal": "8c2caaee_2a8c_4740_8caf_7140b1b83e85",
+                "containerStartIndex": 10,
+                "parentContainer": 2,
+                "displayOD": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=8c2caaee_2a8c_4740_8caf_7140b1b83e85}{I:'vertlinecap'} [Panel Card End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=8c2caaee_2a8c_4740_8caf_7140b1b83e85}{I:'vertLineCap'} [Panel Card End: PANEL_APPLICATION]",
+                "indentTree": 1,
+                "crc": "4294948217",
+                "parentIsCollapsed": true,
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controltype": "layout_directive_PanelNavigatorEnd",
+                "display": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=258a8205_0c0a_405c_8beb_f238245b8e6e}{I:'vertLineCap'} [Panel Navigator End: PANEL_APPLICATIONNAVIGATOR]",
+                "displayODFlat": "{Data=258a8205_0c0a_405c_8beb_f238245b8e6e}{I:'vertlinecap'} [Panel Navigator End]",
+                "idInternal": "258a8205_0c0a_405c_8beb_f238245b8e6e",
+                "containerStartIndex": 2,
+                "parentContainer": -1,
+                "displayOD": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=258a8205_0c0a_405c_8beb_f238245b8e6e}{I:'vertlinecap'} [Panel Navigator End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=258a8205_0c0a_405c_8beb_f238245b8e6e}{I:'vertLineCap'} [Panel Navigator End: PANEL_APPLICATIONNAVIGATOR]",
+                "indentTree": 0,
+                "crc": "4294934135",
+                "parentIsCollapsed": false,
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                }
+            }
+        ],
+        "style_type": "Alpha Five",
+        "resolveAbstractClassNames": true,
+        "builderVersionNumber": 1,
+        "overrideStyleName": "Default",
+        "FontSize": "Medium",
+        "A5ContainerClassPadding": "0px",
+        "A5ContainerClassPaddingForContainerWidthMode": "4px",
+        "layoutType": "ContainerWidth",
+        "previewMode": "MobileDevice",
+        "useDragScrolling": "Auto",
+        "waitMsg": {
+            "message": {
+                "text": "Wait...",
+                "waitIcon": "css/A5System/images/wait.gif"
+            },
+            "cssAnimation": {
+                "size": "32"
+            }
+        },
+        "globalSettings": {
+            "labelWidth": "1in"
+        },
+        "serverSideEvents": {
+            "canAjaxCallback": "",
+            "afterAjaxCallback": ""
+        },
+        "onTimerEventInterval": 60,
+        "clientSideEvents": {
+            "beforeUXSectionPrepare": "",
+            "afterUXSectionPrepare": "",
+            "beforeUXSectionDestroy": "",
+            "afterUXSectionDestroy": "",
+            "_canAjaxCallback": "",
+            "__afterAjaxCallbackComplete": "",
+            "onAjaxCallbackFailed": "",
+            "onAjaxCallbackNotAvailable": "",
+            "onAjaxCallbackNotAllowed": "",
+            "onBeforeCreate": "",
+            "onServerSideEventHandlerError": "",
+            "onFieldValidationError": "",
+            "beforePrepare": "",
+            "afterPrepare": "",
+            "afterValidate": "",
+            "onTabPaneChanged": "",
+            "beforeRptSectionRowPrepare": "",
+            "afterRptSectionRowPrepare": "",
+            "canRptSectionRowAdd": "",
+            "afterRptSectionRowAdd": "",
+            "canRptSectionRowDelete": "",
+            "afterRptSectionRowDelete": "",
+            "onStateChange": "",
+            "onDataStateChange": "",
+            "afterControlBasedOnClientSideDataCacheRefreshed": "",
+            "onControlFocus": "",
+            "onRptSectionFocus": "",
+            "onRptSectionRowChange": "",
+            "canResetForm": "",
+            "afterResetForm": "",
+            "canRecordNavigate": "",
+            "afterRecordNavigate": "",
+            "onSynchronizeDialog": "",
+            "afterPopulateFromTable": "",
+            "onRenderComplete": "",
+            "onAndroidBackButton": "",
+            "onPanelActivate": "",
+            "afterSaveToRepository": "",
+            "afterLoadFromRepository": "",
+            "afterGoogleVisualization": "",
+            "canDeleteParentRecord": "",
+            "afterDeleteParentRecord": "",
+            "onOrientationChange": "",
+            "onKeyboard": "",
+            "onCordovaReady": "",
+            "onPhoneGapReady": "",
+            "onImageError": "",
+            "onSignatureCaptureToggle": "",
+            "onSignatureCaptureAccept": "",
+            "onTimer": "",
+            "beforeOnTimer": "",
+            "canLogin": "",
+            "afterLogin": "{dialog.object}.panelSetActive('PANEL_APPLICATION');",
+            "afterFailedLogin": "",
+            "canLogout": "",
+            "afterLogout": "{dialog.object}.panelSetActive('PANEL_LOGIN');",
+            "onSessionTimeoutWarning": "",
+            "onServerSideListSummaryCompute": "",
+            "beforeHTMLReportExport": "",
+            "onConnectionChange": "",
+            "appCache_cached": "",
+            "appCache_checking": "",
+            "appCache_downloading": "",
+            "appCache_error": "",
+            "appCache_noupdate": "",
+            "appCache_obsolete": "",
+            "appCache_progress": "",
+            "appCache_updateready": "",
+            "onOAuthCompleted": "",
+            "onControlBlur": "",
+            "onControlChange": "",
+            "onBeforePersistControlValuesToLocalStorage": "",
+            "onPersistControlValuesToLocalStorage": "",
+            "onRestoreVariablesFromLocalStorage": "",
+            "onRestoreComponentStateFromLocalStorage": "",
+            "localStorageEncryption": "",
+            "localStorageDecryption": "",
+            "securityNotAuthenticated": "",
+            "securityPermissionDenied": "",
+            "webSocketOnMessage": "",
+            "webSocketServerClose": "",
+            "webSocketSendMessageFail": "",
+            "onOAuthAuthorize": "",
+            "afterGoogleAddressSelect": "",
+            "onBeforeClientSideDataCacheRead": "",
+            "afterClientSideDataCacheAjaxCallback": "",
+            "onWatchEvent": ""
+        },
+        "onlyValidateChangedFields": true,
+        "edit": {
+            "field_error_style": {
+                "type": "Icon",
+                "icon": "<Specified by Style>",
+                "controlContainer_classname": ""
+            },
+            "row_errors_window_title": "Error",
+            "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+            "fieldValidationErrorMessage": "Form has errors."
+        },
+        "submitDialogIfHasClientSideValidationErrors": true,
+        "activeLanguage": "<Default>",
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close"
+        },
+        "clientSideDateFormat": "MM/dd/yyyy",
+        "fontScalingOption": "All",
+        "helpTableType": "DBF",
+        "fieldHelpWindowStyle": "modal-resizeable",
+        "customization": {
+            "resetFormMessage": "Are you sure you want to reset the form?",
+            "resetFormTitle": "Warning",
+            "resetFormIcon": "<Specified by Style>",
+            "resetFormYesButton": "Yes",
+            "resetFormNoButton": "No",
+            "dirtyWarning": "You must first save your changes or cancel changes by clicking the Reset button.",
+            "dirtyWarningTitle": "Notice",
+            "dirtyWarningIcon": "<Specified by Style>",
+            "deleteRecordWarningTitle": "Delete Record",
+            "deleteRecordWarningMessage": "Are you sure you want to delete this record?",
+            "windowTitleDirection": "ltr"
+        },
+        "dataBinding": {
+            "computeDataBindingCodeAtDesignTime": true,
+            "autoRefreshSchemaOnLoad": true,
+            "computeDataBindingCodeAtDesignTimePrompt": "Prompt",
+            "autoRefreshPromptFirst": "Prompt",
+            "precalc": {
+                "flagCodeComputed": false
+            }
+        },
+        "flagShowCommentsInTree": true,
+        "treeCommentOffset": "6",
+        "checkSessionEvery": 1,
+        "warningIntervalBeforeExpiration": 1,
+        "sessionTimeOutWarningMessage": "Your session will expire in {secondsToSessionEnd} seconds. Click the button to extend your session.",
+        "sessionExtendSessionButtonLabel": "Extend Session",
+        "sessionTimeoutWarningDialogTitle": "Warning",
+        "sessionHasExpiredMessage": "Your session has expired.",
+        "sessionHasExpiredButtonLabel": "OK",
+        "sessionHasExpiredAction": "Nothing",
+        "sessionHasExpiredRedirectPage": "<self>",
+        "sessionHasExpiredDialogTitle": "Notice",
+        "sessionHasExpiredOKButtonJavascript": "<ReloadThisPage>",
+        "login": {
+            "display": true,
+            "userNameControl": "UserName",
+            "passwordControl": "Password",
+            "errorMessagesPlaceholder": "LOGIN_ERRORS",
+            "errorMessageStyle": "color: red;",
+            "logoutDoesFullPageReload": true
+        },
+        "selected": "47bfe378_633f_4146_807e_4f1f12526a97\n",
+        "designPaneIndex": 1,
+        "masterPaneC": "controls",
+        "serverSideEventIndex": 9,
+        "clientSideEventIndex": 55,
+        "clientSideEventIndexC": "55",
+        "lastControlSelected": "insertEmbeddedObject_component",
+        "repeatingSectionsAreDirty": true,
+        "containerSubTypeNew": "",
+        "containerSubTypeOld": "",
+        "embeddedMode": false,
+        "toolBox_value": "",
+        "addinBuildNumber": "5217",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builtWithVersionNumer": 1,
+        "FieldsInRepeatingSectionsDeletedBySecurity": "",
+        "repeatingSectionsToRecalc": "",
+        "precalc": {
+            "injectibleHTML": "",
+            "containerWindowHTML": "",
+            "repeatingsectionInfoJs": "",
+            "framesInfoJS": "{dialog.object}.framesInfo = {\n\n};\n",
+            "jsActionJavascriptGlobalFunctions": "",
+            "xbActionJavascriptGlobalFunctions": "",
+            "javascriptSetupForGridLookups": "{\n}",
+            "javascript": {
+                "showWaitMessage": "",
+                "hideWaitMessage": "",
+                "embeddedUXComponents": "{dialog.object}._embeddedUXComponents = {\n\n}"
+            },
+            "fileUpload_controlInfo": "",
+            "javascript_cascadingDropdowns": "{dialog.object}._cascadingControls = [];\n{dialog.object}._cascadingControlsChildren = [];",
+            "template_html": "<!--div GLOBALERRORS-->\n<div class=\"errorTip\" style=\"margin-bottom: 2px; display: none; width: 8in; \" id=\"{dialog.componentname}.GLOBALERRORS\"></div>\n<!--End div GLOBALERRORS-->\n\n<div id=\"{dialog.componentname}.R1\">\n\n'xbasic\nv._dirty = .f.\n\n'xbasic\n\nv._dirty = .f.\n\n\n\n<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--FldS--><input\ttype=\"text\" id=\"{grid.componentname}.V.R{grid.rownumber}.USERNAME\" title=\"\"  autocapitalize=\"off\"  autocorrect=\"off\"     class=\"iOSEdit\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"    name=\"V.R{grid.rownumber}.USERNAME\"    value=\"\"    />\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--FldS--><input\ttype=\"password\" id=\"{grid.componentname}.V.R{grid.rownumber}.PASSWORD\" title=\"\"  autocapitalize=\"off\"  autocorrect=\"off\"     class=\"iOSEdit\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"    name=\"V.R{grid.rownumber}.PASSWORD\"    value=\"\"    />\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_BUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGOUT_BUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 100%\"  id=\"{dialog.componentName}.V.R{dialog.rownumber}.LOGIN_ERRORS\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\">\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n'xbasic\nv._dirty = .f.\n\n'xbasic\n\nv._dirty = .f.\n\n\n\n\t<div class=\"\">\n\t\t<div id=\"{alias}_DIVCONTAINER_96e18977_26cb_44cb_a846_903c12cb8e04\"   ><img src=\"css/A5System/Images/wait.gif\" /> Working...</div>\n\t</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\t\t\n'xbasic\nv._dirty = .f.\n\n'xbasic\nv._dirty = .f.\n\n\n\n</div>\n<!--div DEBUGUPDATECOMMANDS-->\n<div class=\"\" style=\"display: none; \" id=\"{dialog.componentname}.DEBUGUPDATECOMMANDS\"></div>\n<!--End div DEBUGUPDATECOMMANDS-->\n",
+            "panelDisplayNames": "PANEL_LOGIN : 'PANEL_LOGIN',PANEL_APPLICATION : 'PANEL_APPLICATION',PANEL_APPLICATIONNAVIGATOR : 'PANEL_APPLICATIONNAVIGATOR'",
+            "controlJavascript": "",
+            "controlJavascriptRepeatingSections": "",
+            "template_js": "",
+            "sessionVarsInShowHideExpns": "",
+            "flagHasHTML5ImageCapture": false,
+            "flagUsesCordova": false,
+            "otherJS": "",
+            "customControl": {
+                "js_beforePrepare": "\n__replaceAtRuntime_CustomControlsSystemBeforePrepare",
+                "js_afterRender": "\n__replaceAtRuntime_CustomControlsSystemAfterRender",
+                "customControl_xbasicFunctions": ""
+            },
+            "themeSearchReplaceString": "",
+            "flagUseAmazonS3FileUpload": false,
+            "flagUseStripe": false,
+            "flagUseAudioPlayer": false,
+            "flagUseInk": false,
+            "flagUsesAudioLibrary": false,
+            "flagUsesPhoneGapFileSystemFunctions": false,
+            "flagUsesGetAccurateLocation": false,
+            "editorSet_for_editor": "{dialog.object}._EDITOR_EDITORSET = {};",
+            "javascript_layoutRules": "",
+            "javascript_controlNesting": "{\n\n}",
+            "appcacheEvents": "",
+            "flagHasShowTimer": false,
+            "hasListNavigator": false,
+            "vb_based_on_lists": "",
+            "vb_based_on_javascritFunctions": "",
+            "constrainContainerJS": "",
+            "setScreenHeightJS": "",
+            "js_editorSetInitialization": ";\n\n",
+            "jschart": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "jschart_xbasicFunctions": ""
+            },
+            "rgraph": {
+                "libraries": ""
+            },
+            "actionsheet": {
+                "has": false
+            },
+            "kanban": {
+                "has": false
+            },
+            "transformdataviewer": {
+                "has": false,
+                "controlnames": "",
+                "controlnamesListDataSource": "{dialog.object}._listsWithDependentTFControls = {}"
+            },
+            "requiredPlugins": "",
+            "getSetFunctions": {
+                "js_beforePrepare": ""
+            },
+            "usesSystemSVG": false,
+            "IconMap": "{images.RowExpander.Open}=\"<Specified by Style>\"\n{images.RowExpander.Close}=\"<Specified by Style>\"\n{images.EmbeddedSearch.Search}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ClearSearch}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ShowHideEmbeddedSearch}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.NoFocus}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.HasFocus}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges.Disabled}=\"<Specified by Style>\"\n{images.GridRow.EditRecord}=\"<Specified by Style>\"\n{images.GridRow.EditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.HasError}=\"<Specified by Style>\"\n{images.QBE.OperatorIsSelected}=\"<Specified by Style>\"\n{images.QBE.OpenQBEMenu}=\"<Specified by Style>\"\n{images.QBE.ShowHideQBERow}=\"<Specified by Style>\"\n{images.PopUpWindow.Lookup.Close}=\"<Specified by Style>\"\n{images.PopUpWindow.DetailView.Close}=\"<Specified by Style>\"\n{images.CollapseContainer.Open}=\"<Specified by Style>\"\n{images.CollapseContainer.Close}=\"<Specified by Style>\"\n{images.FieldHelpIcon}=\"<Specified by Style>\"\n{images.SearchPart.SaveSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.LoadSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.RunSearch}=\"<Specified by Style>\"\n{images.SearchPart.ClearSearch}=\"<Specified by Style>\"\n{images.GridRow.SelectionPointer}=\"<Specified by Style>\"\n{images.Grid.SortAsc}=\"<Specified by Style>\"\n{images.Grid.SortAscDisabled}=\"<Specified by Style>\"\n{images.Grid.sortDesc}=\"<Specified by Style>\"\n{images.grid.sortDescDisabled}=\"<Specified by Style>\"\n{images.grid.firstPage}=\"<Specified by Style>\"\n{images.grid.firstPageDisabled}=\"<Specified by Style>\"\n{images.grid.prevPage}=\"<Specified by Style>\"\n{images.grid.prevPageDisabled}=\"<Specified by Style>\"\n{images.grid.nextPage}=\"<Specified by Style>\"\n{images.grid.nextPageDisabled}=\"<Specified by Style>\"\n{images.grid.lastPage}=\"<Specified by Style>\"\n{images.grid.lastPageDisabled}=\"<Specified by Style>\"\n{images.edit.dropdownArrow}=\"<Specified by Style>\"\n{images.edit.datePicker}=\"<Specified by Style>\"\n{images.edit.dateTimePicker}=\"<Specified by Style>\"\n{images.edit.timePicker}=\"<Specified by Style>\"\n{images.edit.calculator}=\"<Specified by Style>\"\n{images.edit.lookup}=\"<Specified by Style>\"\n{images.javascript.deleteRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.cancelEditRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoAllEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.dirtyRecordWarning}=\"<Specified by Style>\"\n{images.dv.close}=\"<Specified by Style>\"\n{images.dv.firstRecord}=\"<Specified by Style>\"\n{images.dv.prevRecord}=\"<Specified by Style>\"\n{images.dv.nextRecord}=\"<Specified by Style>\"\n{images.dv.lastRecord}=\"<Specified by Style>\"\n{images.dv.newRecord}=\"<Specified by Style>\"\n{images.dv.cancelEdits}=\"<Specified by Style>\"\n{images.dv.deleteRecord}=\"<Specified by Style>\"\n{images.dv.saveRecord}=\"<Specified by Style>\"\n{images.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.switchToEdit}=\"<Specified by Style>\"\n{images.dv.switchToView}=\"<Specified by Style>\"\n{images.disabled.dv.newRecord}=\"<Specified by Style>\"\n{images.disabled.dv.cancelEdits}=\"<Specified by Style>\"\n{images.disabled.dv.deleteRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.cancelNewRecord}=\"<Specified by Style>\"\n{images.grid.editError}=\"<Specified by Style>\"\n{images.dialog.editError}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandRight}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseRight}=\"<Specified by Style>\"",
+            "absoluteLayoutSetButtonSizes": "",
+            "viewBoxesToRefresh": "",
+            "AdditionalGridStyles": ""
+        },
+        "dialogObject": "if(typeof {dialog.componentName}_DlgObj == 'object') {dialog.componentName}_DlgObj._destroy();\nvar {dialog.componentName}_DlgObj = new A5.DialogComponentHelper('{dialog.componentName}',{\n\tajaxURL: '{dialog.ajaxUrl}',\n\t_embeddedMode: {dialog.embeddedMode},\n\t_livePreviewInBuilder: {livePreviewInBuilder},\n\tcomponentGUID: 'ac611a65-2859-4193-9133-858cf8b96765',\n\tcolumnInfo: {columninfo},\n\toriginalValues: {dialog.jsOriginalValues},\n\tdefaultValues: {dialog.jsDefaultValues},\n\tdatePickerMonthNames: [{datePickerMonthNames}],\n\tdatePickerDayNames: [{datePickerDayNames}],\n\tdatePickerTodayButton: '{datePickerTodayButton}',\n\tdatePickerCloseButton: '{datePickerCloseButton}',\n\tdatePickerFirstDayOfWeek: {datePickerFirstDayOfWeek},\n\tresetFormMessage: '{resetFormMessage}',\n\tresetFormTitle: '{resetFormTitle}',\n\tresetFormIcon: '{resetFormIcon}',\n\tdirtyFormMessage: '{dirtyFormMessage}',\n\tdirtyFormTitle: '{dirtyFormTitle}',\n\tdirtyFormIcon: '{dirtyFormIcon}',\n\tdeleteRecordDialogTitle: '{deleteRecordTitle}',\n\tdeleteRecordDialogMessage: '{deleteRecordMessage}',\t\n\tssDateFormat: '{serverSideDateFormat}',\n\tstyleName: '{dialog.style}',\n\t_fieldHelpers_DIALOG2: [],\n\tparentComponentAlias: '{parentComponentAlias}',\n\tsubmitIfHasClientSideErrors: true, \n\trowErrors: {\n\t\t\t\tshowMessageBox: false,\n\t\t\t\tmessageBoxTitle: 'Error',\n\t\t\t\tstyle: 'color: red; width: 6in; height: 2in;'\n\t\t},\n\tfieldErrors: {\n\t\ttype: 'icon', \n\t\tclassName: 'errorTip',\n\t\tinputClassName: '[class.gridInputError]',\n\t\tedit: { \n\t\t\tcontainer: { className: '[class.gridInputContainerError]'}\n\t\t},\n\t\ticon: '{images.dialog.editError}',\n\t\tglobal: {\n\t\t\tcontId: '{dialog.componentname}.GLOBALERRORS',\n\t\t\thoverClassName: 'errorTextHighlight',\n\t\t\thoverInputClassName: 'errorInputHighlight'\n\t\t}\n\t},\n\t\tafterLogin: function(e) {\n{dialog.object}.panelSetActive('PANEL_APPLICATION');\n\t\t},\n\t\tafterLogout: function(e) {\n{dialog.object}.panelSetActive('PANEL_LOGIN');\n\t\t}\n\n\t});\n\n",
+        "xbasiccode": {
+            "blankInitialValueIfVarNotFound": "",
+            "setValueProperties": "value.USERNAME=\"\"\nvalue.PASSWORD=\"\"",
+            "setValueProperties2": "value.USERNAME=\"\"\nvalue.PASSWORD=\"\"",
+            "setValueUnformattedProperties": "value.USERNAME=convert_type(\"\",\"C\")\nvalue.PASSWORD=convert_type(\"\",\"C\")\n"
+        },
+        "componentType": "Dialog2",
+        "version": 1,
+        "recNav": {
+            "slider": {
+                "showSlider": false
+            },
+            "listView": {
+                "showlistView": false
+            }
+        },
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "mobileDeviceDefault": "iphone4_v",
+        "localPreviewFlag": false,
+        "Livepreview_permissions": "",
+        "_style_versionNumber": 2,
+        "controlflowdirection": "ltr",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "pageTitle": "UX",
+        "securityDeniedAction": "Redirect to login page",
+        "showLineNumbersInControlsList": false,
+        "renderUXLocation": {
+            "type": "window",
+            "sizeToElement": true
+        },
+        "saveFileType": "Formatted JSON",
+        "keyboardShortcutsJSON": "",
+        "applyResponsiveDesignSettings": true,
+        "responseDesignRulesMode": "FirstTrue",
+        "localStorage": {
+            "namespace": "<Default>",
+            "variablesToNotPersist": "",
+            "__version": 1,
+            "workingPreviewTestingMode": "Browser"
+        },
+        "securityAppliedClientSide": true,
+        "preRenderUXatDesignTime": true,
+        "preRenderComputeWhen": "Every time component is saved",
+        "__WPhostName": "Chrome",
+        "addinBuildNumberHighestUsed": "5217",
+        "versionNumber": 1,
+        "_style_hasSassOverrides": false,
+        "useCompactTheme": false,
+        "createAppCacheVersion": false,
+        "createAppCacheVersionC": "No",
+        "appcache": {
+            "pageName": "<Default>",
+            "pageTitle": "",
+            "hasHomeScreenIcons": false,
+            "homeScreenIconName": "",
+            "icons": {
+                "precomposed": false
+            },
+            "pageHeadSection": ""
+        },
+        "clientsideNumberFormatDecimal": "period",
+        "clientsideNumberFormatThousands": "comma",
+        "preRenderWarningMessageShow": true,
+        "flagDropdownCascadingChanged": false,
+        "minimumBuildNumber": "",
+        "style_color_palette": "",
+        "_style_hasCSSTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "customTabOrder": "",
+        "showPulseEffect": true,
+        "styleTweaksCSS": "",
+        "styleTweaksSubthemes": "",
+        "friendlydatesCustomizationJSON": "",
+        "dataSeriesPublishToClientSide": false,
+        "captureJSErrorStackTrace": false,
+        "optionalSystemLibraries": "",
+        "autoSetPreRenderOnForAllUX": false,
+        "useIphoneXStyling": false,
+        "iPhoneXStylingJSON": "",
+        "__LPhostName": "Internet Explorer",
+        "_style_hassubthemeTweaks": false,
+        "_style_isInherited": false,
+        "_buildCount": "3",
+        "__flagHasMacro": false,
+        "preRenderOptimization": false,
+        "_flagStaticHTMLMode": false,
+        "__componentnotfound": false,
+        "jsRunAtBeginning": "",
+        "__flagUseFakeRequestVariables": false,
+        "__specialMode": false,
+        "alias": "{UXPRERENDEREDALIAS}",
+        "systemXbasicFunctionDeclarations": "",
+        "flagStaticHTMLMode": false,
+        "flagInitialLoadIsAjax": false,
+        "_forceInitialLoadIsAjax": false,
+        "override_settings": "",
+        "flagForcerecalc": false,
+        "flagSaveDialogCache": true,
+        "flagExecuteOnDialogInitializeEvent": true,
+        "flagExecuteOnDialogExecuteEvent": true,
+        "__livePreviewMode": false,
+        "_forceMobileSimulation": false,
+        "iconMapOverrides": "",
+        "resolveAbstractIconNamesAtDesignTime": true,
+        "customizationString": {
+            "javascriptDialogs": "",
+            "DetailView": {
+                "toolbar": ""
+            }
+        },
+        "__argumentsFromGrid": "",
+        "linkedResources": "",
+        "flagReloadComponent": false,
+        "__flagPrerender": false,
+        "panelRootId": "{UXPRERENDEROUTPUTDIV}",
+        "__flagstatichtmlorphonegap": false,
+        "__changeAJAXURL": "",
+        "__phoneGapInstantUpdate": false,
+        "temp": {
+            "_onRenderComplete": ""
+        },
+        "_sections": {
+            "flagHasSections": false
+        },
+        "disableAbstractEvents": false,
+        "flagLoadDetailViewImageCaptureJS": false,
+        "forceLoadPhoneGapFileSystemFunctions": false,
+        "_flagUsesAudioLibrary": false,
+        "_flagUsesInk": false,
+        "_flagUsesControlBar": true,
+        "__staticHTML_setStaticHTMLFlag": false,
+        "_isPartial": false,
+        "sassProcessor": true,
+        "__flagCreateAppCache": false,
+        "debugMode": false,
+        "__jsLibraries": "<script type=\"text/javascript\" src=\"javascript/a5.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/a5_url.js\"></script>\n",
+        "A5SaveTimeStamp": "20190220043201546",
+        "prerendered": {
+            "_styledataVersion": 2,
+            "output": {
+                "Head": {
+                    "JavaScript": "*gzip:H4sIAAAAAAAAC5WMsQ6CQBAFexP/Aa/Hq+gOOjsqf2Cznq84PPGyuyD8vSQUFlaWM5NM0CipWGVrQesMi/mBZ96tq1Ri677Cc3Me1HXB79wdD+HfAU2Sfyanun/x/bIYZOTcp5uwJGi9NSJByRzBdp1GS08QRVW1NcPe4IcSfQAk7ywxxgAAAA==",
+                    "CSS_Link": "*gzip:H4sIAAAAAAAAC81YW0/jOBTe55HmP1gFNCBNaGm3EqTAiIG5IDGaFWWXx5GbOI0HN44ch9Kp+O97fEnipGmBYR9WETQ+Pnef89nOcSYXjCC5SMlJR5IH2Q2yrHP69k0sZwwtkTcnkzsqPYlTL6bTmMGf9ALOuPCRmE7wbu+9fvZGJW+eEeFlhJFA+ijhCYGpWeZJngexhwNJeWLpj2/f0EjgGUHLVmHlkGLaPxsGPJGYJkSgZcQ4lj4jkRylOAxpMvV76YPlO7+9wgueS7Qs5tCfMImMENJSaMIfvIz+0rMTLkIwCSTlJv/lrZ/M1s9Z79fMG9e+CBp+pSH5JAQX55whSyvHy5BmKcML3yStkrrmc810CVlocDmqcVbwoY1yNGGQSG/CeHA3qhn5h5L5Nx6SireF6VNIZZ2p4QjwXCYl1ybtzxRctdji1gUVcrFJ9TkjeCULDeuZ0bJW6/OEGpZKV4haixuoabQ0HSRIOIqgsFXNEP8wlXW2r0XDQc0rrjlRA3/C2XoxmrrKJzi4mwqeJ6G/FUURjjDKBdt9R2d4SrLuNhRnd1tp6R4+HHa3I8pY9+90Z/j5guIpTzDzb2Mqyc7gbKc/6A+HO/3z/uDI/N9Pk+k+HmpV7/ZGptz9g/QBZZzREG1Fh4ejGRZTmkDvp34f2rDoSfW+JoLLJM1rCVpRrIhGryI2JJ2crajot6mooGOsUYeEH3MpVb/wFAdULvz94QgSI0EBZmmMdy39ZAigZyQvk3ua0QkjV1CWaOlkvYmRhl+DkaoSQDMUqF8FFzIGmCqTgpRjaE5DGdv32Cy/GfB7IkDN3EcxDUOSjFCJd3reRmcGNn4DK9pVylRkhSh4ZR4FoAXQnkEak3OSSIW5dTC1q6rA1Me55MUyC+2gpijo9rBS4aNAKykAuqb/ClSs0b5GmUbwR9Si69os+xOuurq0idHjpshPkbOpvEftATzFZDx7isu1WG53G01u4nJsVntnBUqotgsU22MBVdUD4mdBAPUDu/YNlYx8T7SxBjGKWqgXNMPQFKFj1Ziz9YgcsDg6OirRASl40OsUEtCHnRNDkItMHT1STnVN2eWF5pF8ZgSRq+axHsFfOIFdZI15u2ErrDLGWpQ7eIa8fgkdN3hyw1ObGjuwKTGjtalwzyWb/SrccF0zPYJcaH1B8uq+o2UjXu+gUlsSB27MHzWxCtuOq8gN4TXB/7eBFg4XNeAsdhGoptSiVP1WxahHVYRq+NI6b6mr1wRl/CuXz6aqtnqWpsKygVuKc0wCTRozqlDNsIpVj18arLWnAXhtW70mfOt0Gb+xVAvfkAaNdlVgUC9Ul6Ky6o61mY34UQOeAkWtepyEz5Dr1ZoLZODH6S5LcNrLUKolSXlGTc4EYZC9ezJ60So9gTEu+v3mss3VedLL4AhFFMdc4LQl5N/BIpAdkxSDdbgAlbnWTrjN3gi8OFQN3HB69niq3iTCgmJWN6SKYxwIzthzcl5L03MDa0/ns5usbUFrIeh6/h/G4ALTk0E4xd+y2bZhdCuWtW9XG080xeUAwe0A2esBqt0PfAQXBOPtLU1CPkdL+33BxIlDmmcmT873g5U5V4O6XrShSK/Xc696aKvf748qD/vlBabpYX+4Vx5/m8c8P1Z3jPbDnjNXA6Y63ZyC6jS7fdaJxUbTUFucJgx5uVJNECsRxYVcx/CNJPmlJDO0wuzUDtxtGZ9ej1fQogKIEEzDKm8FQTBC+pxscWLo3Ck097BcokLtZ871lcnlOuhVO4J5jrv6y9upfgcLd7ALMAJWTzod1YQnHT2fxYTITvP7HIoFiU468Nql38dG0z6MPkxyysIAikD+GKiveMdZIChAmCP/E99jQ+2gTARNLT+zDyAJ3mmW08K5F3j0I4sx3K/HmnmDb8o7m4IqGX/8C6P6YkeRFAAA",
+                    "title": "*gzip:H4sIAAAAAAAAC7MpySzJSbULjbDRh7AAiMez8hEAAAA="
+                },
+                "body": {
+                    "body_tag": "*gzip:H4sIAAAAAAAAC7NJyk+pVEjOSSwutlXK9A8OSExPVbIDAHrud+sWAAAA",
+                    "dialog2_html": "*gzip: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"
+                },
+                "ajaxResponse": "*gzip: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"
+            },
+            "iconMap": "{images.RowExpander.Open}=\"css/{grid.style}/Expand.png\"\n{images.RowExpander.Close}=\"css/{grid.style}/Collapse.png\"\n{images.EmbeddedSearch.Search}=\"css/{grid.style}/GridSearch.png\"\n{images.EmbeddedSearch.ClearSearch}=\"css/{grid.style}/GridSearchClear.png\"\n{images.EmbeddedSearch.ShowHideEmbeddedSearch}=\"css/{grid.style}/GridSearchToggle.png\"\n{images.GridRow.NewRecordRow.NoFocus}=\"css/{grid.style}/GridRowNew.png\"\n{images.GridRow.NewRecordRow.HasFocus}=\"css/{grid.style}/GridRowNewSelected.png\"\n{images.GridRow.SaveRecord}=\"css/{grid.style}/GridRowSave.png\"\n{images.GridRow.SaveRecord.Disabled}=\"css/{grid.style}/GridRowSaveDisabled.png\"\n{images.GridRow.UndoChanges}=\"css/{grid.style}/GridRowUndoEdits.png\"\n{images.GridRow.UndoChanges.Disabled}=\"css/{grid.style}/GridRowUndoEditsDisabled.png\"\n{images.GridRow.EditRecord}=\"css/{grid.style}/GridRowEdit.png\"\n{images.GridRow.EditRecord.Disabled}=\"css/{grid.style}/GridRowEditDisabled.png\"\n{images.GridRow.DeleteRecord}=\"css/{grid.style}/GridRowDelete.png\"\n{images.GridRow.DeleteRecord.Disabled}=\"css/{grid.style}/GridRecordDeleteDisabled.png\"\n{images.GridRow.CancelEditRecord}=\"css/{grid.style}/GridRowCancelEdits.png\"\n{images.GridRow.CancelEditRecord.Disabled}=\n{images.GridRow.HasError}=\"css/{grid.style}/GridRowError.png\"\n{images.QBE.OperatorIsSelected}=\n{images.QBE.OpenQBEMenu}=\"css/{grid.style}/GridQBEMenu.png\"\n{images.QBE.ShowHideQBERow}=\"css/{grid.style}/GridQBEToggle.png\"\n{images.PopUpWindow.Lookup.Close}=\"css/{grid.style}/WinClose.png\"\n{images.PopUpWindow.DetailView.Close}=\"css/{grid.style}/WinClose.png\"\n{images.CollapseContainer.Open}=\"css/{grid.style}/Expand.png\"\n{images.CollapseContainer.Close}=\"css/{grid.style}/Collapse.png\"\n{images.FieldHelpIcon}=\"css/{grid.style}/EditHelp.png\"\n{images.SearchPart.SaveSearchCriteria}=\"css/{grid.style}/GridSearchSave.png\"\n{images.SearchPart.LoadSearchCriteria}=\"css/{grid.style}/GridSearchLoad.png\"\n{images.SearchPart.RunSearch}=\"css/{grid.style}/GridSearch.png\"\n{images.SearchPart.ClearSearch}=\"css/{grid.style}/GridSearchClear.png\"\n{images.GridRow.SelectionPointer}=\"css/{grid.style}/GridRowSelected.png\"\n{images.Grid.SortAsc}=\"css/{grid.style}/GridSortAsc.png\"\n{images.Grid.SortAscDisabled}=\"css/{grid.style}/GridSortAscDisabled.png\"\n{images.Grid.sortDesc}=\"css/{grid.style}/GridSortDesc.png\"\n{images.grid.sortDescDisabled}=\"css/{grid.style}/GridSortDescDisabled.png\"\n{images.grid.firstPage}=\"css/{grid.style}/GridPageFirst.png\"\n{images.grid.firstPageDisabled}=\"css/{grid.style}/GridPageFirstDisabled.png\"\n{images.grid.prevPage}=\"css/{grid.style}/GridPagePrev.png\"\n{images.grid.prevPageDisabled}=\"css/{grid.style}/GridPagePrevDisabled.png\"\n{images.grid.nextPage}=\"css/{grid.style}/GridPageNext.png\"\n{images.grid.nextPageDisabled}=\"css/{grid.style}/GridPageNextDisabled.png\"\n{images.grid.lastPage}=\"css/{grid.style}/GridPageLast.png\"\n{images.grid.lastPageDisabled}=\"css/{grid.style}/GridPageLastDisabled.png\"\n{images.edit.dropdownArrow}=\"css/{grid.style}/EditDDArrow.png\"\n{images.edit.datePicker}=\"css/{grid.style}/EditDP.png\"\n{images.edit.dateTimePicker}=\"css/{grid.style}/EditDTP.png\"\n{images.edit.timePicker}=\"css/{grid.style}/EditTP.png\"\n{images.edit.calculator}=\n{images.edit.lookup}=\"css/{grid.style}/EditLookup.png\"\n{images.javascript.deleteRowConfirmation}=\"css/{grid.style}/MessageQuestion.png\"\n{images.javascript.cancelEditRowConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.UndoEditsConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.UndoAllEditsConfirmation}=\"css/{grid.style}/MessageInfo.png\"\n{images.javascript.dirtyRecordWarning}=\"css/{grid.style}/MessageInfo.png\"\n{images.dv.close}=\"css/{grid.style}/GridRecordClose.png\"\n{images.dv.firstRecord}=\"css/{grid.style}/GridRecordFirst.png\"\n{images.dv.prevRecord}=\"css/{grid.style}/GridRecordPrev.png\"\n{images.dv.nextRecord}=\"css/{grid.style}/GridRecordNext.png\"\n{images.dv.lastRecord}=\"css/{grid.style}/GridRecordLast.png\"\n{images.dv.newRecord}=\"css/{grid.style}/GridRecordNew.png\"\n{images.dv.cancelEdits}=\"css/{grid.style}/GridRecordCancelEdits.png\"\n{images.dv.deleteRecord}=\"css/{grid.style}/GridRecordDelete.png\"\n{images.dv.saveRecord}=\"css/{grid.style}/GridRecordSave.png\"\n{images.dv.saveAndEnter}=\"css/{grid.style}/GridRecordSaveAndEnter.png\"\n{images.dv.switchToEdit}=\"css/{grid.style}/GridRecordSwitchToEdit.png\"\n{images.dv.switchToView}=\"css/{grid.style}/GridRecordSwitchToView.png\"\n{images.disabled.dv.newRecord}=\"css/{grid.style}/GridRecordNew.png\"\n{images.disabled.dv.cancelEdits}=\"css/{grid.style}/GridRecordCancelEditsDisabled.png\"\n{images.disabled.dv.deleteRecord}=\"css/{grid.style}/GridRecordDeleteDisabled.png\"\n{images.disabled.dv.saveRecord}=\"css/{grid.style}/GridRecordSaveDisabled.png\"\n{images.disabled.dv.saveAndEnter}=\"css/{grid.style}/GridRecordSaveAndEnterDisabled.png\"\n{images.dv.cancelNewRecord}=\"css/{grid.style}/GridRecordNewCancelEdits.png\"\n{images.grid.editError}=\"css/{grid.style}/EditError.png\"\n{images.dialog.editError}=\"css/{grid.style}/EditError.png\"\n{images.tabbedUI.menuExpandLeft}=\"css/{grid.style}/PanelLeftExpand.png\"\n{images.tabbedUI.menuCollapseLeft}=\"css/{grid.style}/PanelLeftCollapse.png\"\n{images.tabbedUI.menuExpandRight}=\"css/{grid.style}/PanelRightExpand.png\"\n{images.tabbedUI.menuCollapseRight}=\"css/{grid.style}/PanelRightCollapse.png\"\n{images.dialog.repeatingSectionActiveRowIcon}=\"css/{dialog.style}/DialogRSRowSelected.png\"\n{images.dialog.repeatingSectionAddRowIcon}=\"css/{dialog.style}/DialogRSRowAdd.png\"\n{images.dialog.repeatingSectionDeleteRowIcon}=\"css/{dialog.style}/DialogRSRowDelete.png\"\n{images.dialog.repeatingSectionErrorRowIcon}=\"css/{dialog.style}/DialogRSRowError.png\"\n{images.dialog.deleteRowMessage.icon}=\"css/iOS/MessageQuestion.png\"\n{images.dialog.resetForm.icon}=\"css/iOS/MessageQuestion.png\"\n{images.dialog.dirtyForm.icon}=\"css/iOS/MessageInfo.png\"\n{images.dialog.editError}=\"css/iOS/EditError.png\"\n{images.dialog.listNav}=\"css/iOS/ListNav.png\"\n{images.dialog.listNavSubtle}=\"css/iOS/ListNavSubtle.png\"\n{images.dialog.menu}=\"images/menuPanel24x24.png.a5image\"\n{images.dialog.refresh}=\"images/$$generic.refresh.color.png.a5image\"\n{images.dialog.refreshDisabled}=\"images/disabled/$$generic.refresh.color.png.a5image\""
+        }
+    }
+}
