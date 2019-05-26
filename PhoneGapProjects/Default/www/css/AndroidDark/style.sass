@@ -1,0 +1,1839 @@
+$fontFamily: sans-serif; // *AA:Font|Family|fontFamily|The font family.
+$primaryForeColor: #fff; // *AA:Colors|Primary Foreground|color|The main foreground color in the style.
+$primaryBackColor: #111; // *AA:Colors|Primary Background|color|The main background color in the style.
+$accentForeColor: #fff; // *AA:Colors|Accent Foreground|color|The accent foreground color in the style.
+$accentBackColor: #0099cc; // *AA:Colors|Accent Background|color|The accent background color in the style.
+$errorColor: #fd472a; // *AA:Colors|Error|color|The error color.
+$buttonForeColor: #fff; // *AA:Colors|Button Foreground|color|The button foreground color in the style.
+$buttonBackColor: #414141; // *AA:Colors|Button Background|color|The button background color in the style.
+
+$confirmForeColor: #fff; // *AA:Colors|Confirm Foreground|color|The confirm foreground color in the style.
+$confirmBackColor: #94b435; // *AA:Colors|Confirm Background|color|The confirm background color in the style.
+$denyForeColor: #fff; // *AA:Colors|Deny Foreground|color|The deny foreground color in the style.
+$denyBackColor: #fd4246; // *AA:Colors|Deny Background|color|The deny background color in the style.
+
+$switchOn: #ffffff; // *AA:Colors|Switch On Foreground|color|The color of the switch foreground when the switch is "on".
+$switchOnBack: #4bd762; // *AA:Colors|Switch On Background|color|The color of the switch background when the switch is "on".
+$calendar: #ffffff; // *AA:Colors|Calendar On Foreground|color|The color of the calendar foreground for the "on" state (selected).
+$calendarBack: #ff3b30; // *AA:Colors|Calendar On Background|color|The color of the calendar background for the "on" state (selected).
+$iconSize: 24px; // *AA:Icons|Normal|size|The size for icons.
+$iconSmSize: 18px; // *AA:Icons|Small|size|The size for small icons.
+
+@function adjustColorIn($color,$amount) {
+	@if lightness($color) > 50% {
+		@return darken($color,$amount)
+	} @else {
+		@return lighten($color,$amount)
+	}
+}
+@function adjustColorOut($color,$amount) {
+	@if lightness($color) > 50% {
+		@return lighten($color,$amount)
+	} @else {
+		@return darken($color,$amount)
+	}
+}
+
+@mixin icon($char) {
+display: block;
+position: absolute;
+content: quote($char);
+}
+
+@font-face {
+font-family: 'A5_AndroidIcons';
+src: url(A5_AndroidIcons.eot);
+src: url(A5_AndroidIcons.eot) format('embedded-opentype'), url(A5_AndroidIcons.woff) format('woff'), url(A5_AndroidIcons.ttf) format('truetype'), url(A5_AndroidIcons.svg) format('svg');
+}
+
+@image-generate {
+type: layer;  
+input-a: transparentize($primaryForeColor,.75) 1px 4px;
+output: url('editSide.png');
+}
+@image-generate {
+type: layer;  
+input-a: $accentBackColor 2px 4px;
+output: url('editSideFocus.png');
+}
+@image-generate {
+type: layer;  
+input-a: $errorColor 1px 4px;
+output: url('editSideError.png');
+}
+@image-generate {
+type: mask;
+mode: min; 
+input: transparentize($primaryForeColor,.75) 20px 20px;
+input-mask: url('editBGDownMask.png');
+output: url('editBGDown.png');
+}
+@image-generate {
+type: mask;
+mode: min; 
+input: $accentBackColor 20px 20px;
+input-mask: url('editBGDownMask.png');
+output: url('editBGDownFocus.png');
+}
+@image-generate {
+type: mask;
+mode: min; 
+input: $errorColor 20px 20px;
+input-mask: url('editBGDownMask.png');
+output: url('editBGDownError.png');
+}
+@image-generate {
+type: mask;
+mode: replace; 
+input: $primaryBackColor 1px 256px;
+input-mask: url('spinListBackMask.png');
+output: url('spinListBack.png');
+}
+
+
+html { -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; }
+
+button::-moz-focus-inner {
+border-width: 0;
+padding: 0;
+}
+
+
+.AndroidDarkPage {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+background: $primaryBackColor;
+}
+.AndroidDarkHeading {
+font: 16px $fontFamily;
+font-weight: bold;
+color: $primaryForeColor;
+}
+.AndroidDarkText {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+}
+.AndroidDarkTextHighlight {
+color: $accentBackColor;
+}
+.AndroidDarkLink {
+font: 16px $fontFamily;
+color: lighten($primaryForeColor,20%);
+}
+
+.AndroidDarkGroup {
+border: 1px solid adjustColorIn($primaryBackColor,20%);
+border-top: none;
+padding: 8px;
+padding-top: 40px;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.AndroidDarkGroupLabel {
+font: 12px $fontFamily;
+font-weight: bold;
+color: $primaryForeColor;
+background: adjustColorIn($primaryBackColor,10%);
+border: 1px solid adjustColorIn($primaryBackColor,20%);
+width: 100%;
+padding: 8px;
+margin-left: -9px;
+margin-right: -9px;
+margin-bottom: -33px;
+}
+.AndroidDarkUILock {
+background: #000;
+opacity: .5;
+}
+
+/* Grid */
+.AndroidDarkGrid {
+border: 1px solid adjustColorIn($primaryBackColor,20%);
+border-radius: 3px;
+}
+.AndroidDarkGridHeader {
+font: 12px $fontFamily;
+color: adjustColorOut($primaryForeColor,20%);
+background: adjustColorIn($primaryBackColor,7%);
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+text-align: left;
+padding: 0px 14px;
+}
+.AndroidDarkGridHeader .AndroidDarkLink, .AndroidDarkGridHeader span {
+font: 12px $fontFamily;
+font-weight: bold;
+color: adjustColorOut($primaryForeColor,20%);
+display: inline-block;
+padding: 14px;
+text-decoration: none;
+cursor: default;
+}
+.AndroidDarkGridFooter {
+font: 12px $fontFamily;
+color: adjustColorOut($primaryForeColor,20%);
+background: adjustColorIn($primaryBackColor,7%);
+text-align: left;
+padding: 0px 14px;
+}
+.AndroidDarkGridFooter .AndroidDarkLink, .AndroidDarkGridFooter span {
+font: 12px $fontFamily;
+color: adjustColorOut($primaryForeColor,20%);
+display: inline-block;
+padding: 14px;
+text-decoration: none;
+cursor: default;
+}
+span.AndroidDarkGridNav {
+padding: 0px;
+}
+.AndroidDarkGridSummaryLabel, .AndroidDarkGridSummaryData {
+font-size: 16px;
+padding: 14px;
+background: adjustColorIn($primaryBackColor,7%);
+cursor: default;
+}
+.AndroidDarkGridSummaryLabel {
+font: 12px $fontFamily;
+font-weight: bold;
+color: adjustColorIn($primaryForeColor,20%);
+}
+.AndroidDarkGridQBE {
+font-size: 16px;
+padding: 14px;
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+background: adjustColorIn($primaryBackColor,3%);
+cursor: default;
+}
+.AndroidDarkGridDataHeader {
+font: 12px $fontFamily;
+font-weight: bold;
+color: adjustColorOut($primaryForeColor,20%);
+background: adjustColorIn($primaryBackColor,7%);
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+padding: 8px 14px;
+}
+.AndroidDarkGridData, .AndroidDarkGridRowHeader {
+font-size: 16px;
+padding: 14px;
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+background: $primaryBackColor;
+cursor: default;
+}
+.AndroidDarkGridDataAlt {
+font-size: 16px;
+padding: 14px;
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+background: adjustColorIn($primaryBackColor,1%);
+cursor: default;
+}
+.AndroidDarkGridRowSelected .AndroidDarkGridData, .AndroidDarkGridRowSelected .AndroidDarkGridDataAlt {
+color: $accentForeColor;
+background: transparentize($accentBackColor,.5);
+}
+.AndroidDarkGridDataError {
+font-size: 16px;
+padding: 14px;
+color: $errorColor;
+background: transparentize($errorColor,.85);
+border-bottom: 1px solid adjustColorIn($primaryBackColor,20%);
+cursor: default;
+}
+
+.AndroidDarkGrid > tbody > tr:last-child > td {
+border: none;
+}
+
+.AndroidDarkGridForm{
+border: 1px solid adjustColorIn($primaryBackColor,5%);
+background:  adjustColorIn($primaryBackColor,2%);
+}
+.AndroidDarkGridFormLabel, .AndroidDarkGridFormData {
+padding: 6px;
+}
+.AndroidDarkGridFormLabel {
+font-size: 14px;
+font-weight: bold;
+}
+.AndroidDarkGridFormDataError {
+font-size: 16px;
+padding:6px;
+color: $errorColor;
+background: transparentize($errorColor,.85);
+cursor: default;
+}
+tr:nth-child(1) .AndroidDarkGridFormLabel, tr:nth-child(1) .AndroidDarkGridFormData, tr:nth-child(1) .AndroidDarkGridFormDataError {
+border-top: none;
+}
+
+
+/* Dialog */
+.AndroidDarkDialogLabel {
+font: 14px $fontFamily;
+font-weight: bold;
+color: adjustColorOut($primaryForeColor,20%);
+padding: 6px;
+}
+.AndroidDarkDialogRSHeader {
+}
+.AndroidDarkDialogRSFooter {
+}
+.AndroidDarkDialogRSRow {
+}
+.AndroidDarkDialogRSRowSelected {
+}
+.AndroidDarkDialogRSRowHover {
+}
+.AndroidDarkDialogRSRowError {
+}
+.AndroidDarkDialogRSSeparator {
+border-top: 1px solid adjustColorIn($primaryBackColor,30%);
+margin-top: 6px;
+line-height: 6px;
+}
+
+/* Buttons */
+.AndroidDarkButton, .AndroidDarkButtonConfirm, .AndroidDarkButtonDeny, .AndroidDarkButtonDD {
+position: relative;
+font-size: 16px;
+color: $buttonForeColor;
+background: $buttonBackColor;
+border: none;
+border-top: 1px solid lighten($buttonBackColor,5%);
+border-bottom: 1px solid darken($buttonBackColor,5%);
+padding: 5px 9px;
+margin: 3px;
+outline: none;
+overflow: visible;
+vertical-align: middle;
+}
+.AndroidDarkButtonPressed, .AndroidDarkButtonDDPressed {
+color: $accentForeColor;
+background: $accentBackColor;
+border-top: 1px solid lighten($accentBackColor,5%);
+border-bottom: 1px solid darken($accentBackColor,5%);
+}
+.AndroidDarkButtonPressed:before, .AndroidDarkButtonDDPressed:before {
+content: '';
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+border: 5px solid transparentize($accentBackColor,.5);
+width: 100%;
+height: 100%;
+border-radius: 5px;
+}
+
+
+.AndroidDarkButtonConfirm {
+color: $confirmForeColor;
+background: $confirmBackColor;
+border-top: 1px solid lighten($confirmBackColor,5%);
+border-bottom: 1px solid darken($confirmBackColor,5%);
+}
+.AndroidDarkButtonConfirmPressed:before {
+content: '';
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+border: 5px solid transparentize($confirmBackColor,.5);
+width: 100%;
+height: 100%;
+border-radius: 5px;
+}
+.AndroidDarkButtonDeny {
+color: $denyForeColor;
+background: $denyBackColor;
+border-top: 1px solid lighten($denyBackColor,5%);
+border-bottom: 1px solid darken($denyBackColor,5%);
+}
+.AndroidDarkButtonDenyPressed:before {
+content: '';
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+border: 5px solid transparentize($denyBackColor,.5);
+width: 100%;
+height: 100%;
+border-radius: 5px;
+}
+
+
+.AndroidDarkButtonDD {
+position: relative;
+padding: 0px;
+}
+.AndroidDarkButtonDDContent, .AndroidDarkButtonDDSplitContent {
+padding: 5px 9px;
+}
+.AndroidDarkButtonDDDropdown {
+width: 32px;
+}
+.AndroidDarkButtonDDSplitDropdown {
+border-left: 1px solid lighten($buttonBackColor,5%);
+width: 32px;
+}
+.AndroidDarkButtonDDPressed .AndroidDarkButtonDDSplitDropdown {
+border-left: 1px solid lighten($accentBackColor,5%);
+}
+.AndroidDarkButtonDD:after {
+content: "c";
+display: block;
+position: absolute;
+right: 4px;
+top: 50%;
+margin-top: -13px;
+font: 24px A5_AndroidIcons;
+}
+
+.AndroidDarkButtonLeft, .AndroidDarkButtonRight {
+position: relative;
+font-size: 16px;
+color: $primaryForeColor;
+background: transparent;
+border: none;
+padding: 6px 10px;
+margin: 2px;
+outline: none;
+}
+.AndroidDarkButtonLeft {
+padding-left: 16px;
+}
+.AndroidDarkButtonRight {
+padding-right: 16px;
+}
+
+.AndroidDarkButtonLeft:after {
+color: adjustColorIn($primaryBackColor,40%);
+content: "a";
+display: block;
+position: absolute;
+left: -4px;
+top: 50%;
+margin-top: -14px;
+font: 24px A5_AndroidIcons;
+}
+.AndroidDarkButtonRight:after {
+color: adjustColorIn($primaryBackColor,40%);
+content: "b";
+display: block;
+position: absolute;
+right: -4px;
+top: 50%;
+margin-top: -14px;
+font: 24px A5_AndroidIcons;
+}
+.AndroidDarkButtonLeftPressed, .AndroidDarkButtonRightPressed, .AndroidDarkButtonLeftPressed.AndroidDarkButtonLeft:after, .AndroidDarkButtonRightPressed.AndroidDarkButtonRight:after {
+color: $accentBackColor;
+}
+
+.AndroidDarkButtonDisabled, .AndroidDarkButtonConfirmDisabled, .AndroidDarkButtonDenyDisabled, .AndroidDarkButtonDDDisabled, .AndroidDarkButtonDDDisabled .AndroidDarkButtonDDSplitDropdown {
+opacity: .3;
+}
+
+.AndroidDarkButtonGroupHF, .AndroidDarkButtonGroupHM, .AndroidDarkButtonGroupHL {
+color: $primaryForeColor;
+background: adjustColorIn($primaryBackColor,20%);
+border: none;
+border-left: 1px solid adjustColorIn($primaryBackColor,30%);
+padding-bottom: 8px;
+margin: 0px;
+}
+.AndroidDarkButtonGroupHF {
+border-left: none;
+}
+.AndroidDarkButtonGroupHF.AndroidDarkButtonPressed, .AndroidDarkButtonGroupHM.AndroidDarkButtonPressed, .AndroidDarkButtonGroupHL.AndroidDarkButtonPressed {
+border-bottom: 3px solid $accentBackColor;
+padding-bottom: 5px;
+}
+.AndroidDarkButtonGroupHF.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupHM.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupHL.AndroidDarkButtonPressed:before {
+display: none;
+}
+
+.AndroidDarkButtonGroupVF, .AndroidDarkButtonGroupVM, .AndroidDarkButtonGroupVL {
+color: $primaryForeColor;
+background: adjustColorIn($primaryBackColor,20%);
+border: none;
+border-top: 1px solid adjustColorIn($primaryBackColor,30%);
+padding-right: 12px;
+margin: 0px;
+width: 100%;
+display: block;
+}
+.AndroidDarkButtonGroupVF {
+border-top: none;
+}
+.AndroidDarkButtonGroupVF.AndroidDarkButtonPressed, .AndroidDarkButtonGroupVM.AndroidDarkButtonPressed, .AndroidDarkButtonGroupVL.AndroidDarkButtonPressed {
+border-right: 3px solid $accentBackColor;
+padding-right: 9px;
+}
+.AndroidDarkButtonGroupVF.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupVM.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupVL.AndroidDarkButtonPressed:before {
+display: none;
+}
+
+/* Edits */
+.AndroidDarkEdit {
+font-family: $fontFamily;
+font-size: 16px;
+color: transparentize($primaryForeColor,.1);
+xbackground: url('editSide.png') bottom left no-repeat, url('editSide.png') bottom right no-repeat;
+background-color: transparent;
+background-image: url('editSide.png'), url('editSide.png');
+background-position: bottom left, bottom right;
+background-repeat: no-repeat, no-repeat;
+border: none;
+border-bottom: 1px solid transparentize($primaryForeColor,.75);
+padding: 14px;
+outline: none;
+}
+.AndroidDarkEdit:focus {
+xbackground: url('editSideFocus.png') bottom left no-repeat, url('editSideFocus.png') bottom right no-repeat;
+background-image: url('editSideFocus.png'), url('editSideFocus.png');
+padding-bottom: 13px;
+border-bottom: 2px solid $accentBackColor;
+}
+input.AndroidDarkEditError, textarea.AndroidDarkEditError, select.AndroidDarkEditError {
+color: $errorColor;
+background-color: transparentize($errorColor,.85);
+border-color: $errorColor;
+background-image: url('editSideError.png'), url('editSideError.png');
+}
+input.AndroidDarkEditWatermark, textarea.AndroidDarkEditWatermark, select.AndroidDarkEditWatermark {
+color: transparentize($primaryForeColor,.75);
+}
+input.AndroidDarkEditWatermark.AndroidDarkEditError, textarea.AndroidDarkEditWatermark.AndroidDarkEditError, select.AndroidDarkEditWatermark.AndroidDarkEditError {
+color: lighten($errorColor,10%);
+font-style: italic;
+}
+select.AndroidDarkEdit option { background: $primaryBackColor;}
+.AndroidDarkEditRound {
+border-radius: 24px;
+padding: 6px 13px;
+}
+
+/* Edit Button Group */
+.AndroidDarkEditBG {
+font-size: 16px;
+color: transparentize($primaryForeColor,.1);
+background-image: url('editSide.png'), url('editBGDown.png');
+background-position: bottom left, bottom right;
+background-repeat: no-repeat, no-repeat;
+background-size: 1px 4px, 10px 10px;
+border: none;
+border-bottom: 1px solid transparentize($primaryForeColor,.75);
+border-radius: 3px;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.AndroidDarkEditBGEdit {
+font-size: 16px;
+color: lighten($primaryForeColor,20%);
+border: none;
+background: transparent;
+padding: 14px;
+outline: none;
+}
+.AndroidDarkEditBGButton {
+color: transparentize($primaryForeColor,.75);
+background: url('editSide.png') bottom left no-repeat;
+}
+.AndroidDarkEditBGFocus {
+xbackground: url('editSideFocus.png') bottom left no-repeat, url('editBGDownFocus.png') bottom right no-repeat;
+background-image: url('editSideFocus.png'), url('editBGDownFocus.png');
+background-size: 2px 4px, 10px 10px;
+border-bottom: 2px solid $accentBackColor;
+}
+.AndroidDarkEditBGFocus .AndroidDarkEditBGEdit {
+padding-bottom: 13px;
+}
+.AndroidDarkEditBGFocus .AndroidDarkEditBGButton {
+color: $accentBackColor;
+background: url('editSideFocus.png') bottom left no-repeat;
+}
+.AndroidDarkEditBGWatermark {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkEditBGError {
+color: $errorColor;
+background-color: transparentize($errorColor,.85);
+border-color: $errorColor;
+background-image: url('editSideError.png'), url('editBGDownError.png');
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGButton {
+background: url('editSideError.png') bottom left no-repeat;
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGEdit {
+color: $errorColor;
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGWatermark.AndroidDarkEditBGEdit {
+color: lighten($errorColor,10%);
+font-style: italic;
+}
+
+/* List */
+.AndroidDarkList {
+
+}
+.AndroidDarkListItem {
+font-size: 16px;
+padding: 14px;
+border-bottom: 1px solid transparentize($primaryForeColor,.85);
+background: $primaryBackColor;
+cursor: default;
+outline: none;
+}
+.AndroidDarkListItemSelected {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkListTitle {
+font: 12px $fontFamily;
+font-weight: bold;
+color: transparentize($primaryForeColor,.5);
+border-bottom: 2px solid transparentize($primaryForeColor,.5);
+background: $primaryBackColor;
+padding: 8px 14px;
+}
+.AndroidDarkListSeparator {
+height: 8px;
+background: darken($primaryBackColor,7%);
+border-bottom: 1px solid transparentize($primaryForeColor,.85);
+}
+.AndroidDarkListHeader {
+font: 12px $fontFamily;
+font-weight: bold;
+color: transparentize($primaryForeColor,.5);
+border-bottom: 2px solid transparentize($primaryForeColor,.5);
+padding: 0px 14px;
+position: relative;
+}
+
+.AndroidDarkListHeaderItem {
+padding: 17px 0px;
+padding-top: 16px;
+padding-right: 40px;
+cursor: default;
+}
+.AndroidDarkListHeaderItemResizeOverlay {background: transparentize($primaryForeColor,.75);}
+
+.AndroidDarkListGroupNav {
+color: $primaryForeColor;
+background: transparentize($primaryForeColor,.75);
+padding: 4px;
+border-radius: 4px;
+cursor: default;
+opacity: .5;
+}
+.AndroidDarkListGroupNavFocus {
+opacity: 1;
+}
+
+.AndroidDarkListItemLabelMain {
+font-weight: bold;
+}
+.AndroidDarkListItemLabelSub {
+font-size: 14px;
+}
+.AndroidDarkListItemLabelContext {
+font-size: 14px;
+color: $accentBackColor;
+}
+.AndroidDarkListItemSelected .AndroidDarkListItemLabelContext {
+color: $accentForeColor;
+}
+.AndroidDarkListItemLabelDetail {
+font-size: 14px;
+color: $primaryBackColor;
+background: transparentize($primaryForeColor,.25);
+padding: 2px 10px;
+border-radius: 2px;
+}
+.AndroidDarkListItemContent {
+font-size: 14px;
+color: transparentize($primaryForeColor,.3);
+}
+.AndroidDarkListNavPrev {
+position: absolute;
+top: 0px;
+width: 100%;
+padding: 14px;
+font-weight: bold;
+text-align: center;
+background: transparentize($primaryBackColor,.05);
+border-bottom: 1px solid transparentize($primaryForeColor,.85);
+cursor: default;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+z-index: 4;
+}
+.AndroidDarkListNavNext {
+position: absolute;
+bottom: 0px;
+width: 100%;
+padding: 14px;
+font-weight: bold;
+text-align: center;
+background: transparentize($primaryBackColor,.05);
+border-top: 1px solid transparentize($primaryForeColor,.85);
+cursor: default;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+z-index: 4;
+}
+.AndroidDarkListNavPressed {
+color: $accentForeColor;
+background: transparentize($accentBackColor,.1);
+}
+
+/* Scroller */
+.AndroidDarkScrollerR { 
+background: transparentize($primaryForeColor,.95);
+color: $accentForeColor;
+cursor: default;
+font-family: $fontFamily;
+font-size: 16px;
+}
+.AndroidDarkScrollerRFocus { 
+background: transparentize($accentBackColor,.95);
+}
+.AndroidDarkScrollerRDial {
+background: transparentize($accentBackColor,.2);
+padding: 6px;
+}
+.AndroidDarkScrollerRSlider { 
+width: 18px;
+}
+.AndroidDarkScrollerRSliderHandle { 
+background: transparentize($primaryForeColor,.65);
+width: 18px;
+height: 40px;
+}
+.AndroidDarkScrollerRFocus .AndroidDarkScrollerRSliderHandle { 
+background: transparentize($accentBackColor,.2);
+}
+.AndroidDarkScrollerRSliderShadow { 
+background: transparentize($accentBackColor,.80);
+width: 18px;
+height: 40px;
+border: transparentize($accentBackColor,.80);
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.AndroidDarkScrollerRSliderMsg {
+position: absolute;
+right: 26px;
+color: $accentForeColor;
+background: transparentize($accentBackColor,.2);
+border-radius: 3px;
+padding: 6px;
+white-space: nowrap;
+}
+.AndroidDarkScrollerRSliderMsgT {top: 0px;}
+.AndroidDarkScrollerRSliderMsgB {bottom: 0px;}
+.AndroidDarkScrollerRSliderMsgT:after { 
+content: '';
+display: block;
+position: absolute;
+right: -10px;
+top: 7px;
+border: 5px solid transparent;
+border-left-color: transparentize($accentBackColor,.2);
+}
+.AndroidDarkScrollerRSliderMsgB:after { 
+content: '';
+display: block;
+position: absolute;
+right: -10px;
+bottom: 7px;
+border: 5px solid transparent;
+border-left-color: transparentize($accentBackColor,.2);
+}
+
+
+/* Spin List */
+.AndroidDarkSpinList {
+color: $primaryForeColor;
+padding: 12px;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+vertical-align: top;
+cursor: default;
+}
+.AndroidDarkSpinList:before {
+content: "";
+display: block;
+position: absolute;
+top: 50%;
+left: 0px;
+width: 100%;
+height: 32px;
+margin-top: -18px;
+border-top: 2px solid $accentBackColor;
+border-bottom: 2px solid $accentBackColor;
+}
+.AndroidDarkSpinList:after {
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+background: url('spinListBack.png');
+background-size: 100% 100%;
+}
+
+
+.AndroidDarkSpinListItem {
+font-size: 16px;
+padding: 6px;
+}
+
+.AndroidDarkSpinListGroup {
+padding: 0px;
+white-space: nowrap;
+overflow: hidden;
+}
+.AndroidDarkSpinListGroup .AndroidDarkSpinList {
+display: inline-block;
+margin-left: 4px;
+}
+
+/* Tree */
+.AndroidDarkTree {
+}
+.AndroidDarkTreeNode {
+font-size: 16px;
+border-bottom: 1px solid transparentize($primaryForeColor,.85);
+background: $primaryBackColor;
+cursor: default;
+overflow: hidden;
+outline: none;
+}
+.AndroidDarkTreeNodeSelected {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkTreeNodeLabel {
+display: inline-block;
+color: inherit;
+text-decoration: none;
+padding: 14px;
+padding-bottom: 15px;
+cursor: default;
+width: 100%;
+outline: none;
+}
+.AndroidDarkTreeNode .AndroidDarkIconBtn {
+margin-top: -4px;
+}
+
+/* Slider */
+.AndroidDarkSlider {
+padding: 18px 20px;
+padding-right: 22px;
+margin: 8px 2px;
+}
+.AndroidDarkSliderInner {
+height: 2px;
+background: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkSliderHandle {
+height: 35px;
+width: 35px;
+background: transparentize($accentBackColor,.5);
+border: 1px solid transparent;
+border-radius: 18px;
+margin-left: -17px;
+margin-top: -17px;
+}
+.AndroidDarkSliderHandle:after {
+content: '';
+display: block;
+position: absolute;
+top: 12px;
+left: 12px;
+height: 11px;
+width: 11px;
+background: $accentBackColor;
+border-radius: 9px;
+}
+.AndroidDarkSliderHandleSelected {
+border: 1px solid $accentBackColor;
+}
+.AndroidDarkSliderRange {
+height: 2px;
+background: $accentBackColor;
+}
+
+/* Switch */
+.AndroidDarkSwitch {
+height: 36px;
+padding: 0px;
+cursor: default;
+background: darken($buttonBackColor,10%);
+}
+.AndroidDarkSwitchOn {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkSwitchLeft {
+padding: 8px;
+padding-right: 14px;
+text-align: right;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.AndroidDarkSwitchRight {
+padding: 8px;
+padding-left: 14px;
+text-align: left;
+box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.AndroidDarkSwitchInner {
+}
+.AndroidDarkSwitchButton {
+height: 38px;
+width: 120%;
+margin-left: -60%;
+}
+.AndroidDarkSwitchButton:before {
+content: '';
+display: block;
+position: absolute;
+top: 0px;
+left: -100%;
+width: 100%;
+height: 38px;
+background: url('switchBack.png') right no-repeat;
+}
+.AndroidDarkSwitchButton:after {
+content: '';
+display: block;
+position: absolute;
+top: 0px;
+left: 100%;
+width: 100%;
+height: 38px;
+background: url('switchBack.png') left no-repeat;
+}
+.AndroidDarkSwitchOn .AndroidDarkSwitchButton {
+box-shadow: 0px 3px 3px darken($switchOnBack,30%);
+-moz-box-shadow: 0px 3px 3px darken($switchOnBack,30%);
+-webkit-box-shadow: 0px 3px 3px darken($switchOnBack,30%);
+}
+
+/* Date Picker */
+
+.AndroidDarkDP {
+background: $primaryBackColor;
+}
+
+.AndroidDarkDPHeaderButton {
+display: inline-block;
+font-size: 16px;
+font-weight: bold;
+padding: 14px;
+color: $accentBackColor;
+text-decoration: none;
+cursor: default;
+outline: none;
+}
+
+.AndroidDarkDPDaysOfWeek {
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+}
+.AndroidDarkDPWeeksOfYear {
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkDPDate {
+padding: 0px;
+}
+.AndroidDarkDPItem {
+display: block;
+font-size: 16px;
+padding: 14px;
+color: $primaryForeColor;
+border-top: 1px solid darken($primaryBackColor,20%);
+background: $primaryBackColor;
+text-decoration: none;
+text-align: center;
+cursor: default;
+outline: none;
+}
+.AndroidDarkDPDateToday .AndroidDarkDPItem  {
+color: $accentBackColor;
+}
+.AndroidDarkDPItemSelected {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkDPDateToday .AndroidDarkDPItemSelected  {
+color: $accentForeColor;
+}
+.AndroidDarkDPItemDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkDPItemOutOfRange {
+color: transparentize($primaryForeColor,.5);
+border-top: none;
+}
+
+.AndroidDarkDPPanelItem {
+display: block;
+font-size: 16px;
+padding: 14px;
+color: $primaryForeColor;
+background: $primaryBackColor;
+text-decoration: none;
+text-align: center;
+cursor: default;
+outline: none;
+}
+.AndroidDarkDPPanelItemSelected {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkDPPanelItemDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+
+/* TimePicker */
+.AndroidDarkTP .AndroidDarkEdit {
+text-align: center;
+}
+.AndroidDarkTPEditButton {
+text-align: center;
+cursor: default;
+}
+.AndroidDarkTPMeridianButton {
+color: $accentBackColor;
+font-size: 16px;
+padding: 14px;
+cursor: default;
+}
+
+/* ControlGroups */
+.AndroidDarkControlGroup {
+border: 1px solid adjustColorIn($primaryBackColor,5%);
+background:  adjustColorIn($primaryBackColor,2%);
+}
+.AndroidDarkControlGroupRow {
+padding: 6px;
+}
+.AndroidDarkControlGroupRowFirst {
+}
+.AndroidDarkControlGroup .AndroidDarkDialogLabel {
+padding: 16px;
+}
+.AndroidDarkControlGroup .AndroidDarkEdit, .AndroidDarkControlGroup .AndroidDarkEditBG {
+margin: 0px;
+}
+
+/* Windows */
+.AndroidDarkWin {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+background: lighten($primaryBackColor,5%);
+}
+.AndroidDarkWinInner {
+overflow: hidden;
+}
+.AndroidDarkWinTitle {
+color: $accentBackColor;
+border-bottom: 2px solid $accentBackColor;
+}
+.AndroidDarkWinTitle, .AndroidDarkWinHeader, .AndroidDarkWinTBar, .AndroidDarkWinBody, .AndroidDarkWinBBar, .AndroidDarkWinFooter {
+padding: 6px;
+}
+.AndroidDarkWinButtons {
+border-top: 1px solid transparentize($primaryForeColor,.85);
+font-size: 0px;
+text-align: center;
+}
+.AndroidDarkWinResizer {
+color: darken($primaryBackColor,35%);
+}
+
+
+
+.AndroidDarkDDWin {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+background: lighten($primaryBackColor,5%);
+border: 2px solid lighten($primaryBackColor,5%);
+}
+.AndroidDarkDDWinInner {
+overflow: hidden;
+}
+.AndroidDarkDDWinTitle {
+color: $accentBackColor;
+border-bottom: 2px solid $accentBackColor;
+}
+.AndroidDarkDDWinTitle, .AndroidDarkDDWinHeader, .AndroidDarkDDWinTBar, .AndroidDarkDDWinBody, .AndroidDarkDDWinBBar, .AndroidDarkDDWinFooter {
+padding: 6px;
+}
+.AndroidDarkDDWinButtons {
+border-top: 1px solid transparentize($primaryForeColor,.85);
+font-size: 0px;
+text-align: center;
+}
+.AndroidDarkDDWinResizer {
+color: darken($primaryBackColor,25%);
+}
+
+.AndroidDarkWinButtons, .AndroidDarkDDWinButtons {
+	.AndroidDarkButton {
+	color: $primaryForeColor;
+	background: transparent;
+	border: none;
+	border-right: 1px solid transparentize($primaryForeColor,.85);
+	margin: 0px;
+	}
+	.AndroidDarkButton:first-child {
+	border-left: 1px solid transparentize($primaryForeColor,.85);
+	border-right: 1px solid transparentize($primaryForeColor,.85);
+	}
+	.AndroidDarkButton:before { display: none;}
+	.AndroidDarkButtonPressed {
+	color: $accentForeColor;
+	background: $accentBackColor;
+	}
+}
+
+
+.AndroidDarkDDWinPointerDown {
+border-top: 10px solid lighten($primaryBackColor,5%);
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+margin-left: -10px;
+left: 50%;
+width: 0;
+height: 0;
+bottom: -10px;
+}
+.AndroidDarkDDWinPointerUp {
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 10px solid lighten($primaryBackColor,5%);
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidDarkDDWinPointerLeft {
+border-top: 10px solid transparent;
+border-right: 10px solid lighten($primaryBackColor,5%);
+border-bottom: 10px solid transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkDDWinPointerRight {
+border-top: 10px solid transparent;
+border-left: 10px solid lighten($primaryBackColor,5%);
+border-bottom: 10px solid transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+
+/* Menu */
+.AndroidDarkMenu {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+background: lighten($primaryBackColor,5%);
+border: 2px solid lighten($primaryBackColor,5%);
+}
+.AndroidDarkMenuInner {
+overflow: hidden;
+}
+.AndroidDarkMenuItem {
+font-size: 16px;
+border-bottom: 1px solid transparentize($primaryForeColor,.85);
+padding: 14px;
+cursor: default;
+white-space: nowrap;
+}
+.AndroidDarkMenuItem:last-child {
+border-bottom: none;
+}
+.AndroidDarkMenuItemHover, .AndroidDarkMenuItemSelected {
+color: $accentForeColor;
+background: $accentBackColor;
+}
+.AndroidDarkMenuItemDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkMenuItemCascade {
+position: relative;
+padding-right: 30px;
+}
+.AndroidDarkMenuItemCascade:after {
+content: "b";
+display: block;
+position: absolute;
+right: 0px;
+top: 50%;
+margin-top: -14px;
+font: 24px A5_AndroidIcons;
+}
+.AndroidDarkMenuTitle {
+font: 12px $fontFamily;
+font-weight: bold;
+color: transparentize($primaryForeColor,.5);
+border-bottom: 2px solid transparentize($primaryForeColor,.5);
+padding: 8px 14px;
+}
+.AndroidDarkMenuSeparator {
+height: 2px;
+}
+.AndroidDarkMenuPointerDown {
+border-top: 10px solid lighten($primaryBackColor,5%);
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+margin-left: -10px;
+left: 50%;
+width: 0;
+height: 0;
+bottom: -10px;
+}
+.AndroidDarkMenuPointerUp {
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 10px solid lighten($primaryBackColor,5%);
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidDarkMenuPointerLeft {
+border-top: 10px solid transparent;
+border-right: 10px solid lighten($primaryBackColor,5%);
+border-bottom: 10px solid transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkMenuPointerRight {
+border-top: 10px solid transparent;
+border-left: 10px solid lighten($primaryBackColor,5%);
+border-bottom: 10px solid transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+/* Control bar */
+.AndroidDarkCtrlBarSepH {
+width: 0px;
+border-left: 1px solid adjustColorIn($primaryBackColor,15%);
+}
+.AndroidDarkCtrlBarSepV {
+height: 0px;
+border-top: 1px solid adjustColorIn($primaryBackColor,15%);
+}
+.AndroidDarkCtrlBarDis {
+font: 24px $fontFamily;
+font-weight: bold;
+background: adjustColorIn($primaryBackColor,5%);
+border: 1px solid adjustColorIn($primaryBackColor,15%);
+padding: 8px;
+margin: -1px;
+}
+
+/* Panels */
+.AndroidDarkPanelCard {
+font: 16px $fontFamily;
+color: $primaryForeColor;
+background: $primaryBackColor;
+}
+.AndroidDarkPanelHeader {
+font: 24px $fontFamily;
+font-weight: bold;
+background: adjustColorIn($primaryBackColor,5%);
+border-bottom: 1px solid adjustColorIn($primaryBackColor,15%);
+padding: 8px;
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody {
+padding: 4px;
+}
+.AndroidDarkPanelFooter {
+font: 24px $fontFamily;
+font-weight: bold;
+background: adjustColorIn($primaryBackColor,5%);
+border-top: 1px solid adjustColorIn($primaryBackColor,15%);
+padding: 8px;
+}
+.AndroidDarkPanelHeader .AndroidDarkHeading, .AndroidDarkPanelFooter .AndroidDarkHeading {
+font: 24px $fontFamily;
+font-weight: bold;
+padding: 2px;
+}
+.AndroidDarkPanelHeader .AndroidDarkText, .AndroidDarkPanelFooter .AndroidDarkText {
+font: 16px $fontFamily;
+padding: 6px;
+}
+
+.AndroidDarkPanelNavInd {
+font-size: 0px;
+padding: 2px;
+}
+.AndroidDarkPanelNavIndButton {
+background: transparentize($primaryForeColor,.5);
+width: 10px;
+height: 10px;
+display: inline-block;
+margin: 2px;
+}
+.AndroidDarkPanelNavIndButtonSelected {
+background: transparentize($primaryForeColor,.1);
+}
+
+.AndroidDarkPanelCard > .AndroidDarkPanelBody {
+position: relative;
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody:after {
+display: block;
+position: absolute;
+content: "";
+height: 3px;
+width: 100%;
+left: 0px;
+top: 0px;
+background: rgba(0,0,0,.05);
+z-index: 4;
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody:before {
+display: block;
+position: absolute;
+content: "";
+height: 3px;
+width: 100%;
+left: 0px;
+bottom: 0px;
+background: rgba(0,0,0,.05);
+z-index: 4;
+}
+
+.AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelCard, .AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelNav {
+border-right: 1px solid adjustColorIn($primaryBackColor,15%);
+}
+.AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelCard:before, .AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelNav:before {
+display: block;
+position: absolute;
+content: "";
+height: 100%;
+width: 4px;
+top: 0px;
+right: 0px;
+background: rgba(0,0,0,.025);
+z-index: 4;
+}
+
+.AndroidDarkAppBar {
+padding: 0px;
+text-align: center;
+
+	.AndroidDarkButton {
+		padding: 16px;
+		margin: 0px;
+		border: none;
+		border-left: 1px solid adjustColorIn($primaryBackColor,15%);
+		background: transparent;
+	}
+	.AndroidDarkButton:first-child {
+		border-left: none;
+	}
+	.AndroidDarkButtonPressed {
+		border-bottom: 4px solid $accentBackColor;
+		padding-bottom: 12px;
+	}
+	.AndroidDarkButtonPressed:before {
+		display: none;
+	}
+}
+
+
+/* Tabs */
+
+	/* top and bottom */
+
+.AndroidDarkTabTBand,
+.AndroidDarkTabBBand {
+text-align: center;
+font-size: 0px;
+}
+.AndroidDarkTabTButton, .AndroidDarkTabTButtonSelected, .AndroidDarkTabTButtonDisabled,
+.AndroidDarkTabBButton, .AndroidDarkTabBButtonSelected, .AndroidDarkTabBButtonDisabled {
+font-size: 16px;
+color: $primaryForeColor;
+background:  adjustColorIn($primaryBackColor,20%);
+border: none;
+border-left: 1px solid  adjustColorIn($primaryBackColor,30%);
+padding: 5px 9px;
+padding-bottom: 8px;
+outline: none;
+text-decoration: none;
+display: inline-block;
+}
+.AndroidDarkTabTButton:first-child, .AndroidDarkTabTButtonSelected:first-child, .AndroidDarkTabTButtonDisabled:first-child,
+.AndroidDarkTabBButton:first-child, .AndroidDarkTabBButtonSelected:first-child, .AndroidDarkTabBButtonDisabled:first-child {
+border-left: none;
+}
+.AndroidDarkTabBButton, .AndroidDarkTabBButtonSelected, .AndroidDarkTabBButtonDisabled{
+padding-top: 8px;
+padding-bottom: 5px;
+}
+.AndroidDarkTabTButtonSelected{
+border-bottom: 3px solid $accentBackColor;
+padding-bottom: 5px;
+}
+.AndroidDarkTabBButtonSelected {
+border-top: 3px solid $accentBackColor;
+padding-top: 5px;
+}
+.AndroidDarkTabTButtonDisabled,
+.AndroidDarkTabBButtonDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkTabTPane {
+margin-top: 6px;
+}
+.AndroidDarkTabBPane {
+margin-bottom: 6px;
+}
+
+	/* left and right */
+.AndroidDarkTabLBand,
+.AndroidDarkTabRBand {
+font-size: 0px;
+}
+.AndroidDarkTabLButton, .AndroidDarkTabLButtonSelected, .AndroidDarkTabLButtonDisabled,
+.AndroidDarkTabRButton, .AndroidDarkTabRButtonSelected, .AndroidDarkTabRButtonDisabled {
+font-size: 16px;
+color: $primaryForeColor;
+background:  adjustColorIn($primaryBackColor,20%);
+border: none;
+border-top: 1px solid  adjustColorIn($primaryBackColor,30%);
+padding: 5px 9px;
+padding-right: 12px;
+outline: none;
+text-decoration: none;
+display: block;
+}
+.AndroidDarkTabRButton, .AndroidDarkTabRButtonSelected, .AndroidDarkTabRButtonDisabled {
+padding-left: 12px;
+padding-right: 9px;
+}
+.AndroidDarkTabLButton:first-child, .AndroidDarkTabLButtonSelected:first-child, .AndroidDarkTabLButtonDisabled:first-child,
+.AndroidDarkTabRButton:first-child, .AndroidDarkTabRButtonSelected:first-child, .AndroidDarkTabRButtonDisabled:first-child {
+border-top: none;
+}
+.AndroidDarkTabLButtonSelected {
+border-right: 3px solid $accentBackColor;
+padding-right: 9px;
+}
+.AndroidDarkTabRButtonSelected {
+border-left: 3px solid $accentBackColor;
+padding-left: 9px;
+}
+.AndroidDarkTabLButtonDisabled,
+.AndroidDarkTabRButtonDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkTabLPane {
+margin-left: 6px;
+}
+.AndroidDarkTabRPane {
+margin-right: 6px;
+}
+
+/* Accordion */
+.AndroidDarkAccordion {
+border: 1px solid adjustColorIn($primaryBackColor,20%);
+border-bottom: none;
+}
+.AndroidDarkAccordionButton, .AndroidDarkAccordionButtonSelected, .AndroidDarkAccordionButtonDisabled {
+font: 12px $fontFamily;
+font-weight: bold;
+color: $primaryForeColor;
+background:  adjustColorIn($primaryBackColor,10%);
+border-bottom: 1px solid  adjustColorIn($primaryBackColor,20%);
+padding: 14px;
+outline: none;
+text-decoration: none;
+display: block;
+}
+.AndroidDarkAccordionButton:after {
+content: 'b';
+display: block;
+float: left;
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+}
+.AndroidDarkAccordionButtonSelected:after {
+content: 'c';
+display: block;
+float: left;
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+}
+.AndroidDarkAccordionButtonDisabled {
+color: transparentize($primaryForeColor,.75);
+}
+.AndroidDarkAccordionPane {
+padding: 6px;
+border-bottom: 1px solid  adjustColorIn($primaryBackColor,20%);
+}
+
+/* Tabband */
+.AndroidDarkTabband, .AndroidDarkTabbandIcon {
+font-size: 16px;
+color: $primaryForeColor;
+background: adjustColorIn($primaryBackColor,5%);
+}
+.AndroidDarkTabbandButton, .AndroidDarkTabbandButtonSelected, .AndroidDarkTabbandButtonDisabled {
+color: $primaryForeColor;
+background: transparent;
+border-left: 1px solid adjustColorIn($primaryBackColor,15%);
+border-bottom: 1px solid $accentBackColor;
+padding: 14px;
+outline: none;
+text-decoration: none;
+white-space: nowrap;
+display: block;
+position: relative;
+}
+.AndroidDarkTabbandButtonSelected {
+border-bottom: 5px solid $accentBackColor;
+padding-bottom: 10px;
+}
+.AndroidDarkTabbandButtonDisabled {
+color: transparentize($buttonForeColor,.75);
+}
+.AndroidDarkTabbandClose {
+color: $denyBackColor;
+}
+
+.AndroidDarkTabbandIcon {
+	.AndroidDarkTabbandButton, .AndroidDarkTabbandButtonSelected, .AndroidDarkTabbandButtonDisabled {
+	font-size: 10px;
+	padding: 6px;
+	border: none;
+	}
+	.AndroidDarkTabbandButtonSelected {
+	color: $accentBackColor;
+	padding: 6px;
+	}
+}
+
+/* Ink */
+.AndroidDarkInk {
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+.AndroidDarkInkArea {
+background: #f2f2f2;
+}
+.AndroidDarkInkPage {
+background: #fff;
+border: 1px solid #ccc;
+box-shadow: 0px 3px 3px #e6e6e6;
+-moz-box-shadow: 0px 3px 3px #e6e6e6;
+-webkit-box-shadow: 0px 3px 3px #e6e6e6;
+}
+.AndroidDarkInkZoomBox {
+border: 1px dotted $accentBackColor;
+}
+.AndroidDarkInkZoomBoxScale:after {
+content: "";
+position: absolute;
+bottom: 2px;
+right: 2px;
+display: block;
+border: 5px solid transparent;
+border-bottom-color:  transparentize($accentBackColor,.5);
+border-right-color:  transparentize($accentBackColor,.5);
+}
+.AndroidDarkInkSplitBar {
+background: #e6e6e6;
+}
+.AndroidDarkInkEraser {
+border: 1px solid rgba(255,100,150,0.5);
+border-radius: 3px;
+background: rgba(255,100,150,0.1);
+}
+.AndroidDarkInkButton {
+display: inline-block;
+width: 40px;
+height: 40px;
+padding: 2px;
+border: 1px solid #ccc;
+border-radius: 22px;
+background: rgba(255, 255, 255, 0.9);
+vertical-align: top;
+line-height: 31px;
+text-align: center;
+color: #888888;
+stroke: #888888;
+fill: #888888;
+}
+.AndroidDarkInkButton .AndroidDarkIcon {
+vertical-align: bottom;
+}
+.AndroidDarkInkButtonSelected {
+border-color: #999;
+color: #3c3c3c;
+stroke: #3c3c3c;
+fill: #3c3c3c;
+}
+
+.AndroidDarkInkBarTop {
+background: rgba(255,255,255,0.9);
+border-bottom: 1px solid #ccc;
+}
+.AndroidDarkInkBarLeft {
+background: rgba(255,255,255,0.9);
+border-right: 1px solid #ccc;
+}
+.AndroidDarkInkBarRight {
+background: rgba(255,255,255,0.9);
+border-left: 1px solid #ccc;
+}
+.AndroidDarkInkBarBottom {
+background: rgba(255,255,255,0.9);
+border-top: 1px solid #ccc;
+}
+.AndroidDarkInkGroupTop, .AndroidDarkInkGroupBottom, .AndroidDarkInkGroupLeft, .AndroidDarkInkGroupRight {
+background: rgba(255,255,255,0.9);
+border: 1px solid #ccc;
+}
+.AndroidDarkInkGroupTop {
+border-top: none;
+border-radius: 0px 0px 4px 4px;
+}
+.AndroidDarkInkGroupBottom {
+border-bottom: none;
+border-radius: 4px 4px 0px 0px;
+}
+.AndroidDarkInkGroupLeft {
+border-left: none;
+border-radius: 0px 4px 4px 0px;
+}
+.AndroidDarkInkGroupRight {
+border-right: none;
+border-radius: 4px 0px 0px 4px;
+}
+.AndroidDarkInkBarTop, .AndroidDarkInkBarBottom, .AndroidDarkInkBarLeft, .AndroidDarkInkBarRight, .AndroidDarkInkGroupTop, .AndroidDarkInkGroupBottom, .AndroidDarkInkGroupLeft, .AndroidDarkInkGroupRight {
+	.AndroidDarkInkButton {
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 0px;
+	}
+}
+.AndroidDarkInkBarTop, .AndroidDarkInkBarBottom, .AndroidDarkInkBarLeft, .AndroidDarkInkBarRight, .AndroidDarkInkGroupTop, .AndroidDarkInkGroupBottom, .AndroidDarkInkGroupLeft, .AndroidDarkInkGroupRight {
+	.AndroidDarkInkButtonSelected {
+		background: #e6e6e6;
+	}
+}
+.AndroidDarkInkStatus {
+color: #fff;
+background: rgba(0,0,0,.25);
+padding: 4px;
+border-radius: 4px;
+}
+
+.AndroidDarkInkPopup {
+font: 16px $fontFamily;
+background: #fff;
+color: #000;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+.AndroidDarkInkPopupLock {
+background: rgba(0,0,0,.1);
+}
+.AndroidDarkInkPopupGroup {
+padding: 4px;
+padding-bottom: 0px;
+border-bottom: 1px solid #e6e6e6;
+}
+.AndroidDarkInkPopupSwatch {
+position: relative;
+display: inline-block;
+width: 40px;
+height: 40px;
+padding: 2px;
+border: 1px solid #ccc;
+border-radius: 22px;
+vertical-align: top;
+text-align: center;
+margin-bottom: 4px;
+}
+.AndroidDarkInkPopupSwatchSelected {
+border: 2px solid $accentBackColor;
+border-radius: 23px;
+margin: -1px;
+margin-bottom: 3px;
+}
+.AndroidDarkInkPopupSwatchSelected:before {
+content: "";
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+border: 2px solid #fff;
+border-radius: 20px;
+}
+.AndroidDarkInkPopupButton {
+font-size: 16px;
+color: #000;
+padding: 14px;
+text-align: center;
+}
+
+/* Scroll Indicator */
+.AndroidDarkScrollIndH, .AndroidDarkScrollIndV {
+height: 4px;
+width: 4px;
+padding: 0px;
+}
+.AndroidDarkScrollIndHBar, .AndroidDarkScrollIndVBar {
+background: transparentize($primaryForeColor,.5);
+opacity: .5;
+}
+
+/* Icons */
+.AndroidDarkIcon, .AndroidDarkIconSm, .AndroidDarkIconBtn {
+cursor: default;
+display: inline-block;
+position: relative;
+font: $iconSize - 2px A5_AndroidIcons;
+font-style: normal;
+width: $iconSize;
+height: $iconSize;
+text-transform: none;
+}
+.AndroidDarkIconSm {
+font: $iconSmSize - 2px A5_AndroidIcons;
+width: $iconSmSize;
+height: $iconSmSize;
+}
+.AndroidDarkIconBtn{
+padding: 10px;
+}
+.AndroidDarkIconDisabled { opacity: .5}
+
+.AndroidDarkIconLeft:after {
+@include icon(a);
+}
+.AndroidDarkIconRight:after {
+@include icon(b);
+}
+.AndroidDarkIconUp:after {
+@include icon(d);
+}
+.AndroidDarkIconDown:after {
+@include icon(c);
+}
+.AndroidDarkIconClose:after {
+@include icon(e);
+}
+.AndroidDarkIconResizeThumb:after {
+@include icon(f);
+}
+.AndroidDarkIconRadio:after {
+@include icon(g);
+}
+.AndroidDarkIconCheck:after {
+@include icon(h);
+}
+.AndroidDarkIconAdd:after {
+@include icon(i);
+}
+.AndroidDarkIconRemove:after {
+@include icon(j);
+}
+.AndroidDarkIconUndo:after {
+@include icon(k);
+}
+.AndroidDarkIconRedo:after {
+@include icon(l);
+}
+.AndroidDarkIconEdit:after {
+@include icon(m);
+}
+.AndroidDarkIconCancel:after {
+@include icon(n);
+}
+.AndroidDarkIconDelete:after {
+@include icon(o);
+}
+.AndroidDarkIconCancelEdit:after {
+@include icon(p);
+}
+.AndroidDarkIconNew:after {
+@include icon(q);
+}
+.AndroidDarkIconCancelNew:after {
+@include icon(r);
+}
+.AndroidDarkIconSave:after {
+@include icon(s);
+}
+.AndroidDarkIconLoad:after {
+@include icon(t);
+}
+.AndroidDarkIconSaveAndEnter:after {
+@include icon(u);
+}
+.AndroidDarkIconRefresh:after {
+@include icon(v);
+}
+.AndroidDarkIconSearch:after {
+@include icon(w);
+}
+.AndroidDarkIconFilter:after {
+@include icon(x);
+}
+.AndroidDarkIconFirst:after {
+@include icon(y);
+}
+.AndroidDarkIconLast:after {
+@include icon(z);
+}
+.AndroidDarkIconInfo:after {
+@include icon(A);
+}
+.AndroidDarkIconHelp:after {
+@include icon(B);
+}
+.AndroidDarkIconError:after {
+@include icon(C);
+}
+.AndroidDarkIconWarning:after {
+@include icon(D);
+}
+.AndroidDarkIconMenu:after {
+@include icon(E);
+}
+
+/* container padding */
+.AndroidDarkPanelHeader .A5Container, .AndroidDarkPanelFooter .A5Container, .AndroidDarkPanelTopHeader .A5Container, .AndroidDarkPanelTopFooter .A5Container, .AndroidDarkPanelHeader .A5CWLayout, .AndroidDarkPanelFooter .A5CWLayout, .AndroidDarkPanelTopHeader .A5CWLayout, .AndroidDarkPanelTopFooter .A5CWLayout {
+padding: 0px;
+}
