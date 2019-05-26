@@ -1,0 +1,27 @@
+{
+	"testServer": {
+		"version": "1.0",
+		"description": "Available App Info",
+		"hostName": "Test Server",
+		"message": "Sample message",
+		"messageVersion": 1
+	},
+	"publishing": {
+		"lastProfile": "CONTABOHTTP",
+		"lastURL": "http://185.2.101.13/skp",
+		"serverName": "ppp",
+		"serverDescription": "ppp",
+		"publishToS3": false,
+		"s3url": "",
+		"s3folder": "",
+		"s3connectionstring": "",
+		"publish2ToS3": false
+	},
+	"items": [
+	{
+		"componentName": "MobileNew",
+		"guid": "6b303a95a27d4cd484e92247ffd81807",
+		"settingsJSON": "{\n\t\"id\": \"com.pcslb\",\n\t\"name\": \"polo\",\n\t\"url\": \"\",\n\t\"version\": \"1.0.0\",\n\t\"installMessage\": \"done\",\n\t\"minSize\": \"600\",\n\t\"maxSize\": \"1000\",\n\t\"description\": \"ppp\",\n\t\"other\": {\n\t\t\"developerName\": \"pp\",\n\t\t\"deveroperEmail\": \"p@p.com\"\n\t},\n\t\"publishing\": {\n\t\t\"aexfiles\": false\n\t},\n\t\"additionalResources\": \"\",\n\t\"BackgroundColor\": \"#5345f2\",\n\t\"icontype\": \"Bitmap\",\n\t\"iconbitmap\": \"\",\n\t\"iconstyle\": \"\",\n\t\"svg\": \"\",\n\t\"advancedMode\": false,\n\t\"advancedModeJson\": \"\",\n\t\"options\": {\n\t\t\"iOSStatusBar\": {\n\t\t\t\"statusBarOverlaysWebView\": 1,\n\t\t\t\"statusBarTextWhite\": 0,\n\t\t\t\"statusBarBackgroundHexColor\": \"#FFF\"\n\t\t}\n\t},\n\t\"downloadtype\": \"manifest\",\n\t\"downloadLocation\": \"\"\n}",
+		"settingsDefined": true
+	}]
+}
