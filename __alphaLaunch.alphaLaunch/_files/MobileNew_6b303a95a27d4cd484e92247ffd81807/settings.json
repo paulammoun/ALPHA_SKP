@@ -1,0 +1,34 @@
+{
+	"id": "com.pcslb",
+	"name": "polo",
+	"url": "",
+	"version": "1.0.0",
+	"installMessage": "done",
+	"minSize": "600",
+	"maxSize": "1000",
+	"description": "ppp",
+	"other": {
+		"developerName": "pp",
+		"deveroperEmail": "p@p.com"
+	},
+	"publishing": {
+		"aexfiles": false
+	},
+	"additionalResources": "",
+	"BackgroundColor": "#5345f2",
+	"icontype": "Bitmap",
+	"iconbitmap": "",
+	"iconstyle": "",
+	"svg": "",
+	"advancedMode": false,
+	"advancedModeJson": "",
+	"options": {
+		"iOSStatusBar": {
+			"statusBarOverlaysWebView": 1,
+			"statusBarTextWhite": 0,
+			"statusBarBackgroundHexColor": "#FFF"
+		}
+	},
+	"downloadtype": "manifest",
+	"downloadLocation": ""
+}
