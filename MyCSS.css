@@ -1,0 +1,15 @@
+.btnfloat{
+	position:fixed;
+	width:30px;
+	height:30px;
+	background-color:#000000;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+.lstheader{
+	color: #000;
+	background-color: #868e96;
+	font-weight: bolder;
+}
