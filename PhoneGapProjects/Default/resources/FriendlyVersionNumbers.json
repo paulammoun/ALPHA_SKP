@@ -2,13 +2,6 @@
 {
 	"internalVersionC": "1",
 	"description": "Baseline version",
-	"version": "5.0.1",
-	"date": "2019-05-18 05:51 PM"
-},
-{
-	"internalVersionC": "2",
-	"description": "",
-	"version": "9",
-	"channel": "",
-	"date": "2019-05-20 12:01 PM"
+	"version": "1.0.0",
+	"date": "2019-06-05 09:07 AM"
 }]
