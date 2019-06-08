@@ -1,0 +1,1908 @@
+@font-face {
+font-family: 'A5_AndroidIcons';
+src: url(A5_AndroidIcons.eot) format("embedded-opentype"), url(A5_AndroidIcons.woff) format("woff"), url(A5_AndroidIcons.ttf) format("truetype"), url(A5_AndroidIcons.svg) format("svg");
+}
+html {
+-webkit-tap-highlight-color: transparent;
+-webkit-user-select: none;
+}
+button::-moz-focus-inner {
+border-width: 0;
+padding: 0;
+}
+.AndroidDarkPage {
+color: #fff;
+background: #111;
+font: 16px sans-serif;
+}
+.AndroidDarkHeading {
+color: #fff;
+font: bold 16px sans-serif;
+}
+.AndroidDarkText {
+color: #fff;
+font: 16px sans-serif;
+}
+.AndroidDarkTextHighlight {
+color: #0099cc;
+}
+.AndroidDarkLink {
+color: white;
+font: 16px sans-serif;
+}
+.AndroidDarkGroup {
+border: 1px solid #444444;
+border-top-style: none;
+padding: 8px;
+padding-top: 40px;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.AndroidDarkGroupLabel {
+color: #fff;
+background: #2b2b2b;
+font: bold 12px sans-serif;
+border: 1px solid #444444;
+padding: 8px;
+margin-left: -9px;
+margin-right: -9px;
+margin-bottom: -33px;
+width: 100%;
+}
+.AndroidDarkUILock {
+background: #000;
+opacity: .5;
+}
+/* Grid */
+.AndroidDarkGrid {
+border: 1px solid #444444;
+border-radius: 3px;
+}
+.AndroidDarkGridHeader {
+text-align: left;
+color: white;
+background: #232323;
+font: 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 0px 14px;
+}
+.AndroidDarkGridHeader .AndroidDarkLink, .AndroidDarkGridHeader span {
+text-decoration: none;
+color: white;
+font: bold 12px sans-serif;
+padding: 14px;
+display: inline-block;
+cursor: default;
+}
+.AndroidDarkGridFooter {
+text-align: left;
+color: white;
+background: #232323;
+font: 12px sans-serif;
+padding: 0px 14px;
+}
+.AndroidDarkGridFooter .AndroidDarkLink, .AndroidDarkGridFooter span {
+text-decoration: none;
+color: white;
+font: 12px sans-serif;
+padding: 14px;
+display: inline-block;
+cursor: default;
+}
+span.AndroidDarkGridNav {
+padding: 0px;
+}
+.AndroidDarkGridSummaryLabel, .AndroidDarkGridSummaryData {
+background: #232323;
+font-size: 16px;
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkGridSummaryLabel {
+color: #cccccc;
+font: bold 12px sans-serif;
+}
+.AndroidDarkGridQBE {
+background: #191919;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkGridDataHeader {
+color: white;
+background: #232323;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 8px 14px;
+}
+.AndroidDarkGridData, .AndroidDarkGridRowHeader {
+background: #111;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkGridDataAlt {
+background: #141414;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkGridRowSelected .AndroidDarkGridData, .AndroidDarkGridRowSelected .AndroidDarkGridDataAlt {
+color: #fff;
+background: rgba(0, 153, 204, 0.5);
+}
+.AndroidDarkGridDataError {
+color: #fd472a;
+background: rgba(253, 71, 42, 0.15);
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkGrid > tbody > tr:last-child > td {
+border: none;
+}
+.AndroidDarkGridForm {
+background: #161616;
+border: 1px solid #1e1e1e;
+}
+.AndroidDarkGridFormLabel, .AndroidDarkGridFormData {
+padding: 6px;
+}
+.AndroidDarkGridFormLabel {
+font-size: 14px;
+font-weight: bold;
+}
+.AndroidDarkGridFormDataError {
+color: #fd472a;
+background: rgba(253, 71, 42, 0.15);
+font-size: 16px;
+padding: 6px;
+cursor: default;
+}
+tr:nth-child(1) .AndroidDarkGridFormLabel, tr:nth-child(1) .AndroidDarkGridFormData, tr:nth-child(1) .AndroidDarkGridFormDataError {
+border-top-style: none;
+}
+/* Dialog */
+.AndroidDarkDialogLabel {
+color: white;
+font: bold 14px sans-serif;
+padding: 6px;
+}
+.AndroidDarkDialogRSSeparator {
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #5e5e5e;
+margin-top: 6px;
+line-height: 6px;
+}
+/* Buttons */
+.AndroidDarkButton, .AndroidDarkButtonConfirm, .AndroidDarkButtonDeny, .AndroidDarkButtonDD {
+color: #fff;
+background: #414141;
+font-size: 16px;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #4e4e4e;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #343434;
+padding: 5px 9px;
+margin: 3px;
+overflow: visible;
+vertical-align: middle;
+position: relative;
+outline: none;
+}
+.AndroidDarkButtonPressed, .AndroidDarkButtonDDPressed {
+color: #fff;
+background: #0099cc;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #00ace6;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #0086b3;
+}
+.AndroidDarkButtonPressed:before, .AndroidDarkButtonDDPressed:before {
+border: 5px solid rgba(0, 153, 204, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidDarkButtonConfirm {
+color: #fff;
+background: #94b435;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #a3c63d;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #84a02f;
+}
+.AndroidDarkButtonConfirmPressed:before {
+border: 5px solid rgba(148, 180, 53, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidDarkButtonDeny {
+color: #fff;
+background: #fd4246;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #fd5b5f;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #fd292d;
+}
+.AndroidDarkButtonDenyPressed:before {
+border: 5px solid rgba(253, 66, 70, 0.5);
+display: block;
+position: absolute;
+top: -5px;
+left: -5px;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+content: '';
+}
+.AndroidDarkButtonDD {
+padding: 0px;
+position: relative;
+}
+.AndroidDarkButtonDDContent, .AndroidDarkButtonDDSplitContent {
+padding: 5px 9px;
+}
+.AndroidDarkButtonDDDropdown {
+width: 32px;
+}
+.AndroidDarkButtonDDSplitDropdown {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #4e4e4e;
+width: 32px;
+}
+.AndroidDarkButtonDDPressed .AndroidDarkButtonDDSplitDropdown {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #00ace6;
+}
+.AndroidDarkButtonDD:after {
+font: 24px A5_AndroidIcons;
+margin-top: -13px;
+display: block;
+position: absolute;
+top: 50%;
+right: 4px;
+content: "c";
+}
+.AndroidDarkButtonLeft, .AndroidDarkButtonRight {
+color: #fff;
+background: transparent;
+font-size: 16px;
+border: none;
+padding: 6px 10px;
+margin: 2px;
+position: relative;
+outline: none;
+}
+.AndroidDarkButtonLeft {
+padding-left: 16px;
+}
+.AndroidDarkButtonRight {
+padding-right: 16px;
+}
+.AndroidDarkButtonLeft:after {
+color: #777777;
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+left: -4px;
+content: "a";
+}
+.AndroidDarkButtonRight:after {
+color: #777777;
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+right: -4px;
+content: "b";
+}
+.AndroidDarkButtonLeftPressed, .AndroidDarkButtonRightPressed, .AndroidDarkButtonLeftPressed.AndroidDarkButtonLeft:after, .AndroidDarkButtonRightPressed.AndroidDarkButtonRight:after {
+color: #0099cc;
+}
+.AndroidDarkButtonDisabled, .AndroidDarkButtonConfirmDisabled, .AndroidDarkButtonDenyDisabled, .AndroidDarkButtonDDDisabled, .AndroidDarkButtonDDDisabled .AndroidDarkButtonDDSplitDropdown {
+opacity: .3;
+}
+.AndroidDarkButtonGroupHF, .AndroidDarkButtonGroupHM, .AndroidDarkButtonGroupHL {
+color: #fff;
+background: #444444;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #5e5e5e;
+padding-bottom: 8px;
+margin: 0px;
+}
+.AndroidDarkButtonGroupHF {
+border-left-style: none;
+}
+.AndroidDarkButtonGroupHF.AndroidDarkButtonPressed, .AndroidDarkButtonGroupHM.AndroidDarkButtonPressed, .AndroidDarkButtonGroupHL.AndroidDarkButtonPressed {
+border-bottom-style: solid;
+border-bottom-width: 3px;
+border-bottom-color: #0099cc;
+padding-bottom: 5px;
+}
+.AndroidDarkButtonGroupHF.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupHM.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupHL.AndroidDarkButtonPressed:before {
+display: none;
+}
+.AndroidDarkButtonGroupVF, .AndroidDarkButtonGroupVM, .AndroidDarkButtonGroupVL {
+color: #fff;
+background: #444444;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #5e5e5e;
+padding-right: 12px;
+margin: 0px;
+display: block;
+width: 100%;
+}
+.AndroidDarkButtonGroupVF {
+border-top-style: none;
+}
+.AndroidDarkButtonGroupVF.AndroidDarkButtonPressed, .AndroidDarkButtonGroupVM.AndroidDarkButtonPressed, .AndroidDarkButtonGroupVL.AndroidDarkButtonPressed {
+border-right-style: solid;
+border-right-width: 3px;
+border-right-color: #0099cc;
+padding-right: 9px;
+}
+.AndroidDarkButtonGroupVF.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupVM.AndroidDarkButtonPressed:before, .AndroidDarkButtonGroupVL.AndroidDarkButtonPressed:before {
+display: none;
+}
+/* Edits */
+.AndroidDarkEdit {
+color: rgba(255, 255, 255, 0.9);
+background-color: transparent;
+background-image: url("editSide.png"), url("editSide.png");
+background-repeat: no-repeat, no-repeat;
+background-position: bottom left, bottom right;
+font-family: sans-serif;
+font-size: 16px;
+border: none;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.25);
+padding: 14px;
+xbackground: url("editSide.png") bottom left no-repeat, url("editSide.png") bottom right no-repeat;
+outline: none;
+}
+.AndroidDarkEdit:focus {
+background-image: url("editSideFocus.png"), url("editSideFocus.png");
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #0099cc;
+padding-bottom: 13px;
+xbackground: url("editSideFocus.png") bottom left no-repeat, url("editSideFocus.png") bottom right no-repeat;
+}
+input.AndroidDarkEditError, textarea.AndroidDarkEditError, select.AndroidDarkEditError {
+color: #fd472a;
+background-color: rgba(253, 71, 42, 0.15);
+background-image: url("editSideError.png"), url("editSideError.png");
+border-color: #fd472a;
+}
+input.AndroidDarkEditWatermark, textarea.AndroidDarkEditWatermark, select.AndroidDarkEditWatermark {
+color: rgba(255, 255, 255, 0.25);
+}
+input.AndroidDarkEditWatermark.AndroidDarkEditError, textarea.AndroidDarkEditWatermark.AndroidDarkEditError, select.AndroidDarkEditWatermark.AndroidDarkEditError {
+color: #fd735d;
+font-style: italic;
+}
+select.AndroidDarkEdit option {
+background: #111;
+}
+.AndroidDarkEditRound {
+padding: 6px 13px;
+border-radius: 24px;
+}
+/* Edit Button Group */
+.AndroidDarkEditBG {
+color: rgba(255, 255, 255, 0.9);
+background-image: url("editSide.png"), url("editBGDown.png");
+background-repeat: no-repeat, no-repeat;
+background-position: bottom left, bottom right;
+background-size: 1px 4px, 10px 10px;
+font-size: 16px;
+border: none;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.25);
+border-radius: 3px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkEditBGEdit {
+color: white;
+background: transparent;
+font-size: 16px;
+border: none;
+padding: 14px;
+outline: none;
+}
+.AndroidDarkEditBGButton {
+color: rgba(255, 255, 255, 0.25);
+background: url("editSide.png") no-repeat bottom left;
+}
+.AndroidDarkEditBGFocus {
+background-image: url("editSideFocus.png"), url("editBGDownFocus.png");
+background-size: 2px 4px, 10px 10px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #0099cc;
+xbackground: url("editSideFocus.png") bottom left no-repeat, url("editBGDownFocus.png") bottom right no-repeat;
+}
+.AndroidDarkEditBGFocus .AndroidDarkEditBGEdit {
+padding-bottom: 13px;
+}
+.AndroidDarkEditBGFocus .AndroidDarkEditBGButton {
+color: #0099cc;
+background: url("editSideFocus.png") no-repeat bottom left;
+}
+.AndroidDarkEditBGWatermark {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkEditBGError {
+color: #fd472a;
+background-color: rgba(253, 71, 42, 0.15);
+background-image: url("editSideError.png"), url("editBGDownError.png");
+border-color: #fd472a;
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGButton {
+background: url("editSideError.png") no-repeat bottom left;
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGEdit {
+color: #fd472a;
+}
+.AndroidDarkEditBGError .AndroidDarkEditBGWatermark.AndroidDarkEditBGEdit {
+color: #fd735d;
+font-style: italic;
+}
+/* List */
+.AndroidDarkListItem {
+background: #111;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.15);
+padding: 14px;
+cursor: default;
+outline: none;
+}
+.AndroidDarkListItemSelected {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkListTitle {
+color: rgba(255, 255, 255, 0.5);
+background: #111;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(255, 255, 255, 0.5);
+padding: 8px 14px;
+}
+.AndroidDarkListSeparator {
+background: black;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.15);
+height: 8px;
+}
+.AndroidDarkListHeader {
+color: rgba(255, 255, 255, 0.5);
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(255, 255, 255, 0.5);
+padding: 0px 14px;
+position: relative;
+}
+.AndroidDarkListHeaderItem {
+padding: 17px 0px;
+padding-top: 16px;
+padding-right: 40px;
+cursor: default;
+}
+.AndroidDarkListHeaderItemResizeOverlay {
+background: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkListGroupNav {
+color: #fff;
+background: rgba(255, 255, 255, 0.25);
+padding: 4px;
+cursor: default;
+border-radius: 4px;
+opacity: .5;
+}
+.AndroidDarkListGroupNavFocus {
+opacity: 1;
+}
+.AndroidDarkListItemLabelMain {
+font-weight: bold;
+}
+.AndroidDarkListItemLabelSub {
+font-size: 14px;
+}
+.AndroidDarkListItemLabelContext {
+color: #0099cc;
+font-size: 14px;
+}
+.AndroidDarkListItemSelected .AndroidDarkListItemLabelContext {
+color: #fff;
+}
+.AndroidDarkListItemLabelDetail {
+color: #111;
+background: rgba(255, 255, 255, 0.75);
+font-size: 14px;
+padding: 2px 10px;
+border-radius: 2px;
+}
+.AndroidDarkListItemContent {
+color: rgba(255, 255, 255, 0.7);
+font-size: 14px;
+}
+.AndroidDarkListNavPrev {
+text-align: center;
+background: rgba(17, 17, 17, 0.95);
+font-weight: bold;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.15);
+padding: 14px;
+cursor: default;
+position: absolute;
+top: 0px;
+width: 100%;
+z-index: 4;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkListNavNext {
+text-align: center;
+background: rgba(17, 17, 17, 0.95);
+font-weight: bold;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(255, 255, 255, 0.15);
+padding: 14px;
+cursor: default;
+position: absolute;
+bottom: 0px;
+width: 100%;
+z-index: 4;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkListNavPressed {
+color: #fff;
+background: rgba(0, 153, 204, 0.9);
+}
+/* Scroller */
+.AndroidDarkScrollerR {
+color: #fff;
+background: rgba(255, 255, 255, 0.05);
+font-family: sans-serif;
+font-size: 16px;
+cursor: default;
+}
+.AndroidDarkScrollerRFocus {
+background: rgba(0, 153, 204, 0.05);
+}
+.AndroidDarkScrollerRDial {
+background: rgba(0, 153, 204, 0.8);
+padding: 6px;
+}
+.AndroidDarkScrollerRSlider {
+width: 18px;
+}
+.AndroidDarkScrollerRSliderHandle {
+background: rgba(255, 255, 255, 0.35);
+width: 18px;
+height: 40px;
+}
+.AndroidDarkScrollerRFocus .AndroidDarkScrollerRSliderHandle {
+background: rgba(0, 153, 204, 0.8);
+}
+.AndroidDarkScrollerRSliderShadow {
+background: rgba(0, 153, 204, 0.2);
+border: rgba(0, 153, 204, 0.2);
+width: 18px;
+height: 40px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkScrollerRSliderMsg {
+white-space: nowrap;
+color: #fff;
+background: rgba(0, 153, 204, 0.8);
+padding: 6px;
+position: absolute;
+right: 26px;
+border-radius: 3px;
+}
+.AndroidDarkScrollerRSliderMsgT {
+top: 0px;
+}
+.AndroidDarkScrollerRSliderMsgB {
+bottom: 0px;
+}
+.AndroidDarkScrollerRSliderMsgT:after {
+border: 5px solid transparent;
+border-left-color: rgba(0, 153, 204, 0.8);
+display: block;
+position: absolute;
+top: 7px;
+right: -10px;
+content: '';
+}
+.AndroidDarkScrollerRSliderMsgB:after {
+border: 5px solid transparent;
+border-left-color: rgba(0, 153, 204, 0.8);
+display: block;
+position: absolute;
+right: -10px;
+bottom: 7px;
+content: '';
+}
+/* Spin List */
+.AndroidDarkSpinList {
+color: #fff;
+padding: 12px;
+vertical-align: top;
+cursor: default;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkSpinList:before {
+border-top-style: solid;
+border-top-width: 2px;
+border-top-color: #0099cc;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #0099cc;
+margin-top: -18px;
+display: block;
+position: absolute;
+top: 50%;
+left: 0px;
+width: 100%;
+height: 32px;
+content: "";
+}
+.AndroidDarkSpinList:after {
+background: url("spinListBack.png");
+background-size: 100% 100%;
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+content: "";
+}
+.AndroidDarkSpinListItem {
+font-size: 16px;
+padding: 6px;
+}
+.AndroidDarkSpinListGroup {
+white-space: nowrap;
+padding: 0px;
+overflow: hidden;
+}
+.AndroidDarkSpinListGroup .AndroidDarkSpinList {
+margin-left: 4px;
+display: inline-block;
+}
+/* Tree */
+.AndroidDarkTreeNode {
+background: #111;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.15);
+overflow: hidden;
+cursor: default;
+outline: none;
+}
+.AndroidDarkTreeNodeSelected {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkTreeNodeLabel {
+text-decoration: none;
+color: inherit;
+padding: 14px;
+padding-bottom: 15px;
+display: inline-block;
+cursor: default;
+width: 100%;
+outline: none;
+}
+.AndroidDarkTreeNode .AndroidDarkIconBtn {
+margin-top: -4px;
+}
+/* Slider */
+.AndroidDarkSlider {
+padding: 18px 20px;
+padding-right: 22px;
+margin: 8px 2px;
+}
+.AndroidDarkSliderInner {
+background: rgba(255, 255, 255, 0.25);
+height: 2px;
+}
+.AndroidDarkSliderHandle {
+background: rgba(0, 153, 204, 0.5);
+border: 1px solid transparent;
+margin-top: -17px;
+margin-left: -17px;
+width: 35px;
+height: 35px;
+border-radius: 18px;
+}
+.AndroidDarkSliderHandle:after {
+background: #0099cc;
+display: block;
+position: absolute;
+top: 12px;
+left: 12px;
+width: 11px;
+height: 11px;
+border-radius: 9px;
+content: '';
+}
+.AndroidDarkSliderHandleSelected {
+border: 1px solid #0099cc;
+}
+.AndroidDarkSliderRange {
+background: #0099cc;
+height: 2px;
+}
+/* Switch */
+.AndroidDarkSwitch {
+background: #272727;
+padding: 0px;
+cursor: default;
+height: 36px;
+}
+.AndroidDarkSwitchOn {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkSwitchLeft {
+text-align: right;
+padding: 8px;
+padding-right: 14px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkSwitchRight {
+text-align: left;
+padding: 8px;
+padding-left: 14px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+.AndroidDarkSwitchButton {
+margin-left: -60%;
+width: 120%;
+height: 38px;
+}
+.AndroidDarkSwitchButton:before {
+background: url("switchBack.png") no-repeat right;
+display: block;
+position: absolute;
+top: 0px;
+left: -100%;
+width: 100%;
+height: 38px;
+content: '';
+}
+.AndroidDarkSwitchButton:after {
+background: url("switchBack.png") no-repeat left;
+display: block;
+position: absolute;
+top: 0px;
+left: 100%;
+width: 100%;
+height: 38px;
+content: '';
+}
+.AndroidDarkSwitchOn .AndroidDarkSwitchButton {
+box-shadow: 0px 3px 3px #197027;
+-moz-box-shadow: 0px 3px 3px #197027;
+-webkit-box-shadow: 0px 3px 3px #197027;
+}
+/* Date Picker */
+.AndroidDarkDP {
+background: #111;
+}
+.AndroidDarkDPHeaderButton {
+text-decoration: none;
+color: #0099cc;
+font-size: 16px;
+font-weight: bold;
+padding: 14px;
+display: inline-block;
+cursor: default;
+outline: none;
+}
+.AndroidDarkDPDaysOfWeek {
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+}
+.AndroidDarkDPWeeksOfYear {
+color: rgba(255, 255, 255, 0.25);
+font-size: 14px;
+font-weight: normal;
+padding: 6px;
+}
+.AndroidDarkDPDate {
+padding: 0px;
+}
+.AndroidDarkDPItem {
+text-align: center;
+text-decoration: none;
+color: #fff;
+background: #111;
+font-size: 16px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: black;
+padding: 14px;
+display: block;
+cursor: default;
+outline: none;
+}
+.AndroidDarkDPDateToday .AndroidDarkDPItem {
+color: #0099cc;
+}
+.AndroidDarkDPItemSelected {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkDPDateToday .AndroidDarkDPItemSelected {
+color: #fff;
+}
+.AndroidDarkDPItemDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkDPItemOutOfRange {
+color: rgba(255, 255, 255, 0.5);
+border-top-style: none;
+}
+.AndroidDarkDPPanelItem {
+text-align: center;
+text-decoration: none;
+color: #fff;
+background: #111;
+font-size: 16px;
+padding: 14px;
+display: block;
+cursor: default;
+outline: none;
+}
+.AndroidDarkDPPanelItemSelected {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkDPPanelItemDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+/* TimePicker */
+.AndroidDarkTP .AndroidDarkEdit {
+text-align: center;
+}
+.AndroidDarkTPEditButton {
+text-align: center;
+cursor: default;
+}
+.AndroidDarkTPMeridianButton {
+color: #0099cc;
+font-size: 16px;
+padding: 14px;
+cursor: default;
+}
+/* ControlGroups */
+.AndroidDarkControlGroup {
+background: #161616;
+border: 1px solid #1e1e1e;
+}
+.AndroidDarkControlGroupRow {
+padding: 6px;
+}
+.AndroidDarkControlGroup .AndroidDarkDialogLabel {
+padding: 16px;
+}
+.AndroidDarkControlGroup .AndroidDarkEdit, .AndroidDarkControlGroup .AndroidDarkEditBG {
+margin: 0px;
+}
+/* Windows */
+.AndroidDarkWin {
+color: #fff;
+background: #1e1e1e;
+font: 16px sans-serif;
+}
+.AndroidDarkWinInner {
+overflow: hidden;
+}
+.AndroidDarkWinTitle {
+color: #0099cc;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #0099cc;
+}
+.AndroidDarkWinTitle, .AndroidDarkWinHeader, .AndroidDarkWinTBar, .AndroidDarkWinBody, .AndroidDarkWinBBar, .AndroidDarkWinFooter {
+padding: 6px;
+}
+.AndroidDarkWinButtons {
+text-align: center;
+font-size: 0px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(255, 255, 255, 0.15);
+}
+.AndroidDarkWinResizer {
+color: black;
+}
+.AndroidDarkDDWin {
+color: #fff;
+background: #1e1e1e;
+font: 16px sans-serif;
+border: 2px solid #1e1e1e;
+}
+.AndroidDarkDDWinInner {
+overflow: hidden;
+}
+.AndroidDarkDDWinTitle {
+color: #0099cc;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: #0099cc;
+}
+.AndroidDarkDDWinTitle, .AndroidDarkDDWinHeader, .AndroidDarkDDWinTBar, .AndroidDarkDDWinBody, .AndroidDarkDDWinBBar, .AndroidDarkDDWinFooter {
+padding: 6px;
+}
+.AndroidDarkDDWinButtons {
+text-align: center;
+font-size: 0px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: rgba(255, 255, 255, 0.15);
+}
+.AndroidDarkDDWinResizer {
+color: black;
+}
+.AndroidDarkWinButtons .AndroidDarkButton, .AndroidDarkDDWinButtons .AndroidDarkButton {
+color: #fff;
+background: transparent;
+border: none;
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: rgba(255, 255, 255, 0.15);
+margin: 0px;
+}
+.AndroidDarkWinButtons .AndroidDarkButton:first-child, .AndroidDarkDDWinButtons .AndroidDarkButton:first-child {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: rgba(255, 255, 255, 0.15);
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: rgba(255, 255, 255, 0.15);
+}
+.AndroidDarkWinButtons .AndroidDarkButton:before, .AndroidDarkDDWinButtons .AndroidDarkButton:before {
+display: none;
+}
+.AndroidDarkWinButtons .AndroidDarkButtonPressed, .AndroidDarkDDWinButtons .AndroidDarkButtonPressed {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkDDWinPointerDown {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: #1e1e1e;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+margin-left: -10px;
+left: 50%;
+bottom: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkDDWinPointerUp {
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: #1e1e1e;
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidDarkDDWinPointerLeft {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: #1e1e1e;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkDDWinPointerRight {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: #1e1e1e;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+/* Menu */
+.AndroidDarkMenu {
+color: #fff;
+background: #1e1e1e;
+font: 16px sans-serif;
+border: 2px solid #1e1e1e;
+}
+.AndroidDarkMenuInner {
+overflow: hidden;
+}
+.AndroidDarkMenuItem {
+white-space: nowrap;
+font-size: 16px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: rgba(255, 255, 255, 0.15);
+padding: 14px;
+cursor: default;
+}
+.AndroidDarkMenuItem:last-child {
+border-bottom-style: none;
+}
+.AndroidDarkMenuItemHover, .AndroidDarkMenuItemSelected {
+color: #fff;
+background: #0099cc;
+}
+.AndroidDarkMenuItemDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkMenuItemCascade {
+padding-right: 30px;
+position: relative;
+}
+.AndroidDarkMenuItemCascade:after {
+font: 24px A5_AndroidIcons;
+margin-top: -14px;
+display: block;
+position: absolute;
+top: 50%;
+right: 0px;
+content: "b";
+}
+.AndroidDarkMenuTitle {
+color: rgba(255, 255, 255, 0.5);
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-bottom-color: rgba(255, 255, 255, 0.5);
+padding: 8px 14px;
+}
+.AndroidDarkMenuSeparator {
+height: 2px;
+}
+.AndroidDarkMenuPointerDown {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: #1e1e1e;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+margin-left: -10px;
+left: 50%;
+bottom: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkMenuPointerUp {
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: transparent;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: #1e1e1e;
+margin-left: -10px;
+top: -10px;
+left: 50%;
+width: 0;
+height: 0;
+}
+.AndroidDarkMenuPointerLeft {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-right-style: solid;
+border-right-width: 10px;
+border-right-color: #1e1e1e;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+left: -10px;
+width: 0;
+height: 0;
+}
+.AndroidDarkMenuPointerRight {
+border-top-style: solid;
+border-top-width: 10px;
+border-top-color: transparent;
+border-left-style: solid;
+border-left-width: 10px;
+border-left-color: #1e1e1e;
+border-bottom-style: solid;
+border-bottom-width: 10px;
+border-bottom-color: transparent;
+margin-top: -10px;
+top: 50%;
+right: -10px;
+width: 0;
+height: 0;
+}
+/* Control bar */
+.AndroidDarkCtrlBarSepH {
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #373737;
+width: 0px;
+}
+.AndroidDarkCtrlBarSepV {
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #373737;
+height: 0px;
+}
+.AndroidDarkCtrlBarDis {
+background: #1e1e1e;
+font: bold 24px sans-serif;
+border: 1px solid #373737;
+padding: 8px;
+margin: -1px;
+}
+/* Panels */
+.AndroidDarkPanelCard {
+color: #fff;
+background: #111;
+font: 16px sans-serif;
+}
+.AndroidDarkPanelHeader {
+background: #1e1e1e;
+font: bold 24px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #373737;
+padding: 8px;
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody {
+padding: 4px;
+}
+.AndroidDarkPanelFooter {
+background: #1e1e1e;
+font: bold 24px sans-serif;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #373737;
+padding: 8px;
+}
+.AndroidDarkPanelHeader .AndroidDarkHeading, .AndroidDarkPanelFooter .AndroidDarkHeading {
+font: bold 24px sans-serif;
+padding: 2px;
+}
+.AndroidDarkPanelHeader .AndroidDarkText, .AndroidDarkPanelFooter .AndroidDarkText {
+font: 16px sans-serif;
+padding: 6px;
+}
+.AndroidDarkPanelNavInd {
+font-size: 0px;
+padding: 2px;
+}
+.AndroidDarkPanelNavIndButton {
+background: rgba(255, 255, 255, 0.5);
+margin: 2px;
+display: inline-block;
+width: 10px;
+height: 10px;
+}
+.AndroidDarkPanelNavIndButtonSelected {
+background: rgba(255, 255, 255, 0.9);
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody {
+position: relative;
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody:after {
+background: rgba(0, 0, 0, 0.05);
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 3px;
+z-index: 4;
+content: "";
+}
+.AndroidDarkPanelCard > .AndroidDarkPanelBody:before {
+background: rgba(0, 0, 0, 0.05);
+display: block;
+position: absolute;
+left: 0px;
+bottom: 0px;
+width: 100%;
+height: 3px;
+z-index: 4;
+content: "";
+}
+.AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelCard, .AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelNav {
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: #373737;
+}
+.AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelCard:before, .AndroidDarkPanelLayout > .AndroidDarkPanelBody > div > .AndroidDarkPanelNav:before {
+background: rgba(0, 0, 0, 0.025);
+display: block;
+position: absolute;
+top: 0px;
+right: 0px;
+width: 4px;
+height: 100%;
+z-index: 4;
+content: "";
+}
+.AndroidDarkAppBar {
+text-align: center;
+padding: 0px;
+}
+.AndroidDarkAppBar .AndroidDarkButton {
+background: transparent;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #373737;
+padding: 16px;
+margin: 0px;
+}
+.AndroidDarkAppBar .AndroidDarkButton:first-child {
+border-left-style: none;
+}
+.AndroidDarkAppBar .AndroidDarkButtonPressed {
+border-bottom-style: solid;
+border-bottom-width: 4px;
+border-bottom-color: #0099cc;
+padding-bottom: 12px;
+}
+.AndroidDarkAppBar .AndroidDarkButtonPressed:before {
+display: none;
+}
+/* Tabs */
+/* top and bottom */
+.AndroidDarkTabTBand, .AndroidDarkTabBBand {
+text-align: center;
+font-size: 0px;
+}
+.AndroidDarkTabTButton, .AndroidDarkTabTButtonSelected, .AndroidDarkTabTButtonDisabled, .AndroidDarkTabBButton, .AndroidDarkTabBButtonSelected, .AndroidDarkTabBButtonDisabled {
+text-decoration: none;
+color: #fff;
+background: #444444;
+font-size: 16px;
+border: none;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #5e5e5e;
+padding: 5px 9px;
+padding-bottom: 8px;
+display: inline-block;
+outline: none;
+}
+.AndroidDarkTabTButton:first-child, .AndroidDarkTabTButtonSelected:first-child, .AndroidDarkTabTButtonDisabled:first-child, .AndroidDarkTabBButton:first-child, .AndroidDarkTabBButtonSelected:first-child, .AndroidDarkTabBButtonDisabled:first-child {
+border-left-style: none;
+}
+.AndroidDarkTabBButton, .AndroidDarkTabBButtonSelected, .AndroidDarkTabBButtonDisabled {
+padding-top: 8px;
+padding-bottom: 5px;
+}
+.AndroidDarkTabTButtonSelected {
+border-bottom-style: solid;
+border-bottom-width: 3px;
+border-bottom-color: #0099cc;
+padding-bottom: 5px;
+}
+.AndroidDarkTabBButtonSelected {
+border-top-style: solid;
+border-top-width: 3px;
+border-top-color: #0099cc;
+padding-top: 5px;
+}
+.AndroidDarkTabTButtonDisabled, .AndroidDarkTabBButtonDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkTabTPane {
+margin-top: 6px;
+}
+.AndroidDarkTabBPane {
+margin-bottom: 6px;
+}
+/* left and right */
+.AndroidDarkTabLBand, .AndroidDarkTabRBand {
+font-size: 0px;
+}
+.AndroidDarkTabLButton, .AndroidDarkTabLButtonSelected, .AndroidDarkTabLButtonDisabled, .AndroidDarkTabRButton, .AndroidDarkTabRButtonSelected, .AndroidDarkTabRButtonDisabled {
+text-decoration: none;
+color: #fff;
+background: #444444;
+font-size: 16px;
+border: none;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #5e5e5e;
+padding: 5px 9px;
+padding-right: 12px;
+display: block;
+outline: none;
+}
+.AndroidDarkTabRButton, .AndroidDarkTabRButtonSelected, .AndroidDarkTabRButtonDisabled {
+padding-left: 12px;
+padding-right: 9px;
+}
+.AndroidDarkTabLButton:first-child, .AndroidDarkTabLButtonSelected:first-child, .AndroidDarkTabLButtonDisabled:first-child, .AndroidDarkTabRButton:first-child, .AndroidDarkTabRButtonSelected:first-child, .AndroidDarkTabRButtonDisabled:first-child {
+border-top-style: none;
+}
+.AndroidDarkTabLButtonSelected {
+border-right-style: solid;
+border-right-width: 3px;
+border-right-color: #0099cc;
+padding-right: 9px;
+}
+.AndroidDarkTabRButtonSelected {
+border-left-style: solid;
+border-left-width: 3px;
+border-left-color: #0099cc;
+padding-left: 9px;
+}
+.AndroidDarkTabLButtonDisabled, .AndroidDarkTabRButtonDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkTabLPane {
+margin-left: 6px;
+}
+.AndroidDarkTabRPane {
+margin-right: 6px;
+}
+/* Accordion */
+.AndroidDarkAccordion {
+border: 1px solid #444444;
+border-bottom-style: none;
+}
+.AndroidDarkAccordionButton, .AndroidDarkAccordionButtonSelected, .AndroidDarkAccordionButtonDisabled {
+text-decoration: none;
+color: #fff;
+background: #2b2b2b;
+font: bold 12px sans-serif;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 14px;
+display: block;
+outline: none;
+}
+.AndroidDarkAccordionButton:after {
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+display: block;
+float: left;
+content: 'b';
+}
+.AndroidDarkAccordionButtonSelected:after {
+font: 16px A5_AndroidIcons;
+margin-top: -2px;
+margin-right: 6px;
+display: block;
+float: left;
+content: 'c';
+}
+.AndroidDarkAccordionButtonDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkAccordionPane {
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #444444;
+padding: 6px;
+}
+/* Tabband */
+.AndroidDarkTabband, .AndroidDarkTabbandIcon {
+color: #fff;
+background: #1e1e1e;
+font-size: 16px;
+}
+.AndroidDarkTabbandButton, .AndroidDarkTabbandButtonSelected, .AndroidDarkTabbandButtonDisabled {
+text-decoration: none;
+white-space: nowrap;
+color: #fff;
+background: transparent;
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #373737;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #0099cc;
+padding: 14px;
+display: block;
+position: relative;
+outline: none;
+}
+.AndroidDarkTabbandButtonSelected {
+border-bottom-style: solid;
+border-bottom-width: 5px;
+border-bottom-color: #0099cc;
+padding-bottom: 10px;
+}
+.AndroidDarkTabbandButtonDisabled {
+color: rgba(255, 255, 255, 0.25);
+}
+.AndroidDarkTabbandClose {
+color: #fd4246;
+}
+.AndroidDarkTabbandIcon .AndroidDarkTabbandButton, .AndroidDarkTabbandIcon .AndroidDarkTabbandButtonSelected, .AndroidDarkTabbandIcon .AndroidDarkTabbandButtonDisabled {
+font-size: 10px;
+border: none;
+padding: 6px;
+}
+.AndroidDarkTabbandIcon .AndroidDarkTabbandButtonSelected {
+color: #0099cc;
+padding: 6px;
+}
+/* Ink */
+.AndroidDarkInk {
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+.AndroidDarkInkArea {
+background: #f2f2f2;
+}
+.AndroidDarkInkPage {
+background: #fff;
+border: 1px solid #ccc;
+box-shadow: 0px 3px 3px #e6e6e6;
+-moz-box-shadow: 0px 3px 3px #e6e6e6;
+-webkit-box-shadow: 0px 3px 3px #e6e6e6;
+}
+.AndroidDarkInkZoomBox {
+border: 1px dotted #0099cc;
+}
+.AndroidDarkInkZoomBoxScale:after {
+border: 5px solid transparent;
+border-right-color: rgba(0, 153, 204, 0.5);
+border-bottom-color: rgba(0, 153, 204, 0.5);
+display: block;
+position: absolute;
+right: 2px;
+bottom: 2px;
+content: "";
+}
+.AndroidDarkInkSplitBar {
+background: #e6e6e6;
+}
+.AndroidDarkInkEraser {
+background: rgba(255, 100, 150, 0.1);
+border: 1px solid rgba(255, 100, 150, 0.5);
+border-radius: 3px;
+}
+.AndroidDarkInkButton {
+text-align: center;
+color: #888888;
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid #ccc;
+padding: 2px;
+display: inline-block;
+vertical-align: top;
+width: 40px;
+height: 40px;
+line-height: 31px;
+border-radius: 22px;
+stroke: #888888;
+fill: #888888;
+}
+.AndroidDarkInkButton .AndroidDarkIcon {
+vertical-align: bottom;
+}
+.AndroidDarkInkButtonSelected {
+color: #3c3c3c;
+border-color: #999;
+stroke: #3c3c3c;
+fill: #3c3c3c;
+}
+.AndroidDarkInkBarTop {
+background: rgba(255, 255, 255, 0.9);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #ccc;
+}
+.AndroidDarkInkBarLeft {
+background: rgba(255, 255, 255, 0.9);
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color: #ccc;
+}
+.AndroidDarkInkBarRight {
+background: rgba(255, 255, 255, 0.9);
+border-left-style: solid;
+border-left-width: 1px;
+border-left-color: #ccc;
+}
+.AndroidDarkInkBarBottom {
+background: rgba(255, 255, 255, 0.9);
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #ccc;
+}
+.AndroidDarkInkGroupTop, .AndroidDarkInkGroupBottom, .AndroidDarkInkGroupLeft, .AndroidDarkInkGroupRight {
+background: rgba(255, 255, 255, 0.9);
+border: 1px solid #ccc;
+}
+.AndroidDarkInkGroupTop {
+border-top-style: none;
+border-radius: 0px 0px 4px 4px;
+}
+.AndroidDarkInkGroupBottom {
+border-bottom-style: none;
+border-radius: 4px 4px 0px 0px;
+}
+.AndroidDarkInkGroupLeft {
+border-left-style: none;
+border-radius: 0px 4px 4px 0px;
+}
+.AndroidDarkInkGroupRight {
+border-right-style: none;
+border-radius: 4px 0px 0px 4px;
+}
+.AndroidDarkInkBarTop .AndroidDarkInkButton, .AndroidDarkInkBarBottom .AndroidDarkInkButton, .AndroidDarkInkBarLeft .AndroidDarkInkButton, .AndroidDarkInkBarRight .AndroidDarkInkButton, .AndroidDarkInkGroupTop .AndroidDarkInkButton, .AndroidDarkInkGroupBottom .AndroidDarkInkButton, .AndroidDarkInkGroupLeft .AndroidDarkInkButton, .AndroidDarkInkGroupRight .AndroidDarkInkButton {
+background: transparent;
+border: 1px solid transparent;
+border-radius: 0px;
+}
+.AndroidDarkInkBarTop .AndroidDarkInkButtonSelected, .AndroidDarkInkBarBottom .AndroidDarkInkButtonSelected, .AndroidDarkInkBarLeft .AndroidDarkInkButtonSelected, .AndroidDarkInkBarRight .AndroidDarkInkButtonSelected, .AndroidDarkInkGroupTop .AndroidDarkInkButtonSelected, .AndroidDarkInkGroupBottom .AndroidDarkInkButtonSelected, .AndroidDarkInkGroupLeft .AndroidDarkInkButtonSelected, .AndroidDarkInkGroupRight .AndroidDarkInkButtonSelected {
+background: #e6e6e6;
+}
+.AndroidDarkInkStatus {
+color: #fff;
+background: rgba(0, 0, 0, 0.25);
+padding: 4px;
+border-radius: 4px;
+}
+.AndroidDarkInkPopup {
+color: #000;
+background: #fff;
+font: 16px sans-serif;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+.AndroidDarkInkPopupLock {
+background: rgba(0, 0, 0, 0.1);
+}
+.AndroidDarkInkPopupGroup {
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #e6e6e6;
+padding: 4px;
+padding-bottom: 0px;
+}
+.AndroidDarkInkPopupSwatch {
+text-align: center;
+border: 1px solid #ccc;
+padding: 2px;
+margin-bottom: 4px;
+display: inline-block;
+vertical-align: top;
+position: relative;
+width: 40px;
+height: 40px;
+border-radius: 22px;
+}
+.AndroidDarkInkPopupSwatchSelected {
+border: 2px solid #0099cc;
+margin: -1px;
+margin-bottom: 3px;
+border-radius: 23px;
+}
+.AndroidDarkInkPopupSwatchSelected:before {
+border: 2px solid #fff;
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+border-radius: 20px;
+content: "";
+}
+.AndroidDarkInkPopupButton {
+text-align: center;
+color: #000;
+font-size: 16px;
+padding: 14px;
+}
+/* Scroll Indicator */
+.AndroidDarkScrollIndH, .AndroidDarkScrollIndV {
+padding: 0px;
+width: 4px;
+height: 4px;
+}
+.AndroidDarkScrollIndHBar, .AndroidDarkScrollIndVBar {
+background: rgba(255, 255, 255, 0.5);
+opacity: .5;
+}
+/* Icons */
+.AndroidDarkIcon, .AndroidDarkIconSm, .AndroidDarkIconBtn {
+font: normal 22px A5_AndroidIcons;
+display: inline-block;
+cursor: default;
+position: relative;
+width: 24px;
+height: 24px;
+text-transform: none;
+}
+.AndroidDarkIconSm {
+font: 16px A5_AndroidIcons;
+width: 18px;
+height: 18px;
+}
+.AndroidDarkIconBtn {
+padding: 10px;
+}
+.AndroidDarkIconDisabled {
+opacity: .5;
+}
+.AndroidDarkIconLeft:after {
+display: block;
+position: absolute;
+content: "a";
+}
+.AndroidDarkIconRight:after {
+display: block;
+position: absolute;
+content: "b";
+}
+.AndroidDarkIconUp:after {
+display: block;
+position: absolute;
+content: "d";
+}
+.AndroidDarkIconDown:after {
+display: block;
+position: absolute;
+content: "c";
+}
+.AndroidDarkIconClose:after {
+display: block;
+position: absolute;
+content: "e";
+}
+.AndroidDarkIconResizeThumb:after {
+display: block;
+position: absolute;
+content: "f";
+}
+.AndroidDarkIconRadio:after {
+display: block;
+position: absolute;
+content: "g";
+}
+.AndroidDarkIconCheck:after {
+display: block;
+position: absolute;
+content: "h";
+}
+.AndroidDarkIconAdd:after {
+display: block;
+position: absolute;
+content: "i";
+}
+.AndroidDarkIconRemove:after {
+display: block;
+position: absolute;
+content: "j";
+}
+.AndroidDarkIconUndo:after {
+display: block;
+position: absolute;
+content: "k";
+}
+.AndroidDarkIconRedo:after {
+display: block;
+position: absolute;
+content: "l";
+}
+.AndroidDarkIconEdit:after {
+display: block;
+position: absolute;
+content: "m";
+}
+.AndroidDarkIconCancel:after {
+display: block;
+position: absolute;
+content: "n";
+}
+.AndroidDarkIconDelete:after {
+display: block;
+position: absolute;
+content: "o";
+}
+.AndroidDarkIconCancelEdit:after {
+display: block;
+position: absolute;
+content: "p";
+}
+.AndroidDarkIconNew:after {
+display: block;
+position: absolute;
+content: "q";
+}
+.AndroidDarkIconCancelNew:after {
+display: block;
+position: absolute;
+content: "r";
+}
+.AndroidDarkIconSave:after {
+display: block;
+position: absolute;
+content: "s";
+}
+.AndroidDarkIconLoad:after {
+display: block;
+position: absolute;
+content: "t";
+}
+.AndroidDarkIconSaveAndEnter:after {
+display: block;
+position: absolute;
+content: "u";
+}
+.AndroidDarkIconRefresh:after {
+display: block;
+position: absolute;
+content: "v";
+}
+.AndroidDarkIconSearch:after {
+display: block;
+position: absolute;
+content: "w";
+}
+.AndroidDarkIconFilter:after {
+display: block;
+position: absolute;
+content: "x";
+}
+.AndroidDarkIconFirst:after {
+display: block;
+position: absolute;
+content: "y";
+}
+.AndroidDarkIconLast:after {
+display: block;
+position: absolute;
+content: "z";
+}
+.AndroidDarkIconInfo:after {
+display: block;
+position: absolute;
+content: "A";
+}
+.AndroidDarkIconHelp:after {
+display: block;
+position: absolute;
+content: "B";
+}
+.AndroidDarkIconError:after {
+display: block;
+position: absolute;
+content: "C";
+}
+.AndroidDarkIconWarning:after {
+display: block;
+position: absolute;
+content: "D";
+}
+.AndroidDarkIconMenu:after {
+display: block;
+position: absolute;
+content: "E";
+}
+/* container padding */
+.AndroidDarkPanelHeader .A5Container, .AndroidDarkPanelFooter .A5Container, .AndroidDarkPanelTopHeader .A5Container, .AndroidDarkPanelTopFooter .A5Container, .AndroidDarkPanelHeader .A5CWLayout, .AndroidDarkPanelFooter .A5CWLayout, .AndroidDarkPanelTopHeader .A5CWLayout, .AndroidDarkPanelTopFooter .A5CWLayout {
+padding: 0px;
+}
