@@ -1,0 +1,197 @@
+{
+    "aliases": {
+        "alias": "[PathAlias.ADB_Path]\r\n",
+        "alias_expanded": "\r\n",
+        "alias_aliasExpanded": "[PathAlias.ADB_Path]|",
+        "error": false
+    },
+    "namedResources": "{}",
+    "ssrsConnectionStrings": "{}",
+    "applicationVariables": "{}",
+    "alphaDAOConnectionStrings": {
+        "SQL": "Encrypted:3MLNR/D8BLbOLVyV2vnymlT4970fFMs7f75fDdfEcUU7c+AFxa8wecu4ny1divf7DisHYAdlPF56wIPLcwZE6vXaefmCQOv0m+0/iXFfksNCQWA1PA3jW7Q4aYy2C/cfs6RxLx9IxMZphMPyK/Y9deEFlqc3l4k6hZiGARDlRRBOw0pJWs3iXT5AWldvWMJRm1svIYds6avpWmH7wNYMbLVD32tG9DMZ"
+    },
+    "ADOConnectionStrings": "{}",
+    "webProjectProperties": {
+        "aexFiles": {
+            "fileNames": ""
+        },
+        "fileDownload": {
+            "allowedFilenamePatterns": "*.xls*,*.pdf,*.jpg,*.jpeg,*.bmp,*.png,*.rtf",
+            "allowedFolderPatterns": "",
+            "blockedFilenamePatterns": ""
+        },
+        "reportServer": {
+            "disable": false
+        },
+        "reportEvents": {
+            "afterPrint": "",
+            "library": "",
+            "beforePrint": ""
+        },
+        "projectStyle": "Alpha-Dark_White:compact,pulse",
+        "useDirectPdf": false,
+        "useMicrosoftXPSPrinterForPDF": false,
+        "useBSONforSQLreporting": true,
+        "convertXPSToPDF": true,
+        "PDFPrintTimeout": 0,
+        "PDFOptions": "",
+        "PDFPrintTimeoutMessage": "",
+        "HTMLReportOffload": false,
+        "jsLibraries": {
+            "jQueryCore": "Load Internal Version",
+            "jQueryUI": "Load Internal Version",
+            "links": "",
+            "includeImageGallery": false,
+            "includeGoogleJSAPI": false,
+            "includeCKEdit": false,
+            "jQueryCoreVersion": "1.6.2",
+            "jQueryUIVersion": "1.8.16",
+            "cordova": {
+                "loadFrom": "BuiltIn"
+            },
+            "vuejs": "None"
+        },
+        "cssLibraries": {
+            "links": "",
+            "jQuery": "No Theme"
+        },
+        "deleteOldBackups": false,
+        "maxNumberOfBackups": "",
+        "minNumberOfBackups": "",
+        "deleteIfOlderThanDays": "",
+        "googleMapsAPIKey": "",
+        "googleStaticMapsAPIKey": "",
+        "googleGeocodingAPIKey": "",
+        "NamedResources": "",
+        "switchYear": "",
+        "websocket": {
+            "enable": false,
+            "longpolling": false,
+            "port": "",
+            "using": "Simple",
+            "redis_url": "",
+            "redis_host": "",
+            "redis_port": ""
+        },
+        "transform": {
+            "enable": false,
+            "settingsJSON": ""
+        },
+        "debugger": {
+            "allow": false
+        },
+        "email": {
+            "smtp_server": "smtp.gmail.com\t",
+            "smtp_username": "paul@pcs-lb.com",
+            "smtp_password": "@Mmoun#7285",
+            "smtp_port": "587 ",
+            "smtp_SSLOption": "TLS",
+            "from": "paul@pcs-lb.com",
+            "from_alias": "paul@pcs-lb.com",
+            "mandrillKey": "",
+            "sparkPostKey": "",
+            "outbox": {
+                "tableType": "SQL",
+                "connectionString": "",
+                "tableName": "",
+                "fieldmap": "",
+                "sequenceName": ""
+            },
+            "defaultmethod": "Internal"
+        },
+        "repository": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "auditTable": {
+            "on": false,
+            "tabletype": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": "",
+            "expressionForGettingUserId": ""
+        },
+        "extendedUserInfo": {
+            "connectionString": "",
+            "tableName": "",
+            "userIdField": ""
+        },
+        "workQueue": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "authenticationKeys": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "helpTable": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "textDictionary": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "datasynclogtable": {
+            "tableType": "SQL",
+            "connectionString": "",
+            "tableName": "",
+            "fieldmap": ""
+        },
+        "applicationGlobalVariables": "",
+        "calendar": {
+            "license": "not licensed"
+        },
+        "css": {
+            "webkit": {
+                "AllowSelectionOfText": false
+            }
+        },
+        "stripe": {
+            "keysJSON": ""
+        },
+        "siteDefaults": {
+            "guessedDefaultPage": true,
+            "defaultpage": "index.a5w",
+            "maxUploadSizeMB": 100,
+            "sessionTimeout": 15,
+            "sessionCookieName": "XBasic_SessionId",
+            "authenticationCookieName": ".ASPXFORMSAUTH"
+        },
+        "tfa": {
+            "twillioAccountSID": "",
+            "twillioAuthCode": "",
+            "twillioPhoneNumber": "",
+            "tokenLife": 7200,
+            "googleAuthenticatorPassword": "",
+            "googleAuthenticatorIssuer": "AlphaAnywhere",
+            "email": {
+                "send_from": "",
+                "send_from_alias": "",
+                "subject": "",
+                "message": ""
+            },
+            "codenotvalidmessage": "Code is not valid"
+        }
+    },
+    "namedDataSources": "{}",
+    "versionInfo": {
+        "__buildNumberExe__": 5887,
+        "__buildNumberAddins__": 5315,
+        "__guid": "de6de73f-0a31-4262-8326-4caaac99f618",
+        "__A5PublishVersion": 0,
+        "__A5PublishTimestamp": 2.01988e+15,
+        "__control": "hV7+2zUTjP0=\r\n"
+    }
+}
