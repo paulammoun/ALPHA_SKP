@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <%a5
 
+dim flagHTMLEdtor as l = .f.
+if eval_valid("request.variables.fileUploadUrl") then 
+	if request.variables.fileUploadUrl = "__a5HTMLEditorFileInsertPage.a5w" then 
+		flagHTMLEdtor = .t.
+	end if 
+end if 
 
+dim _class as c 
+_class = a5DialogHelper_ResolveTHEME_CSS("[class.dialogInput]",request.variables.stylesheetName)
+
+
+dim imageSizeHTML as c  = ""
+if flagHTMLEdtor then 
+	imageSizeHTML = <<%html2%
+Width: <input __class__ style="width: .3in;" id="__width" name="__width" /> Height: <input __class__ style="width: .3in;" id="__height" name="__height" /> Margin: <input __class__ style="width: .3in;" id="__margin" name="__margin" /> <br><br>
+%html2%
+	imageSizeHTML = stritran(imageSizeHTML,"__class__"," class=" + quote(_class))
+end if 
 dim __accept as c
 __accept = ""
 if eval_valid("request.variables._allowedFileTypes") then 
@@ -172,7 +189,7 @@ end if
 %>
 <html>
 <head>
-<meta name="generator" content="Alpha Five HTML Editor Version 12 Build 5667-5254">
+<meta name="generator" content="Alpha Five HTML Editor Version 12 Build 5887-5315">
 <!-- must use in order to make XP Themes render -->
 <meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -414,16 +431,14 @@ A5.fileUpload = {
 <div id="UPLOADFORM">
 <%a5  ?fileUploadText %>
 <form id="FileUpload" action="<%a5 ?fileUploadURL %>" method="post" enctype="multipart/form-data">
+
 <input type="hidden" id="filesToUpload" class="<%a5 ?__buttonClass%>" name="filesToUpload"/>
+
 <input type="hidden" id="OTHERVARIABLEVALUES" name="__otherFormData" />
-
 <%a5 ?hiddenFields %>
-
-
-
-
+<br>
+<%a5 ?imageSizeHTML %>
 </form>
-
 <script>
 function addHiddenField(name,value) { 
 	var ele = document.createElement('input');
@@ -453,8 +468,6 @@ if(typeof window.parent._tempUploadVariables != 'undefined') {
 	delete window.parent._tempUploadVariables;
 }
 </script>
-
-
 
 <script>
 function uploadNew() { 

@@ -11675,6 +11675,7 @@ A5.DialogComponentHelper.prototype = {
 		this._hiddenControls = {};
 		this._objectsToDestroy = [];
 		this._friendlyDateControls = [];
+		this.eventGroups = [];
 		this._dataCache = {};
 		this._jsCharts = {};
 		this._viewBoxData = {};
@@ -19329,20 +19330,33 @@ _listRowSelect: function(listId,lObj) {
 		var data = A5.ajax.buildURLParam('_namedResource',namedResource);
 		var cb = function() { }
 		if(typeof callBack == 'function') cb = callBack;
-		this.ajaxCallback('','','system:getAccessToken','',data,{onComplete: function() { cb.call(this,that.__accessToken, that.__baseURL);},deviceOfflineFunction: function() {   }});
+		this.ajaxCallback('','','system:getAccessToken','',data,{onComplete: function() { cb.call(this,that.__accessToken, that.__baseURL, that.__refreshToken, that.__accessTokenExpires);},deviceOfflineFunction: function() {   }});
+	},
+
+
+	deleteAccessToken: function(namedResource,callBack) {
+		var that = this;;
+		var data = A5.ajax.buildURLParam('_namedResource',namedResource);
+		var cb = function() { }
+		if(typeof callBack == 'function') cb = callBack;
+		this.ajaxCallback('','','system:deleteAccessToken','',data,{onComplete: function() { cb.call(this);},deviceOfflineFunction: function() {   }});
 	},
 
 
 	getOAuthAccessToken: function(named) {
-		window.___currentUXObject = this;
-		var data = A5.ajax.buildURLParam('__pagename', window.location.pathname );
-		var varName = typeof arguments[1] != 'undefined' ? arguments[1] : '';
-		var _mode = typeof arguments[2] != 'undefined' ? arguments[2] : '3';
-		var urlPrefix = '';
-		if(typeof window.cordova == 'object') {
-			urlPrefix = this._getAjaxURL();
-		}
-		this.ajaxCallback('','','',urlPrefix + '__a5ExternalAuthentication.a5w',data+'&state='+named+'|'+this.dialogId+'_DlgObj&__Mode='+_mode+'&__variableName='+varName);
+			window.___currentUXObject = this;
+			var data = A5.ajax.buildURLParam('__pagename', window.location.pathname );
+			var varName = typeof arguments[1] != 'undefined' ? arguments[1] : '';
+			var _mode = typeof arguments[2] != 'undefined' ? arguments[2] : '3';
+			var obj = typeof arguments[3] != 'undefined' ? arguments[3]: {};
+			var urlPrefix = '';
+			if(typeof window.cordova == 'object') {
+				urlPrefix = this._getAjaxURL();
+			}
+			var _data = data+'&state='+named+'|'+this.dialogId+'_DlgObj&__Mode='+_mode+'&__variableName='+varName
+			var _obj = A5.ajax.buildURLParam('__oauthoptions',JSON.stringify(obj) );
+			_data = _data + '&' + _obj;
+			this.ajaxCallback('','','',urlPrefix + '__a5ExternalAuthentication.a5w',_data);
 	},
 
 	_ajaxCallbackCrossDomain: function(url,successFunctionName) {
@@ -22849,6 +22863,20 @@ _refreshListDataLow: function(listId,mode,obj) {
 				if(typeof tresult == 'boolean') result = result && tresult;
 			}
 		}
+
+		// event groups before
+		var eg = null;
+		for(var i=0;i<this.eventGroups.length;i++){
+			eg = this.eventGroups[i];
+			if(eg.before){
+				if(typeof eg.before[eventName] == 'function'){
+					tresult = eg.before[eventName].apply(this,[eg.scope || this].concat(targs));
+					if(typeof tresult == 'boolean') result = result && tresult;
+				}
+			}
+		}
+
+
 		//user event
 		if(typeof this[eventName] != 'undefined'  ) {
 			if(this[eventName].constructor == Function) {
@@ -22858,6 +22886,18 @@ _refreshListDataLow: function(listId,mode,obj) {
 				} else {
 					tresult = this[eventName].apply(this,targs);
 					if(typeof tresult == 'boolean') result = tresult;
+				}
+			}
+		}
+
+		// event groups after
+		var eg = null;
+		for(var i=0;i<this.eventGroups.length;i++){
+			eg = this.eventGroups[i];
+			if(eg.after){
+				if(typeof eg.after[eventName] == 'function'){
+					tresult = eg.after[eventName].apply(this,[eg.scope || this].concat(targs));
+					if(typeof tresult == 'boolean') result = result && tresult;
 				}
 			}
 		}

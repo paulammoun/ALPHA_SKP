@@ -157,10 +157,44 @@ if file1.filename <> "" then
   
 		
 		if insertType = "Image" then 
+			dim _w as c = ""
+			dim _h as c = ""
+			dim _m as c = ""
+			if eval_valid("request.variables.__width") then 
+				_w = request.variables.__width 
+			end if 
+			if eval_valid("request.variables.__height") then 
+				_h = request.variables.__height
+			end if 
+			if eval_valid("request.variables.__margin") then 
+				_m = request.variables.__margin 
+			end if 
+			
 			jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
 				"window.parent.$sa(ele,'a5imagetoinsert','"+filenameRelative+"');"+crlf()+\
 				"window.parent.$sa(ele,'a5inserttype','image');"+crlf()+\
 				"window.parent.$e.execute(ele,'a5insert');"
+			
+			if _w + _h + _m <> "" then 
+				_w = fix(_w)
+				_h = fix(_h)
+				_m = fix(_m)
+				
+				
+				dim p as p
+				p.src = filenameRelative
+				p.style = "width: " + _w + "; height: " + _h + "; margin: " + _m + ";"
+				dim json as c 
+				json = json_generate(p,.f.,.t.)
+				
+				dim htmlEdObj as c = request.variables.htmlEditorObjectName
+				dim js2 as c 
+				'js2 = "window.parent." + htmlEdObj + "._edInsertHTML('','some junk');" + "window.parent.A5.windows.getFromElement('" + windowId + "').hide();"
+				js2 = "window.parent." + htmlEdObj + "._edInsertHTML('img','',"+json+");" + "window.parent.A5.windows.getFromElement('" + windowId + "').hide();"
+				jsCmd = js2 
+				'obj._edInsertHTML('','<img style="width: 2in;" src="htmlimages/Image 002.png" />')
+			end if 
+			
 		else if insertType = "file" then 
 			jsCmd = "ele = window.parent.$('"+windowId+"');"+crlf()+\
 				"window.parent.$sa(ele,'a5filetoinsert','"+filenameRelative+"');"+crlf()+\
@@ -176,6 +210,17 @@ end if
 
 
 
+''request.variables.htmlEditorObjectName
+
+'request.variables.__width := "1in"
+'request.variables.__height := ""
+'request.variables.__margin := ""
+'jsCmd := <<%str%
+'ele = window.parent.$('A5dlg0');
+'window.parent.$sa(ele,'a5imagetoinsert','htmlimages/Image 010.png');
+'window.parent.$sa(ele,'a5inserttype','image');
+'window.parent.$e.execute(ele,'a5insert');%str%
+
 
 dim returndatatype as c = default ""
 if returndatatype  = "javascript" then 
@@ -183,6 +228,19 @@ if returndatatype  = "javascript" then
 else
 	?"<script>"+crlf()+jsCmd+crlf()+"</script>"
 end if 
+
+function fix as c (txt as c)
+	
+dim txt2 as c = "" + val(txt)
+if txt2 = txt then 
+	'no units
+	txt2 = txt + "px"
+else
+	txt2 = txt 
+end if 
+txt2 = stritran(txt2,";","")	
+fix = txt2 
+end function 
 
 %>
 

@@ -23,7 +23,6 @@ if eval_valid("Request.Variables.fileToDownload") then
 	fileToDownload = Request.Variables.fileToDownload
 end if
 
-
 'check to see if the filename is a JSON definition for a file in cloud storage
 dim p as p
 filetodownload = alltrim(filetodownload)
@@ -112,9 +111,16 @@ if left(filetodownload,2) <> chr(92) + chr(92) then
 					'user specified a relative path for the download folder
 					folder = Request.ApplicationRoot + folder
 				end if
-			end if 
+			end if
+			
+			dim file2 as c = fileToDownload
+			file2 = stritran(file2,"/",chr(92)) 
 
 			fileToDownload = a5_removetrailingbackslash(folder) + chr(92) + fileToDownload
+			
+			if file.exists(filetodownload) = .f. then 
+				fileToDownload = Request.ApplicationRoot + file2
+			end if 
 		end if
 	end if
 end if

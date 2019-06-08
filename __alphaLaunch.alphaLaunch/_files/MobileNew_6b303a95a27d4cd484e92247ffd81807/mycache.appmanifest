@@ -1,9 +1,9 @@
 CACHE MANIFEST
 
-#version2019-14-05 162116024
-a5images/$$window.button.close.png
+#version2019-05-06 1885442
 a5images/boxsize8x8fillUp5FDiagonalWhite3A232552C2392C239.png
-a5images/null_1x1.png
+a5images/null1x1.png
+a5images/windowbuttonclose.png
 css/A5System/default/tree/b.png
 css/A5System/default/tree/bc.png
 css/A5System/default/tree/bcf.png
@@ -71,11 +71,26 @@ css/A5System/Vista/tree/boh.png
 css/A5System/Vista/tree/n.png
 css/A5System/Vista/theme.css
 css/A5System/Vista/theme.js
-css/Alpha-Dark/style.css
-css/Alpha-Dark/style.dat
-css/Alpha-Dark/style.js
-css/Alpha-Dark/styleInherit.json
+css/AndroidDark/A5_AndroidIcons.eot
+css/AndroidDark/A5_AndroidIcons.ttf
+css/AndroidDark/A5_AndroidIcons.woff
+css/AndroidDark/editBGDown.png
+css/AndroidDark/editBGDownError.png
+css/AndroidDark/editBGDownFocus.png
+css/AndroidDark/editBGDownMask.png
+css/AndroidDark/editSide.png
+css/AndroidDark/editSideError.png
+css/AndroidDark/editSideFocus.png
+css/AndroidDark/spinListBack.png
+css/AndroidDark/spinListBackMask.png
+css/AndroidDark/style.css
+css/AndroidDark/style.dat
+css/AndroidDark/style.js
+css/AndroidDark/style.json
+css/AndroidDark/style.sass
+css/AndroidDark/switchBack.png
 css/_sharedStyles/style.css
 javascript/a5.js
 javascript/A5jQueryWithUI.js
+javascript/a5_url.js
 index.html

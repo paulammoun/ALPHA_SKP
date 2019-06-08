@@ -43,7 +43,8 @@
 <promptToStartServerForLivePreview=.T.>
 <encryptConnectionStrings=.T.>
 <saveFileType="">
-<showPublishCompleteDialog=.T.>
+<showPublishCompleteDialog=.F.>
+<livePreviewMachineName="Localhost">
 >
 <googleMapsAPIKey="">
 <googleStaticMapsAPIKey="">
@@ -148,4 +149,7 @@
 <message="">
 >
 <codenotvalidmessage="Code is not valid">
+>
+<oauthEvents<onGotAccessToken="">
+<library="">
 >

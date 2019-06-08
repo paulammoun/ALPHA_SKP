@@ -2,13 +2,29 @@
 'This page is used for external authentication methods to get credentials, add a user, or login from an AJAX call
 dim __ajax as c
 dim code as c
+
+dim oauthOptions as c = "{}"
+if eval_valid("request.variables.__oauthoptions") then 
+	oauthOptions = request.variables.__oauthoptions
+end if 
+
+ 
 dim ext as webSecurity::ExtAuthentication
 if ext.AllowExtAuthentication = .F.
 	goto redirect
 end if
-ext.GetAuthenticationTokens()
+ext.GetAuthenticationTokens(oauthOptions)
 dim isAuthenticated as l
 isAuthenticated = ext.IsAuthenticated()
+
+
+if isAuthenticated = .t. 
+	dim txt as c 
+	txt = json_generate(request.variables)
+	save_to_file(txt,"c:\bugs\cian_authenticated.txt")
+else
+	save_to_file(ext.javascript,"c:\bugs\cian_javascript.txt")
+end if 
 
 if isAuthenticated = .F. 
 	if code = "" ' need JavaScript code to open login form
@@ -24,11 +40,13 @@ if isAuthenticated = .F.
 end if 
 if isAuthenticated
 	ext.ProcessAuthenticationRequest()
+
 end if 
 
 redirect: 
 
 if __ajax = "true"
+	
 	?ext.Javascript  
 else
 	?ext.html

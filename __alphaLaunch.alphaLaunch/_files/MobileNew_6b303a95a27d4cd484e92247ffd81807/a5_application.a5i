@@ -86,6 +86,7 @@ DIM jsLibraries.jQueryCoreVersion as C = "1.6.2"
 DIM jsLibraries.jQueryUIVersion as C = "1.8.16"
 DIM jsLibraries.cordova as P
 DIM jsLibraries.cordova.loadFrom as C = "BuiltIn"
+DIM jsLibraries.vuejs as C = "None"
 DIM cssLibraries as P
 DIM cssLibraries.links as C
 DIM cssLibraries.jQuery as C = "No Theme"
@@ -127,6 +128,7 @@ DIM email.outbox.connectionString as C
 DIM email.outbox.tableName as C
 DIM email.outbox.fieldmap as C
 DIM email.outbox.sequenceName as C
+DIM email.defaultmethod as C = "Internal"
 DIM repository as P
 DIM repository.tableType as C = "SQL"
 DIM repository.connectionString as C
@@ -183,6 +185,19 @@ DIM siteDefaults.maxUploadSizeMB as N = 100
 DIM siteDefaults.sessionTimeout as N = 15
 DIM siteDefaults.sessionCookieName as C = "XBasic_SessionId"
 DIM siteDefaults.authenticationCookieName as C = ".ASPXFORMSAUTH"
+DIM tfa as P
+DIM tfa.twillioAccountSID as C
+DIM tfa.twillioAuthCode as C
+DIM tfa.twillioPhoneNumber as C
+DIM tfa.tokenLife as N = 7200
+DIM tfa.googleAuthenticatorPassword as C
+DIM tfa.googleAuthenticatorIssuer as C = "AlphaAnywhere"
+DIM tfa.email as P
+DIM tfa.email.send_from as C
+DIM tfa.email.send_from_alias as C
+DIM tfa.email.subject as C
+DIM tfa.email.message as C
+DIM tfa.codenotvalidmessage as C = "Code is not valid"
 %txt%
 
 dim gv as p 
@@ -193,10 +208,10 @@ dim gv.__buildNumberExe__ as n
 dim gv.__buildNumberAddins__ as n 
 dim gv.__guid as c 
 dim gv.__A5PublishVersion as n 
-gv.__A5PublishTimestamp = 2019212114162117604
-gv.__buildNumberExe__ = 5667
-gv.__buildNumberAddins__ = 5254
-gv.__guid = "d92338ac-6004-4231-a612-c6042bc2f47a"
+gv.__A5PublishTimestamp = 2019880518086866
+gv.__buildNumberExe__ = 5887
+gv.__buildNumberAddins__ = 5315
+gv.__guid = "de6de73f-0a31-4262-8326-4caaac99f618"
 gv.__control = <<%txtcontrol%
 hV7+2zUTjP0=
 %txtcontrol%
