@@ -198,6 +198,9 @@ DIM tfa.email.send_from_alias as C
 DIM tfa.email.subject as C
 DIM tfa.email.message as C
 DIM tfa.codenotvalidmessage as C = "Code is not valid"
+DIM oauthEvents as P
+DIM oauthEvents.onGotAccessToken as C
+DIM oauthEvents.library as C
 %txt%
 
 dim gv as p 
@@ -208,10 +211,10 @@ dim gv.__buildNumberExe__ as n
 dim gv.__buildNumberAddins__ as n 
 dim gv.__guid as c 
 dim gv.__A5PublishVersion as n 
-gv.__A5PublishTimestamp = 2019880518086866
-gv.__buildNumberExe__ = 5887
-gv.__buildNumberAddins__ = 5315
-gv.__guid = "de6de73f-0a31-4262-8326-4caaac99f618"
+gv.__A5PublishTimestamp = 2019292921172928097
+gv.__buildNumberExe__ = 5905
+gv.__buildNumberAddins__ = 5320
+gv.__guid = "0d320d68-5673-4ea9-9eb0-ad3bb23d43ab"
 gv.__control = <<%txtcontrol%
 hV7+2zUTjP0=
 %txtcontrol%

@@ -3245,7 +3245,7 @@
 		"name": "\\css\\demoapp_index.css"
 	},
 	{
-		"crc": 4294952089,
+		"crc": 4294903031,
 		"name": "\\javascript\\a5.js"
 	},
 	{
@@ -3258,7 +3258,7 @@
 	}],
 	"rootfiles": [
 	{
-		"crc": 4294908858,
+		"crc": 4294921628,
 		"name": "\\baseline.zip"
 	},
 	{
@@ -3270,7 +3270,7 @@
 		"name": "\\icon.png"
 	},
 	{
-		"crc": 4294929359,
+		"crc": 4294936587,
 		"name": "\\index.html"
 	},
 	{
@@ -3282,11 +3282,11 @@
 		"name": "\\splash.png"
 	},
 	{
-		"crc": 4294966174,
+		"crc": 4294963886,
 		"name": "\\version.json"
 	},
 	{
-		"crc": 4294915025,
+		"crc": 4294947357,
 		"name": "\\_instantUpdateSettings.js"
 	},
 	{

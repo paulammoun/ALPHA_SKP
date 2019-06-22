@@ -1,12 +1,12 @@
 {
 	"id": "com.pcslb",
-	"name": "polo",
+	"name": "SKP",
 	"url": "",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"installMessage": "done",
 	"minSize": "600",
 	"maxSize": "1000",
-	"description": "ppp",
+	"description": "SKP",
 	"other": {
 		"developerName": "pp",
 		"deveroperEmail": "p@p.com"
@@ -21,10 +21,10 @@
 	"iconstyle": "",
 	"svg": "",
 	"advancedMode": false,
-	"advancedModeJson": "",
+	"advancedModeJson": "{\r\n\t\"appIcon\": \"\",\r\n\t\"template\": \"\"\r\n}",
 	"options": {
 		"iOSStatusBar": {
-			"statusBarOverlaysWebView": 1,
+			"statusBarOverlaysWebView": 0,
 			"statusBarTextWhite": 0,
 			"statusBarBackgroundHexColor": "#FFF"
 		}

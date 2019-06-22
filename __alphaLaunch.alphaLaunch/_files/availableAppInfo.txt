@@ -7,10 +7,10 @@
 	"appList": [
 	{
 		"id": "com.pcslb",
-		"name": "polo",
-		"description": "ppp",
+		"name": "SKP",
+		"description": "SKP",
 		"url": "MobileNew_6b303a95a27d4cd484e92247ffd81807",
-		"version": "1.0.0",
+		"version": "2.0.0",
 		"installMessage": "done",
 		"minSize": "600",
 		"maxSize": "1000",
@@ -19,7 +19,7 @@
 		"template": "<table style=\"background-color:#5345f2; padding-top:0px;padding-bottom:12px;width:100%;padding-top:12px\">  <tr>   <td style=\"width:64px;\">             <img  style=\"\" src=\"\" />   </td>   <td>    <p style=\"font-size: 20px; padding-left:20px; color:#fff; font-family:arial; margin-bottom:0px;\">{name}</p>    <p style=\"font-size: 14px; padding-left:20px; color:#fff; font-family:arial; margin-top:0px;\">{desc}</p>   </td>  </tr> </table> ",
 		"options": {
 			"iOSStatusBar": {
-				"statusBarOverlaysWebView": 1,
+				"statusBarOverlaysWebView": 0,
 				"statusBarTextWhite": 0,
 				"statusBarBackgroundHexColor": "#FFF"
 			}
