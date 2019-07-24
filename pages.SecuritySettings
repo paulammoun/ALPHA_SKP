@@ -134,4 +134,12 @@
 <action="login">
 <groups="8c523d316a614fb98586bd79735e61c2,Administrators,d1df062f3e814910869aad523c836555,EntityAdmin,9ef728f1bd0c41ecac1e58d4545a1ff4,OfficeUSer">
 >
+<[35]<page="Redeem.a5rpt">
+<action="login">
+<groups="8c523d316a614fb98586bd79735e61c2,Administrators,d1df062f3e814910869aad523c836555,EntityAdmin,e02d8de01c294dea9661471528c36270,HairDressers,9ef728f1bd0c41ecac1e58d4545a1ff4,OfficeUSer,fd280f7c747343319ec63ab799b26b34,Salons">
+>
+<[36]<page="Redeem.a5wcmp">
+<action="login">
+<groups="8c523d316a614fb98586bd79735e61c2,Administrators,d1df062f3e814910869aad523c836555,EntityAdmin,e02d8de01c294dea9661471528c36270,HairDressers,9ef728f1bd0c41ecac1e58d4545a1ff4,OfficeUSer,fd280f7c747343319ec63ab799b26b34,Salons">
+>
 >

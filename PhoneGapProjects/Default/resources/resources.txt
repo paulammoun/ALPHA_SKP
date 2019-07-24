@@ -6,7 +6,7 @@
 	"_ssP": "",
 	"_ssA9": "C:\\Users\\PC\\Desktop\\2019-05-07_1845.png",
 	"_initialUxComponent": "MobileNew",
-	"_componentLastUpdated": "21/06/2019 06:42:07 63 pm",
+	"_componentLastUpdated": "21/07/2019 04:09:46 87 pm",
 	"_ajaxUrl": "http://185.2.101.13/skp/",
 	"_additionalFiles": "",
 	"_userName": "yaRPoIn+mK7LOXPAYFajlAOZrh9Hg9/p",
@@ -34,11 +34,11 @@
 	"_androidBuildFlag": true,
 	"_iOSBuildFlag": true,
 	"_windowsBuildFlag": false,
-	"_newAjaxURL": "",
-	"_changeAjaxURL": false,
-	"_baseLineGuid": "a03232c0d6514a8b9d91473a883b30de",
+	"_newAjaxURL": "http://185.2.101.13/skp/",
+	"_changeAjaxURL": true,
+	"_baseLineGuid": "e8f843b1144d47229b99a26e13237106",
 	"enableInstantUpdate": true,
-	"instantUpdateSettingsJSON": "{\r\n\t\"item1\": \"item1\",\r\n\t\"name\": \"\",\r\n\t\"patchLocation\": \"AlphaSoftware\",\r\n\t\"storageConnectionString\": \"\",\r\n\t\"baseURL\": \"\",\r\n\t\"displayMessageAfterUpdate\": false,\r\n\t\"firsttimerunmessage\": \"\",\r\n\t\"displayfirsttimeloadmessage\": true,\r\n\t\"message\": \"\",\r\n\t\"systemMessages\": \"Verbose\",\r\n\t\"autoUpdate\": true,\r\n\t\"path\": \"\"\r\n}",
+	"instantUpdateSettingsJSON": "{\r\n\t\"item1\": \"item1\",\r\n\t\"name\": \"\",\r\n\t\"patchLocation\": \"AlphaSoftware\",\r\n\t\"storageConnectionString\": \"\",\r\n\t\"baseURL\": \"\",\r\n\t\"displayMessageAfterUpdate\": true,\r\n\t\"firsttimerunmessage\": \"\",\r\n\t\"displayfirsttimeloadmessage\": true,\r\n\t\"message\": \"\",\r\n\t\"systemMessages\": \"Verbose\",\r\n\t\"autoUpdate\": true,\r\n\t\"path\": \"\"\r\n}",
 	"launchAppManager": true,
 	"_sqlitedbdefined": false,
 	"_channel": "",
@@ -49,5 +49,9 @@
 	"_enableFirebaseAuthentication": false,
 	"_firebaseAuthorizedDomainName": "",
 	"_firebaseDynamicLinksDomainName": "",
-	"_channels": ""
+	"_channels": "",
+	"baseline": {
+		"_initialUXcomponent": "MobileNew",
+		"_ajaxurl": "http://185.2.101.13/skp/"
+	}
 }

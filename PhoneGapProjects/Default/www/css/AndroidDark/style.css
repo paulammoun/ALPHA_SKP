@@ -1,7 +1,15 @@
 @font-face {
-font-family: 'A5_AndroidIcons';
-src: url(A5_AndroidIcons.eot) format("embedded-opentype"), url(A5_AndroidIcons.woff) format("woff"), url(A5_AndroidIcons.ttf) format("truetype"), url(A5_AndroidIcons.svg) format("svg");
+	font-family: 'A5_AndroidIcons';
+	src: url(A5_AndroidIcons.eot) format("embedded-opentype"),
+	url("css/AndroidDark/A5_AndroidIcons.eot") format("embedded-opentype"), 
+	url(A5_AndroidIcons.woff) format("woff"), 
+	url("css/AndroidDark/A5_AndroidIcons.woff") format("woff"),
+	url(A5_AndroidIcons.ttf) format("truetype"),
+	url("css/AndroidDark/A5_AndroidIcons.ttf") format("truetype"), 
+	url(A5_AndroidIcons.svg) format("svg"),
+	url("css/AndroidDark/A5_AndroidIcons.svg") format("svg");
 }
+
 html {
 -webkit-tap-highlight-color: transparent;
 -webkit-user-select: none;
