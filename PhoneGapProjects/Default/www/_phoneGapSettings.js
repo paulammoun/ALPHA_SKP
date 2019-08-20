@@ -16,7 +16,7 @@ function _phoneGapSettings() {
         "disable-cursor": "false",
         "android-minSdkVersion": "19",
         "android-installLocation": "internalOnly",
-        "phonegap-version": "cli-7.1.0",
+        "phonegap-version": "cli-8.1.1",
         "EnableViewportScale": "false",
         "MediaPlaybackRequiresUserAction": "true",
         "AllowInlineMediaPlayback": "true",
@@ -26,7 +26,7 @@ function _phoneGapSettings() {
         "KeyboardDisplayRequiresUserAction": "true",
         "SurpressesIncrementalRendering": "true",
         "android-maxSdkVersion": "",
-        "android-targetSdkVersion": "",
+        "android-targetSdkVersion": "26",
         "KeepRunning": "true",
         "ErrorUrl": "error.html",
         "LoadingDialog": "Please wait, the app is loading.",
@@ -47,30 +47,19 @@ function _phoneGapSettings() {
         "splash-screen-duration": "5000"
     },
     "plugins": {
-        "cordova-plugin-console": "npm",
         "cordova-plugin-device": "npm",
         "cordova-plugin-file": "npm",
         "cordova-plugin-file-transfer": "npm",
-        "cordova-plugin-geolocation": "npm",
         "cordova-plugin-inappbrowser": "npm",
         "cordova-plugin-network-information": "npm",
         "cordova-plugin-dialogs": "npm",
         "cordova-plugin-splashscreen": "npm",
         "phonegap-plugin-barcodescanner": "npm",
-        "cordova-plugin-camera-with-exif": "npm",
-        "ionic-plugin-keyboard": "npm",
         "cordova-sqlite-ext": "npm",
-        "cordova-plugin-statusbar": "npm",
-        "cordova-plugin-x-toast": "npm",
-        "cordova-plugin-whitelist": "npm",
-        "cordova-plugin-device-orientation": "npm",
-        "cordova-plugin-android-permissions": "npm",
-        "cordova-plugin-globalization": "npm",
-        "cordova-plugin-native-transitions": "npm",
-        "https://github.com/transistorsoft/cordova-background-geolocation-lt.git": "git",
         "cordova-plugin-datepicker": "npm",
-        "cordova-plugin-battery-status": "npm",
-        "cordova-plugin-zip": "npm"
+        "cordova-plugin-zip": "npm",
+        "cordova-plugin-whitelist": "npm",
+        "cordova-plugin-x-toast": "npm"
     }
 };
 }

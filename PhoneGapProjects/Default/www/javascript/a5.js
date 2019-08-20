@@ -16098,9 +16098,18 @@ _listRowSelect: function(listId,lObj) {
 
 			//hide the wrapping container and the following <br> if necessary
 
+
 			try{
 				//don't do this if the control is a container
-				if(typeof this.__controlNesting[controlName] == 'undefined') {
+				var flagIsContainer = true;
+
+
+				var cn = controlName;
+				var cn = cn.split('_A5INSTANCE')[0];
+
+				if(typeof this.__controlNesting[cn] == 'undefined') flagIsContainer = false;
+				if(!flagIsContainer) {
+
 					if($(this.dialogId + '.V.R' + data.rowNumber + '.'+controlName + '')) {
 						var ele = $(this.dialogId + '.V.R' + data.rowNumber + '.'+controlName + '');
 						var pEle = ele.parentNode;
@@ -16117,8 +16126,11 @@ _listRowSelect: function(listId,lObj) {
 							}
 						}
 					}
+
 				}
 			}catch(e) { }
+
+
 
 
 		}
@@ -19691,7 +19703,7 @@ _listRowSelect: function(listId,lObj) {
 				}
 			}
 			aFail.onprogress = function(arg) {
-				if(!done && this.responseText.indexOf(marker) > -1 ) {
+				if(typeof this.responseText != 'undefined' && !done && this.responseText.indexOf(marker) > -1 ) {
 
 					var resp = this.responseText;
 					if(typeof resp != 'undefined') {
@@ -19704,12 +19716,16 @@ _listRowSelect: function(listId,lObj) {
 						}
 						if(resp) {
 							//resp = resp.substring(length);
-							length = this.responseText.length;
+
 							if(_chunkCount >= _maxMessages) {
 								//do nothing
 							} else {
-								_chunkCount++;
-								if(resp.indexOf(marker) > -1) eval(resp);
+
+								if(resp.indexOf(marker) > -1) {
+									eval(resp);
+									length = this.responseText.length;
+									_chunkCount++;
+								}
 							}
 
 						}

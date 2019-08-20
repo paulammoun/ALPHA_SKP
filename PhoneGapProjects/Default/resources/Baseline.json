@@ -3245,7 +3245,7 @@
 		"name": "\\css\\demoapp_index.css"
 	},
 	{
-		"crc": 4294955308,
+		"crc": 4294920809,
 		"name": "\\javascript\\a5.js"
 	},
 	{
@@ -3258,11 +3258,11 @@
 	}],
 	"rootfiles": [
 	{
-		"crc": 4294918966,
+		"crc": 4294926354,
 		"name": "\\baseline.zip"
 	},
 	{
-		"crc": 4294932798,
+		"crc": 4294941375,
 		"name": "\\config.xml"
 	},
 	{
@@ -3270,7 +3270,7 @@
 		"name": "\\icon.png"
 	},
 	{
-		"crc": 4294937841,
+		"crc": 4294950208,
 		"name": "\\index.html"
 	},
 	{
@@ -3282,23 +3282,18 @@
 		"name": "\\splash.png"
 	},
 	{
-		"crc": 4294961437,
+		"crc": 4294952911,
 		"name": "\\version.json"
 	},
 	{
-		"crc": 4294933591,
+		"crc": 4294921394,
 		"name": "\\_instantUpdateSettings.js"
 	},
 	{
-		"crc": 4294936014,
+		"crc": 4294932597,
 		"name": "\\_phoneGapSettings.js"
 	}],
 	"plugins": [
-	{
-		"name": "cordova-plugin-console",
-		"source": "npm",
-		"version": "1.1.0"
-	},
 	{
 		"name": "cordova-plugin-device",
 		"source": "npm",
@@ -3313,11 +3308,6 @@
 		"name": "cordova-plugin-file-transfer",
 		"source": "npm",
 		"version": "1.5.1"
-	},
-	{
-		"name": "cordova-plugin-geolocation",
-		"source": "npm",
-		"version": "2.4.3"
 	},
 	{
 		"name": "cordova-plugin-inappbrowser",
@@ -3345,59 +3335,9 @@
 		"version": "7.1.2"
 	},
 	{
-		"name": "cordova-plugin-camera-with-exif",
-		"source": "npm",
-		"version": ""
-	},
-	{
-		"name": "ionic-plugin-keyboard",
-		"source": "npm",
-		"version": "2.2.1"
-	},
-	{
 		"name": "cordova-sqlite-ext",
 		"source": "npm",
 		"version": "0.9.1"
-	},
-	{
-		"name": "cordova-plugin-statusbar",
-		"source": "npm",
-		"version": "2.4.2"
-	},
-	{
-		"name": "cordova-plugin-x-toast",
-		"source": "npm",
-		"version": "2.6.0"
-	},
-	{
-		"name": "cordova-plugin-whitelist",
-		"source": "npm",
-		"version": "1.3.3"
-	},
-	{
-		"name": "cordova-plugin-device-orientation",
-		"source": "npm",
-		"version": "2.0.0"
-	},
-	{
-		"name": "cordova-plugin-android-permissions",
-		"source": "npm",
-		"version": ""
-	},
-	{
-		"name": "cordova-plugin-globalization",
-		"source": "npm",
-		"version": "1.0.8"
-	},
-	{
-		"name": "cordova-plugin-native-transitions",
-		"source": "npm",
-		"version": ""
-	},
-	{
-		"name": "",
-		"source": "git",
-		"version": ""
 	},
 	{
 		"name": "cordova-plugin-datepicker",
@@ -3405,13 +3345,18 @@
 		"version": ""
 	},
 	{
-		"name": "cordova-plugin-battery-status",
-		"source": "npm",
-		"version": "1.2.5"
-	},
-	{
 		"name": "cordova-plugin-zip",
 		"source": "npm",
 		"version": "3.1.0"
+	},
+	{
+		"name": "cordova-plugin-whitelist",
+		"source": "npm",
+		"version": "1.3.3"
+	},
+	{
+		"name": "cordova-plugin-x-toast",
+		"source": "npm",
+		"version": "2.6.0"
 	}]
 }

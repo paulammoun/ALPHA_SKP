@@ -3245,7 +3245,7 @@
 		"name": "\\css\\demoapp_index.css"
 	},
 	{
-		"crc": 4294909991,
+		"crc": 4294920809,
 		"name": "\\javascript\\a5.js"
 	},
 	{
@@ -3258,11 +3258,11 @@
 	}],
 	"rootfiles": [
 	{
-		"crc": 4294918966,
+		"crc": 4294932420,
 		"name": "\\baseline.zip"
 	},
 	{
-		"crc": 4294932798,
+		"crc": 4294905836,
 		"name": "\\config.xml"
 	},
 	{
@@ -3270,7 +3270,7 @@
 		"name": "\\icon.png"
 	},
 	{
-		"crc": 4294905474,
+		"crc": 4294909436,
 		"name": "\\index.html"
 	},
 	{
@@ -3282,15 +3282,15 @@
 		"name": "\\splash.png"
 	},
 	{
-		"crc": 4294920540,
+		"crc": 4294916886,
 		"name": "\\version.json"
 	},
 	{
-		"crc": 4294933591,
+		"crc": 4294957811,
 		"name": "\\_instantUpdateSettings.js"
 	},
 	{
-		"crc": 4294936014,
+		"crc": 4294936380,
 		"name": "\\_phoneGapSettings.js"
 	}],
 	"plugins": [
